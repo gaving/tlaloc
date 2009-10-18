@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	256AC3D90F4B6AC300CF3369 /* rt_trayAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 359}";
+			sepNavWindowFrame = "{{81, 615}, {750, 558}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 86228CE7108A918800C8C6FC /* rt-tray */;
+		activeTarget = 8D1107260486CEB800E47090 /* rt-tray */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* rt-tray */,
+		);
+		codeSenseManager = 86228CF9108A918F00C8C6FC /* Code sense */;
+		executables = (
+			86228CE7108A918800C8C6FC /* rt-tray */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 277572368;
+			PBXWorkspaceStateSaveDate = 277572368;
+		};
+		perUserProjectItems = {
+			8618439E108B6B1700D72F2D /* XCBuildMessageTextBookmark */ = 8618439E108B6B1700D72F2D /* XCBuildMessageTextBookmark */;
+			8618439F108B6B1700D72F2D /* PBXTextBookmark */ = 8618439F108B6B1700D72F2D /* PBXTextBookmark */;
+			861843A2108B6B1700D72F2D /* PBXTextBookmark */ = 861843A2108B6B1700D72F2D /* PBXTextBookmark */;
+			861843A6108B6B2000D72F2D /* PBXTextBookmark */ = 861843A6108B6B2000D72F2D /* PBXTextBookmark */;
+			861843A7108B6B2000D72F2D /* PBXTextBookmark */ = 861843A7108B6B2000D72F2D /* PBXTextBookmark */;
+			861843B6108B6C3000D72F2D /* PBXTextBookmark */ = 861843B6108B6C3000D72F2D /* PBXTextBookmark */;
+			861843B7108B6C3000D72F2D /* PBXTextBookmark */ = 861843B7108B6C3000D72F2D /* PBXTextBookmark */;
+			86B02CCB108B44ED009B7F46 = 86B02CCB108B44ED009B7F46 /* PBXTextBookmark */;
+			86B02CDA108B4540009B7F46 = 86B02CDA108B4540009B7F46 /* PBXTextBookmark */;
+			86B02CDB108B4540009B7F46 = 86B02CDB108B4540009B7F46 /* PBXTextBookmark */;
+			86B02EC4108B673E009B7F46 = 86B02EC4108B673E009B7F46 /* PBXTextBookmark */;
+			86B02ED8108B6912009B7F46 = 86B02ED8108B6912009B7F46 /* PBXTextBookmark */;
+			86B02F09108B6ABC009B7F46 = 86B02F09108B6ABC009B7F46 /* PBXTextBookmark */;
+			86B02F0A108B6ABC009B7F46 = 86B02F0A108B6ABC009B7F46 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 86228CF8108A918F00C8C6FC /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8618439E108B6B1700D72F2D /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'response' undeclared (first use in this function)";
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 34;
+		rType = 1;
+	};
+	8618439F108B6B1700D72F2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 35";
+		rLen = 0;
+		rLoc = 1085;
+		rType = 0;
+		vrLen = 879;
+		vrLoc = 786;
+	};
+	861843A2108B6B1700D72F2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 44";
+		rLen = 0;
+		rLoc = 1720;
+		rType = 0;
+		vrLen = 1588;
+		vrLoc = 383;
+	};
+	861843A6108B6B2000D72F2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 69";
+		rLen = 0;
+		rLoc = 2331;
+		rType = 0;
+		vrLen = 822;
+		vrLoc = 963;
+	};
+	861843A7108B6B2000D72F2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 69";
+		rLen = 0;
+		rLoc = 2331;
+		rType = 0;
+		vrLen = 1555;
+		vrLoc = 517;
+	};
+	861843B6108B6C3000D72F2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 68";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 775;
+		vrLoc = 971;
+	};
+	861843B7108B6C3000D72F2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 68";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1295;
+		vrLoc = 844;
+	};
+	86228CE7108A918800C8C6FC /* rt-tray */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "rt-tray";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	86228CF8108A918F00C8C6FC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	86228CF9108A918F00C8C6FC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	86B02C82108B0BDD009B7F46 /* TorrentList.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{312, 0}";
+			sepNavVisRange = "{0, 312}";
+			sepNavWindowFrame = "{{544, 359}, {750, 558}}";
+		};
+	};
+	86B02C83108B0BDD009B7F46 /* TorrentList.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{484, 0}";
+			sepNavVisRange = "{0, 484}";
+			sepNavWindowFrame = "{{127, 573}, {750, 558}}";
+		};
+	};
+	86B02C8A108B0F39009B7F46 /* TorrentListController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{407, 0}";
+			sepNavVisRange = "{0, 407}";
+			sepNavWindowFrame = "{{150, 552}, {750, 558}}";
+		};
+	};
+	86B02C8B108B0F39009B7F46 /* TorrentListController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {894, 871}}";
+			sepNavSelRange = "{2263, 0}";
+			sepNavVisRange = "{844, 1295}";
+			sepNavWindowFrame = "{{799, 148}, {750, 558}}";
+		};
+	};
+	86B02CCB108B44ED009B7F46 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C83108B0BDD009B7F46 /* TorrentList.m */;
+		name = "TorrentList.m: 18";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 176;
+		vrLoc = 80;
+	};
+	86B02CDA108B4540009B7F46 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C82108B0BDD009B7F46 /* TorrentList.h */;
+		name = "TorrentList.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 219;
+		vrLoc = 0;
+	};
+	86B02CDB108B4540009B7F46 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8A108B0F39009B7F46 /* TorrentListController.h */;
+		name = "TorrentListController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 308;
+		vrLoc = 0;
+	};
+	86B02D7C108B517F009B7F46 /* XMLRPCDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {859, 533}}";
+			sepNavSelRange = "{1210, 0}";
+			sepNavVisRange = "{83, 796}";
+			sepNavWindowFrame = "{{196, 510}, {750, 558}}";
+		};
+	};
+	86B02EC4108B673E009B7F46 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 55";
+		rLen = 0;
+		rLoc = 1460;
+		rType = 0;
+		vrLen = 359;
+		vrLoc = 43;
+	};
+	86B02ED8108B6912009B7F46 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'XMLRPCConnection' may not respond to '-sendSynchronousXMLRPCRequest:'";
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		rLen = 1;
+		rLoc = 32;
+		rType = 1;
+	};
+	86B02F09108B6ABC009B7F46 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 59";
+		rLen = 0;
+		rLoc = 1720;
+		rType = 0;
+		vrLen = 359;
+		vrLoc = 46;
+	};
+	86B02F0A108B6ABC009B7F46 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */;
+		name = "TorrentListController.m: 59";
+		rLen = 0;
+		rLoc = 1720;
+		rType = 0;
+		vrLen = 1203;
+		vrLoc = 517;
+	};
+	8D1107260486CEB800E47090 /* rt-tray */ = {
+		activeExec = 0;
+		executables = (
+			86228CE7108A918800C8C6FC /* rt-tray */,
+		);
+	};
+}
