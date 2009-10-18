@@ -7,60 +7,77 @@
 //
 
 #import "TorrentListController.h"
-#import "TorrentList.h"
-#import "XMLRPCRequest.h"
-#import "XMLRPCResponse.h"
-#import "XMLRPCConnection.h"
-#import "XMLRPCConnectionManager.h"
-#import "XMLRPCDelegate.h"
+#import "Config.h"
+#import "Torrent.h"
 
 @implementation TorrentListController
 
+@synthesize torrents;
+
+NSPredicate *predicateTemplate;
+
 -(void)awakeFromNib {
-    [self initializeTableStuff];
+    if ([self grabTorrents]) {
+
+        //initialize the contacts array
+        torrents  = [[NSMutableArray alloc] init];
+
+        [self buildTorrents];
+    }
+
+    predicateTemplate = [[NSPredicate predicateWithFormat:@"(filename contains[cd] $searchString)"] retain];
 }
 
-- (void) initializeTableStuff {
-    torrentArray = [[NSArray alloc] init];
 
-    XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:[NSURL URLWithString: @"http://192.168.1.100:90/RPC2"]];
-    XMLRPCConnectionManager *manager = [XMLRPCConnectionManager sharedManager];
-    XMLRPCDelegate* delegate = [[XMLRPCDelegate alloc] init];
-    [request setMethod:@"download_list" withParameter:@"main"];
-    // NSLog(@"Request body: %@", [request body]);
-    [manager spawnConnectionWithXMLRPCRequest: request delegate: delegate];
-    [manager release];
-    [request release];
+- (void)buildTorrents {
+    NSMutableArray* theTorrents = [[Config instance] torrents];
+    for (Torrent *torrent in theTorrents) {
 
-/*     XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:[NSURL URLWithString: @"http://192.168.1.100:90/RPC2"]]; */
-    // // XMLRPCConnectionManager *manager = [XMLRPCConnectionManager sharedManager];
-    // // XMLRPCConnection *connection = [[XMLRPCConnection alloc] init];
-    // XMLRPCDelegate* delegate = [[XMLRPCDelegate alloc] init];
-    // [request setMethod:@"download_list" withParameter:@"main"];
-    // // NSLog(@"Request body: %@", [request body]);
-    // // [manager spawnConnectionWithXMLRPCRequest: request delegate: delegate];
-    // XMLRPCResponse *response = [XMLRPCConnection sendSynchronousXMLRPCRequest: request];
-    // torrentArray = (NSArray *)[response object];
-    // // [manager release];
-    // // [connection release];
-    // [request release];
-    /* [response release]; */
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+            [torrent filename], @"filename",
+            [torrent bytesTotalReadable], @"size",
+            [torrent bytesDoneReadable], @"downloaded",
+            @"-", @"uploaded",
+            @"-", @"ratio",
+            nil];
 
-    NSLog(@"Finished initing the table");
+        //add it to the arrayController
+        [arrayTorrents addObject:dict];
+    }
+}
+
+- (BOOL)grabTorrents {
+    return ([Torrent loadAll] == YES);
 }
 
 - (IBAction)fetchTorrents:(id)sender {
-    torrentArray = [[TorrentList instance] torrents];
-    [tableView reloadData];
+    if ([self grabTorrents]) {
+        [torrents release];
+        torrents  = [[NSMutableArray alloc] init];
+        [self buildTorrents];
+        [tableView reloadData];
+    }
 }
 
-- (int)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [torrentArray count];
-}
+- (IBAction)updateFilterAction:(id)sender {
 
-- (id)tableView:(NSTableView *)tableView
-objectValueForTableColumn:(NSTableColumn *)tableColumn row:(int)row {
-    return [torrentArray objectAtIndex:row];
+    NSString *searchString = [searchField stringValue];
+    NSPredicate *predicate;
+
+    //if the search field is empty do not search!
+    if ([searchString isEqualToString:@""]) {
+        predicate = nil;
+    } else {
+        //create a new dictionary with the search string
+        NSMutableDictionary *bindVariables = [[NSMutableDictionary alloc] init];
+        [bindVariables setObject:searchString forKey:@"searchString"];
+
+        //and create a predicate from the template by replacing the variable with its actual value
+        predicate = [predicateTemplate predicateWithSubstitutionVariables:bindVariables];
+    }
+
+    //apply the predicate to the array controller
+    [arrayTorrents setFilterPredicate:predicate];
 }
 
 

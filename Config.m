@@ -1,19 +1,19 @@
 //
-//  TorrentList.m
+//  Config.m
 //  rt-tray
 //
 //  Created by Gavin Gilmour on 18/10/2009.
 //  Copyright 2009 SPSA. All rights reserved.
 //
 
-#import "TorrentList.h"
+#import "Config.h"
 
-@implementation TorrentList
+@implementation Config
 
 @synthesize torrents;
 
-+ (TorrentList *)instance {
-    static TorrentList *gInstance = NULL;
++ (Config *)instance {
+    static Config *gInstance = NULL;
 
     @synchronized(self) {
         if (gInstance == NULL)

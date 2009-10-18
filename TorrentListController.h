@@ -1,5 +1,5 @@
 //
-//  TorrentListController.h
+//  ConfigController.h
 //  rt-tray
 //
 //  Created by Gavin Gilmour on 18/10/2009.
@@ -7,16 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TorrentList.h"
 
+// @interface TorrentListController : NSWindowController {
 @interface TorrentListController : NSObject {
     IBOutlet NSToolbarItem *refreshItem;
     IBOutlet NSTableView *tableView;
-    TorrentList *torrentList;
-    NSArray *torrentArray;
+    IBOutlet NSSearchField *searchField;
+    IBOutlet NSArrayController *arrayTorrents;
+
+    NSMutableArray* torrents;
 }
 
-- (void)initializeTableStuff;
+- (BOOL)grabTorrents;
+- (void)buildTorrents;
 - (IBAction)fetchTorrents:(id)sender;
+- (IBAction)updateFilterAction:(id)sender;
+
+@property (copy) NSArray* torrents;
 
 @end

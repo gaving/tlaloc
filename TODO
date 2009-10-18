@@ -1,0 +1,10 @@
+
+- [_] Set an application icon
+- [_] Think of a better name
+- [_] Calculate ratio
+- [_] Info pane
+- [_] Status bar
+- [_] Make the ratio column display an image
+- [x] Get the filter box working
+    - http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/CocoaBindings/Tasks/filtering.html
+    - http://stackoverflow.com/questions/815480/how-do-you-get-search-capability-similar-to-spotlight-or-itunes

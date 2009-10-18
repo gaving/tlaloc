@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* rt_trayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* rt_trayAppDelegate.m */; };
-		86B02C84108B0BDD009B7F46 /* TorrentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B02C83108B0BDD009B7F46 /* TorrentList.m */; };
+		861843BF108B6FAF00D72F2D /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 861843BE108B6FAF00D72F2D /* Torrent.m */; };
+		861843C8108B706E00D72F2D /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 861843C7108B706E00D72F2D /* Config.m */; };
 		86B02C8C108B0F39009B7F46 /* TorrentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */; };
 		86B02D4A108B50A0009B7F46 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B02D35108B50A0009B7F46 /* NSDataAdditions.m */; };
 		86B02D4B108B50A0009B7F46 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B02D37108B50A0009B7F46 /* NSStringAdditions.m */; };
@@ -38,8 +39,10 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		86B02C82108B0BDD009B7F46 /* TorrentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentList.h; sourceTree = "<group>"; };
-		86B02C83108B0BDD009B7F46 /* TorrentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentList.m; sourceTree = "<group>"; };
+		861843BD108B6FAF00D72F2D /* Torrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torrent.h; sourceTree = "<group>"; };
+		861843BE108B6FAF00D72F2D /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
+		861843C6108B706E00D72F2D /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		861843C7108B706E00D72F2D /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		86B02C8A108B0F39009B7F46 /* TorrentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentListController.h; sourceTree = "<group>"; };
 		86B02C8B108B0F39009B7F46 /* TorrentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentListController.m; sourceTree = "<group>"; };
 		86B02D34108B50A0009B7F46 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
@@ -85,8 +88,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				861845AD108B981300D72F2D /* XMLRPC */,
 				256AC3D80F4B6AC300CF3369 /* rt_trayAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* rt_trayAppDelegate.m */,
+				86B02C8A108B0F39009B7F46 /* TorrentListController.h */,
+				86B02C8B108B0F39009B7F46 /* TorrentListController.m */,
+				861843BD108B6FAF00D72F2D /* Torrent.h */,
+				861843BE108B6FAF00D72F2D /* Torrent.m */,
+				861843C6108B706E00D72F2D /* Config.h */,
+				861843C7108B706E00D72F2D /* Config.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -125,10 +135,8 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				86B02C82108B0BDD009B7F46 /* TorrentList.h */,
 				86B02D7B108B517F009B7F46 /* XMLRPCDelegate.h */,
 				86B02D7C108B517F009B7F46 /* XMLRPCDelegate.m */,
-				86B02C83108B0BDD009B7F46 /* TorrentList.m */,
 			);
 			name = "rt-tray";
 			sourceTree = "<group>";
@@ -148,12 +156,22 @@
 				8D1107310486CEB800E47090 /* rt_tray-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
-				86B02C8A108B0F39009B7F46 /* TorrentListController.h */,
-				86B02C8B108B0F39009B7F46 /* TorrentListController.m */,
-				86B02D34108B50A0009B7F46 /* NSDataAdditions.h */,
-				86B02D35108B50A0009B7F46 /* NSDataAdditions.m */,
-				86B02D36108B50A0009B7F46 /* NSStringAdditions.h */,
-				86B02D37108B50A0009B7F46 /* NSStringAdditions.m */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		861845AD108B981300D72F2D /* XMLRPC */ = {
+			isa = PBXGroup;
+			children = (
 				86B02D38108B50A0009B7F46 /* XMLRPC.h */,
 				86B02D39108B50A0009B7F46 /* XMLRPCConnection.h */,
 				86B02D3A108B50A0009B7F46 /* XMLRPCConnection.m */,
@@ -172,17 +190,12 @@
 				86B02D47108B50A0009B7F46 /* XMLRPCResponse.m */,
 				86B02D48108B50A0009B7F46 /* XMLRPCTreeBasedParser.h */,
 				86B02D49108B50A0009B7F46 /* XMLRPCTreeBasedParser.m */,
+				86B02D34108B50A0009B7F46 /* NSDataAdditions.h */,
+				86B02D35108B50A0009B7F46 /* NSDataAdditions.m */,
+				86B02D36108B50A0009B7F46 /* NSStringAdditions.h */,
+				86B02D37108B50A0009B7F46 /* NSStringAdditions.m */,
 			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-			);
-			name = Frameworks;
+			name = XMLRPC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +255,6 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* rt_trayAppDelegate.m in Sources */,
-				86B02C84108B0BDD009B7F46 /* TorrentList.m in Sources */,
 				86B02C8C108B0F39009B7F46 /* TorrentListController.m in Sources */,
 				86B02D4A108B50A0009B7F46 /* NSDataAdditions.m in Sources */,
 				86B02D4B108B50A0009B7F46 /* NSStringAdditions.m in Sources */,
@@ -255,6 +267,8 @@
 				86B02D52108B50A0009B7F46 /* XMLRPCResponse.m in Sources */,
 				86B02D53108B50A0009B7F46 /* XMLRPCTreeBasedParser.m in Sources */,
 				86B02D7D108B517F009B7F46 /* XMLRPCDelegate.m in Sources */,
+				861843BF108B6FAF00D72F2D /* Torrent.m in Sources */,
+				861843C8108B706E00D72F2D /* Config.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

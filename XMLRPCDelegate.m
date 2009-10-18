@@ -8,6 +8,7 @@
 
 #import "XMLRPCDelegate.h"
 #import "TorrentListController.h"
+#import "Config.h"
 
 @implementation XMLRPCDelegate
 
@@ -27,7 +28,7 @@
     // }
 
     // NSLog(@"Returning the array now");
-    [[TorrentList instance] setTorrents:arr];
+    [[Config instance] setTorrents:arr];
     // NSLog([[TorrentList instance] torrents]);
     // return arr;
 }

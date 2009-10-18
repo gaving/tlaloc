@@ -1,5 +1,5 @@
 //
-//  TorrentList.h
+//  Config.h
 //  rt-tray
 //
 //  Created by Gavin Gilmour on 18/10/2009.
@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface TorrentList : NSObject {
+@interface Config : NSObject {
     NSMutableArray *torrents;
 }
 
 @property (copy) NSMutableArray *torrents;
 
-+ (TorrentList *)instance;
++ (Config *)instance;
 
 @end
