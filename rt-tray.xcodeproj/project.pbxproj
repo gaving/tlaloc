@@ -11,6 +11,7 @@
 		256AC3DA0F4B6AC300CF3369 /* rt_trayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* rt_trayAppDelegate.m */; };
 		861843BF108B6FAF00D72F2D /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 861843BE108B6FAF00D72F2D /* Torrent.m */; };
 		861843C8108B706E00D72F2D /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 861843C7108B706E00D72F2D /* Config.m */; };
+		861845FD108B9C3400D72F2D /* Torrent.icns in Resources */ = {isa = PBXBuildFile; fileRef = 861845FC108B9C3400D72F2D /* Torrent.icns */; };
 		86B02C8C108B0F39009B7F46 /* TorrentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B02C8B108B0F39009B7F46 /* TorrentListController.m */; };
 		86B02D4A108B50A0009B7F46 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B02D35108B50A0009B7F46 /* NSDataAdditions.m */; };
 		86B02D4B108B50A0009B7F46 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B02D37108B50A0009B7F46 /* NSStringAdditions.m */; };
@@ -43,6 +44,7 @@
 		861843BE108B6FAF00D72F2D /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
 		861843C6108B706E00D72F2D /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		861843C7108B706E00D72F2D /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		861845FC108B9C3400D72F2D /* Torrent.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Torrent.icns; sourceTree = "<group>"; };
 		86B02C8A108B0F39009B7F46 /* TorrentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentListController.h; sourceTree = "<group>"; };
 		86B02C8B108B0F39009B7F46 /* TorrentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentListController.m; sourceTree = "<group>"; };
 		86B02D34108B50A0009B7F46 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				861845FC108B9C3400D72F2D /* Torrent.icns */,
 				8D1107310486CEB800E47090 /* rt_tray-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -243,6 +246,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				861845FD108B9C3400D72F2D /* Torrent.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
