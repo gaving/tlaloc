@@ -202,46 +202,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>86184418108B742800D72F2D</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Torrent.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>86184419108B742800D72F2D</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Torrent.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>861845F5108B9C1300D72F2D</string>
-						<key>history</key>
-						<array>
-							<string>86184589108B8D4700D72F2D</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {857, 588}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>104 523 857 629 0 0 1920 1178 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>86B02EDC108B694F009B7F46</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>TorrentListController.m</string>
@@ -256,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>861845F6108B9C1300D72F2D</string>
+						<string>8618460D108BA11000D72F2D</string>
 						<key>history</key>
 						<array>
 							<string>8618454F108B8AA700D72F2D</string>
@@ -276,86 +236,6 @@
 				<false/>
 				<key>RubberWindowFrame</key>
 				<string>799 204 750 502 0 0 1920 1178 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>861843F9108B71B300D72F2D</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Config.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>861843FA108B71B300D72F2D</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Config.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>861845F7108B9C1300D72F2D</string>
-						<key>history</key>
-						<array>
-							<string>861843F3108B718100D72F2D</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {750, 461}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>81 671 750 502 0 0 1920 1178 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>861843EA108B715F00D72F2D</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>XMLRPCDelegate.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>861843EB108B715F00D72F2D</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>XMLRPCDelegate.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>861845F8108B9C1300D72F2D</string>
-						<key>history</key>
-						<array>
-							<string>861843E8108B715D00D72F2D</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {750, 461}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>196 566 750 502 0 0 1920 1178 </string>
 			</dict>
 		</dict>
 	</array>
@@ -390,8 +270,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -435,7 +313,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
 									<integer>14</integer>
 									<integer>0</integer>
 								</array>
@@ -476,7 +353,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Pumpkin</string>
+								<string>rt_tray-Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -484,11 +361,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Pumpkin</string>
+										<string>rt_tray-Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>861845F4108B9C1300D72F2D</string>
+										<string>8618460C108BA11000D72F2D</string>
 										<key>history</key>
 										<array>
 											<string>86B02CCB108B44ED009B7F46</string>
@@ -505,7 +382,6 @@
 											<string>861845D6108B9B2900D72F2D</string>
 											<string>861845F0108B9C1300D72F2D</string>
 											<string>861845F2108B9C1300D72F2D</string>
-											<string>861845F3108B9C1300D72F2D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -527,6 +403,8 @@
 							<string>422pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -703,14 +581,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>861845F9108B9C1300D72F2D</string>
+		<string>86184418108B742800D72F2D</string>
+		<string>861843F9108B71B300D72F2D</string>
+		<string>861843EA108B715F00D72F2D</string>
 		<string>861843B0108B6B2000D72F2D</string>
 		<string>861843B1108B6B2000D72F2D</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>861843EA108B715F00D72F2D</string>
-		<string>861843F9108B71B300D72F2D</string>
 		<string>86B02EDC108B694F009B7F46</string>
-		<string>86184418108B742800D72F2D</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>86228CF6108A918F00C8C6FC</string>
 		<string>/Users/gavin/Coding/rt-tray/rt-tray.xcodeproj</string>
