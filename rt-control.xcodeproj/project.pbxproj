@@ -76,7 +76,7 @@
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8650F442109313A600ACABF0 /* Torrent.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Torrent.icns; path = Resources/Torrent.icns; sourceTree = "<group>"; };
 		8650F4551093142000ACABF0 /* rt_control-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rt_control-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* rt-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "rt-control.app"; path = "/Users/gavin/Coding/rt-control/build/Debug/rt-control.app"; sourceTree = "<absolute>"; };
+		86802D0410934360003CB030 /* rt-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "rt-control.app"; path = "build/Debug/rt-control.app"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +130,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				86802D0410934360003CB030 /* rt-control.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,7 +225,7 @@
 			name = "rt-control";
 			productInstallPath = "$(HOME)/Applications";
 			productName = "rt-control";
-			productReference = 8D1107320486CEB800E47090 /* rt-control.app */;
+			productReference = 86802D0410934360003CB030 /* rt-control.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
