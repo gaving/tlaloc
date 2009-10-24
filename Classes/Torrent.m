@@ -1,9 +1,9 @@
 //
 //  Torrent.m
-//  rt-phone
+//  rt-control
 //
 //  Created by Gavin Gilmour on 18/07/2009.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009. All rights reserved.
 //
 
 #import "Torrent.h"
@@ -23,24 +23,28 @@
 @synthesize bytesTotal;
 @synthesize bytesDoneReadable;
 @synthesize bytesTotalReadable;
+@synthesize sizeFiles;
 
 + (NSURL *)rtorrentRPCURL {
 
     /* Make this configurable in the settings page */
-    // NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    // NSString *rtorrentRPCURL = [userDefaults stringForKey:@"rtorrentRPCURL"];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *rtorrentRPCURL = [userDefaults stringForKey:@"rtorrentRPCURL"];
 
-    // if ([rtorrentRPCURL length] == 0) {
-        // return nil;
-    // }
+    NSLog(rtorrentRPCURL);
 
-    return [NSURL URLWithString:  @"http://192.168.1.100:90/RPC2"];
+    if ([rtorrentRPCURL length] == 0) {
+        NSLog(@"No rtorrent RPC URL specified. Aborting.");
+        return nil;
+    }
+
+    return [NSURL URLWithString:  rtorrentRPCURL];
 }
 
 +  (id)fetchInfo:(NSString *)methodName param:(NSString *)param {
     XMLRPCRequest *infoRequest = [[XMLRPCRequest alloc] initWithURL:[Torrent rtorrentRPCURL]];
     [infoRequest setMethod:methodName withParameter:param];
-    [infoRequest setUserAgent:@"rt-phone"];
+    [infoRequest setUserAgent:@"rt-control"];
     NSString *response = [Torrent executeXMLRPCRequest:infoRequest];
     [infoRequest release];
     return response;
@@ -51,10 +55,10 @@
     return [userInfoResponse object];
 }
 
-+ (NSString *)stringFromFileSize:(int)theSize {
-    float floatSize = theSize;
-    if (theSize<1023)
-        return([NSString stringWithFormat:@"%i bytes",theSize]);
++ (NSString *)stringFromFileSize:(NSNumber *)theSize {
+    float floatSize = [theSize floatValue];
+    if (floatSize<1023)
+        return([NSString stringWithFormat:@"%i bytes",floatSize]);
     floatSize = floatSize / 1024;
     if (floatSize<1023)
         return([NSString stringWithFormat:@"%1.1f KB",floatSize]);
@@ -81,7 +85,7 @@
     /* Fetch the main download list */
     XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:rtorrentRPCURL];
 
-    [request setUserAgent:@"rt-phone"];
+    [request setUserAgent:@"rt-control"];
     [request setMethod:@"download_list" withParameter:@"main"];
 
     NSObject *response = [Torrent executeXMLRPCRequest:request];
@@ -103,6 +107,7 @@
         NSString *name = [self fetchInfo:@"d.get_name" param:hash];
         NSNumber *bytesDone = [self fetchInfo:@"d.get_completed_bytes" param:hash];
         NSNumber *bytesTotal = [self fetchInfo:@"d.get_size_bytes" param:hash];
+        NSNumber *sizeFiles = [self fetchInfo:@"d.get_size_files" param:hash];
 
         Torrent *tempTorrent = [[[Torrent alloc] init] autorelease];
         [tempTorrent setHash:hash];
@@ -111,6 +116,8 @@
         [tempTorrent setBytesTotal:bytesTotal];
         [tempTorrent setBytesDoneReadable:[Torrent stringFromFileSize: bytesDone]];
         [tempTorrent setBytesTotalReadable:[Torrent stringFromFileSize: bytesTotal]];
+        [tempTorrent setSizeFiles:[Torrent stringFromFileSize: sizeFiles]];
+
         [torrents addObject:tempTorrent];
     }
 
@@ -120,6 +127,17 @@
     return YES;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    Torrent *copy = [[self class] allocWithZone: zone];
+    [copy setFilename:[self filename]];
+    [copy setBytesDoneReadable:[self bytesDoneReadable]];
+    return copy;
+}
+
+- (NSImage*) icon {
+    NSImage *image = [[NSWorkspace sharedWorkspace] iconForFileType:[filename pathExtension]];
+    return image;
+}
 
 - (void) dealloc {
     [name release];

@@ -1,49 +1,59 @@
 //
 //  TorrentListController.m
-//  rt-tray
+//  rt-control
 //
 //  Created by Gavin Gilmour on 18/10/2009.
-//  Copyright 2009 SPSA. All rights reserved.
+//  Copyright 2009. All rights reserved.
 //
 
 #import "TorrentListController.h"
 #import "Config.h"
 #import "Torrent.h"
+#import "ImageTextCell.h"
 
 @implementation TorrentListController
 
-@synthesize torrents;
-
 NSPredicate *predicateTemplate;
 
--(void)awakeFromNib {
-    if ([self grabTorrents]) {
+- (id) init {
+    if (self = [super init]) {
+        // build up some sample data
 
-        //initialize the contacts array
-        torrents  = [[NSMutableArray alloc] init];
+        if ([self grabTorrents]) {
 
-        [self buildTorrents];
+            //initialize the contacts array
+            torrents  = [[NSMutableArray alloc] init];
+
+            [self buildTorrents];
+        } else {
+            NSAlert* alert = [NSAlert new];
+            [alert setInformativeText: @"Couldn't connect fetch torrents"];
+            [alert setMessageText:     @"Please check your connection settings"];
+            [alert runModal];
+        }
     }
+    return self;
+}
+
+-(void)awakeFromNib {
+
+    NSTableColumn* column = [[tableView tableColumns] objectAtIndex:0];
+    ImageTextCell* cell = [[[ImageTextCell alloc] init] autorelease];
+    [column setDataCell: cell];
+
+    [cell setPrimaryTextKeyPath: @"filename"];
+    [cell setSecondaryTextKeyPath: @"bytesDoneReadable"];
+    [cell setIconKeyPath: @"icon"];
 
     predicateTemplate = [[NSPredicate predicateWithFormat:@"(filename contains[cd] $searchString)"] retain];
 }
 
+- (NSArray*) torrents {
+        return torrents;
+}
 
 - (void)buildTorrents {
-    NSMutableArray* theTorrents = [[Config instance] torrents];
-    for (Torrent *torrent in theTorrents) {
-
-        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-            [torrent filename], @"filename",
-            [torrent bytesTotalReadable], @"size",
-            [torrent bytesDoneReadable], @"downloaded",
-            @"-", @"uploaded",
-            @"-", @"ratio",
-            nil];
-
-        //add it to the arrayController
-        [arrayTorrents addObject:dict];
-    }
+    torrents = [[Config instance] torrents];
 }
 
 - (BOOL)grabTorrents {
@@ -60,7 +70,6 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)updateFilterAction:(id)sender {
-
     NSString *searchString = [searchField stringValue];
     NSPredicate *predicate;
 
@@ -79,6 +88,5 @@ NSPredicate *predicateTemplate;
     //apply the predicate to the array controller
     [arrayTorrents setFilterPredicate:predicate];
 }
-
 
 @end

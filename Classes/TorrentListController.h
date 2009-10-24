@@ -1,9 +1,9 @@
 //
 //  ConfigController.h
-//  rt-tray
+//  rt-control
 //
 //  Created by Gavin Gilmour on 18/10/2009.
-//  Copyright 2009 SPSA. All rights reserved.
+//  Copyright 2009. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,7 +22,5 @@
 - (void)buildTorrents;
 - (IBAction)fetchTorrents:(id)sender;
 - (IBAction)updateFilterAction:(id)sender;
-
-@property (copy) NSArray* torrents;
 
 @end

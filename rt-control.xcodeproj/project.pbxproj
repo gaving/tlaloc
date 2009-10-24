@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8610519110930EDE002078AA /* TorrentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517110930EDE002078AA /* TorrentTableView.m */; };
+		8610519210930EDE002078AA /* TorrentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517310930EDE002078AA /* TorrentListController.m */; };
+		8610519310930EDE002078AA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517410930EDE002078AA /* Config.m */; };
+		8610519410930EDE002078AA /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517710930EDE002078AA /* ImageTextCell.m */; };
+		8610519510930EDE002078AA /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517910930EDE002078AA /* Torrent.m */; };
+		8650F3C2109310BA00ACABF0 /* rt_controlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3C0109310BA00ACABF0 /* rt_controlAppDelegate.m */; };
+		8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */; };
+		8650F3FD109311B800ACABF0 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E7109311B800ACABF0 /* XMLRPCResponse.m */; };
+		8650F3FE109311B800ACABF0 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E9109311B800ACABF0 /* XMLRPCRequest.m */; };
+		8650F3FF109311B800ACABF0 /* XMLRPCEventBasedParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3EB109311B800ACABF0 /* XMLRPCEventBasedParserDelegate.m */; };
+		8650F400109311B800ACABF0 /* XMLRPCEventBasedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3ED109311B800ACABF0 /* XMLRPCEventBasedParser.m */; };
+		8650F401109311B800ACABF0 /* XMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3EF109311B800ACABF0 /* XMLRPCEncoder.m */; };
+		8650F402109311B800ACABF0 /* XMLRPCConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F1109311B800ACABF0 /* XMLRPCConnectionManager.m */; };
+		8650F403109311B800ACABF0 /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F4109311B800ACABF0 /* XMLRPCConnection.m */; };
+		8650F404109311B800ACABF0 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F7109311B800ACABF0 /* NSStringAdditions.m */; };
+		8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F9109311B800ACABF0 /* NSDataAdditions.m */; };
+		8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* MainMenu.xib */; };
+		8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42C1093130000ACABF0 /* InfoPlist.strings */; };
+		8650F443109313A600ACABF0 /* Torrent.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8650F442109313A600ACABF0 /* Torrent.icns */; };
+		8650F4561093142000ACABF0 /* rt_control-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8650F4551093142000ACABF0 /* rt_control-Info.plist */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		256AC3F00F4B6AF500CF3369 /* rt_control_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rt_control_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8610517110930EDE002078AA /* TorrentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentTableView.m; sourceTree = "<group>"; };
+		8610517210930EDE002078AA /* TorrentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentTableView.h; sourceTree = "<group>"; };
+		8610517310930EDE002078AA /* TorrentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentListController.m; sourceTree = "<group>"; };
+		8610517410930EDE002078AA /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		8610517510930EDE002078AA /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		8610517610930EDE002078AA /* TorrentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentListController.h; sourceTree = "<group>"; };
+		8610517710930EDE002078AA /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextCell.m; sourceTree = "<group>"; };
+		8610517810930EDE002078AA /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextCell.h; sourceTree = "<group>"; };
+		8610517910930EDE002078AA /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
+		8610517A10930EDE002078AA /* Torrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torrent.h; sourceTree = "<group>"; };
+		8650F3C0109310BA00ACABF0 /* rt_controlAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rt_controlAppDelegate.m; sourceTree = "<group>"; };
+		8650F3C1109310BA00ACABF0 /* rt_controlAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rt_controlAppDelegate.h; sourceTree = "<group>"; };
+		8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCTreeBasedParser.m; sourceTree = "<group>"; };
+		8650F3E6109311B800ACABF0 /* XMLRPCTreeBasedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCTreeBasedParser.h; sourceTree = "<group>"; };
+		8650F3E7109311B800ACABF0 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		8650F3E8109311B800ACABF0 /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
+		8650F3E9109311B800ACABF0 /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
+		8650F3EA109311B800ACABF0 /* XMLRPCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCRequest.h; sourceTree = "<group>"; };
+		8650F3EB109311B800ACABF0 /* XMLRPCEventBasedParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEventBasedParserDelegate.m; sourceTree = "<group>"; };
+		8650F3EC109311B800ACABF0 /* XMLRPCEventBasedParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEventBasedParserDelegate.h; sourceTree = "<group>"; };
+		8650F3ED109311B800ACABF0 /* XMLRPCEventBasedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEventBasedParser.m; sourceTree = "<group>"; };
+		8650F3EE109311B800ACABF0 /* XMLRPCEventBasedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEventBasedParser.h; sourceTree = "<group>"; };
+		8650F3EF109311B800ACABF0 /* XMLRPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEncoder.m; sourceTree = "<group>"; };
+		8650F3F0109311B800ACABF0 /* XMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		8650F3F1109311B800ACABF0 /* XMLRPCConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnectionManager.m; sourceTree = "<group>"; };
+		8650F3F2109311B800ACABF0 /* XMLRPCConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnectionManager.h; sourceTree = "<group>"; };
+		8650F3F3109311B800ACABF0 /* XMLRPCConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnectionDelegate.h; sourceTree = "<group>"; };
+		8650F3F4109311B800ACABF0 /* XMLRPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnection.m; sourceTree = "<group>"; };
+		8650F3F5109311B800ACABF0 /* XMLRPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnection.h; sourceTree = "<group>"; };
+		8650F3F6109311B800ACABF0 /* XMLRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPC.h; sourceTree = "<group>"; };
+		8650F3F7109311B800ACABF0 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		8650F3F8109311B800ACABF0 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		8650F3F9109311B800ACABF0 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		8650F3FA109311B800ACABF0 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8650F442109313A600ACABF0 /* Torrent.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Torrent.icns; path = Resources/Torrent.icns; sourceTree = "<group>"; };
+		8650F4551093142000ACABF0 /* rt_control-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rt_control-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* rt-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "rt-control.app"; path = "/Users/gavin/Coding/rt-control/build/Debug/rt-control.app"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8650F3D01093115300ACABF0 /* XMLRPC */,
+				8610517110930EDE002078AA /* TorrentTableView.m */,
+				8610517210930EDE002078AA /* TorrentTableView.h */,
+				8610517310930EDE002078AA /* TorrentListController.m */,
+				8610517410930EDE002078AA /* Config.m */,
+				8610517510930EDE002078AA /* Config.h */,
+				8610517610930EDE002078AA /* TorrentListController.h */,
+				8610517710930EDE002078AA /* ImageTextCell.m */,
+				8610517810930EDE002078AA /* ImageTextCell.h */,
+				8610517910930EDE002078AA /* Torrent.m */,
+				8610517A10930EDE002078AA /* Torrent.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* rt-control */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "rt-control";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8650F3C0109310BA00ACABF0 /* rt_controlAppDelegate.m */,
+				8650F3C1109310BA00ACABF0 /* rt_controlAppDelegate.h */,
+				256AC3F00F4B6AF500CF3369 /* rt_control_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8650F4551093142000ACABF0 /* rt_control-Info.plist */,
+				8650F442109313A600ACABF0 /* Torrent.icns */,
+				8650F42A1093130000ACABF0 /* MainMenu.xib */,
+				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8650F3D01093115300ACABF0 /* XMLRPC */ = {
+			isa = PBXGroup;
+			children = (
+				8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */,
+				8650F3E6109311B800ACABF0 /* XMLRPCTreeBasedParser.h */,
+				8650F3E7109311B800ACABF0 /* XMLRPCResponse.m */,
+				8650F3E8109311B800ACABF0 /* XMLRPCResponse.h */,
+				8650F3E9109311B800ACABF0 /* XMLRPCRequest.m */,
+				8650F3EA109311B800ACABF0 /* XMLRPCRequest.h */,
+				8650F3EB109311B800ACABF0 /* XMLRPCEventBasedParserDelegate.m */,
+				8650F3EC109311B800ACABF0 /* XMLRPCEventBasedParserDelegate.h */,
+				8650F3ED109311B800ACABF0 /* XMLRPCEventBasedParser.m */,
+				8650F3EE109311B800ACABF0 /* XMLRPCEventBasedParser.h */,
+				8650F3EF109311B800ACABF0 /* XMLRPCEncoder.m */,
+				8650F3F0109311B800ACABF0 /* XMLRPCEncoder.h */,
+				8650F3F1109311B800ACABF0 /* XMLRPCConnectionManager.m */,
+				8650F3F2109311B800ACABF0 /* XMLRPCConnectionManager.h */,
+				8650F3F3109311B800ACABF0 /* XMLRPCConnectionDelegate.h */,
+				8650F3F4109311B800ACABF0 /* XMLRPCConnection.m */,
+				8650F3F5109311B800ACABF0 /* XMLRPCConnection.h */,
+				8650F3F6109311B800ACABF0 /* XMLRPC.h */,
+				8650F3F7109311B800ACABF0 /* NSStringAdditions.m */,
+				8650F3F8109311B800ACABF0 /* NSStringAdditions.h */,
+				8650F3F9109311B800ACABF0 /* NSDataAdditions.m */,
+				8650F3FA109311B800ACABF0 /* NSDataAdditions.h */,
+			);
+			path = XMLRPC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* rt-control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "rt-control" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rt-control";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "rt-control";
+			productReference = 8D1107320486CEB800E47090 /* rt-control.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rt-control" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* rt-control */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* rt-control */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */,
+				8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */,
+				8650F443109313A600ACABF0 /* Torrent.icns in Resources */,
+				8650F4561093142000ACABF0 /* rt_control-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				8610519110930EDE002078AA /* TorrentTableView.m in Sources */,
+				8610519210930EDE002078AA /* TorrentListController.m in Sources */,
+				8610519310930EDE002078AA /* Config.m in Sources */,
+				8610519410930EDE002078AA /* ImageTextCell.m in Sources */,
+				8610519510930EDE002078AA /* Torrent.m in Sources */,
+				8650F3C2109310BA00ACABF0 /* rt_controlAppDelegate.m in Sources */,
+				8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */,
+				8650F3FD109311B800ACABF0 /* XMLRPCResponse.m in Sources */,
+				8650F3FE109311B800ACABF0 /* XMLRPCRequest.m in Sources */,
+				8650F3FF109311B800ACABF0 /* XMLRPCEventBasedParserDelegate.m in Sources */,
+				8650F400109311B800ACABF0 /* XMLRPCEventBasedParser.m in Sources */,
+				8650F401109311B800ACABF0 /* XMLRPCEncoder.m in Sources */,
+				8650F402109311B800ACABF0 /* XMLRPCConnectionManager.m in Sources */,
+				8650F403109311B800ACABF0 /* XMLRPCConnection.m in Sources */,
+				8650F404109311B800ACABF0 /* NSStringAdditions.m in Sources */,
+				8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8650F42A1093130000ACABF0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8650F42B1093130000ACABF0 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		8650F42C1093130000ACABF0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8650F42D1093130000ACABF0 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = rt_control_Prefix.pch;
+				INFOPLIST_FILE = "rt_control-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "rt-control";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = rt_control_Prefix.pch;
+				INFOPLIST_FILE = "rt_control-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "rt-control";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "rt-control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rt-control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,14 +1,14 @@
 //
-//  rt_trayAppDelegate.h
-//  rt-tray
+//  rt_controlAppDelegate.h
+//  rt-control
 //
 //  Created by Gavin Gilmour on 18/10/2009.
-//  Copyright 2009 SPSA. All rights reserved.
+//  Copyright 2009. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 
-@interface rt_trayAppDelegate : NSObject <NSApplicationDelegate> {
+@interface rt_controlAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
 }
 
