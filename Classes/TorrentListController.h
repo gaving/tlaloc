@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-// @interface TorrentListController : NSWindowController {
 @interface TorrentListController : NSObject {
+    IBOutlet NSToolbarItem *addItem;
     IBOutlet NSToolbarItem *refreshItem;
+    IBOutlet NSToolbarItem *infoItem;
+    IBOutlet NSToolbarItem *removeItem;
+    IBOutlet NSToolbarItem *preferencesItem;
+
     IBOutlet NSTableView *tableView;
     IBOutlet NSSearchField *searchField;
     IBOutlet NSArrayController *arrayTorrents;
@@ -20,7 +24,12 @@
 
 - (BOOL)grabTorrents;
 - (void)buildTorrents;
-- (IBAction)fetchTorrents:(id)sender;
-- (IBAction)updateFilterAction:(id)sender;
+
+- (IBAction)addTorrent:(id)sender;
+- (IBAction)refreshTorrents:(id)sender;
+- (IBAction)removeTorrent:(id)sender;
+- (IBAction)filterTorrent:(id)sender;
+- (IBAction)infoTorrent:(id)sender;
+- (IBAction)preferences:(id)sender;
 
 @end

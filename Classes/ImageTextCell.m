@@ -83,34 +83,32 @@
    [secondaryText drawAtPoint:NSMakePoint(cellFrame.origin.x+cellFrame.size.height+10, cellFrame.origin.y+cellFrame.size.height/2)
                withAttributes:secondaryTextAttributes];
 
-/*
- *    if (!progressIndicator) {
- *
- *        [> Progress indicator at the side <]
- *        progressIndicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(0, 0, 16, 16)];
- *        [progressIndicator setStyle:NSProgressIndicatorSpinningStyle];
- *        [progressIndicator setIndeterminate:NO];
- *        [progressIndicator setMaxValue:100.0];
- *        [progressIndicator setDisplayedWhenStopped:YES];
- *        [progressIndicator setUsesThreadedAnimation:YES];
- *        [progressIndicator startAnimation:self];
- *        [progressIndicator autorelease];
- *    }
- *    [progressIndicator setDoubleValue:90];
- *
- *    NSRect progressIndicatorFrame;
- *    NSDivideRect(cellFrame, &progressIndicatorFrame, &cellFrame, PROGRESS_INDICATOR_DIMENSION + PROGRESS_INDICATOR_LEFT_MARGIN, NSMaxXEdge);
- *    progressIndicatorFrame.size = NSMakeSize(PROGRESS_INDICATOR_DIMENSION, PROGRESS_INDICATOR_DIMENSION);
- *    progressIndicatorFrame.origin.x += PROGRESS_INDICATOR_LEFT_MARGIN;
- *
- *    if ([progressIndicator superview] != controlView) {
- *        [controlView addSubview:progressIndicator];
- *    }
- *
- *    if (!NSEqualRects([progressIndicator frame], progressIndicatorFrame)) {
- *        [progressIndicator setFrame:progressIndicatorFrame];
- *    }
- */
+   // if (!progressIndicator) {
+
+       // [> Progress indicator at the side <]
+       // progressIndicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(0, 0, 16, 16)];
+       // [progressIndicator setStyle:NSProgressIndicatorBarStyle];
+       // [progressIndicator setIndeterminate:NO];
+       // [progressIndicator setMaxValue:100.0];
+       // [progressIndicator setDisplayedWhenStopped:YES];
+       // [progressIndicator setUsesThreadedAnimation:YES];
+       // [progressIndicator startAnimation:self];
+       // [progressIndicator autorelease];
+   // }
+   // [progressIndicator setDoubleValue:90];
+
+   // NSRect progressIndicatorFrame;
+   // NSDivideRect(cellFrame, &progressIndicatorFrame, &cellFrame, PROGRESS_INDICATOR_DIMENSION + PROGRESS_INDICATOR_LEFT_MARGIN, NSMaxXEdge);
+   // progressIndicatorFrame.size = NSMakeSize(200, PROGRESS_INDICATOR_DIMENSION);
+   // progressIndicatorFrame.origin.x -= 100;
+
+   // if ([progressIndicator superview] != controlView) {
+       // [controlView addSubview:progressIndicator];
+   // }
+
+   // if (!NSEqualRects([progressIndicator frame], progressIndicatorFrame)) {
+       // [progressIndicator setFrame:progressIndicatorFrame];
+   // }
 
    [[NSGraphicsContext currentContext] saveGraphicsState];
    float yOffset = cellFrame.origin.y;

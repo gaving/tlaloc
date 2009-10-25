@@ -13,7 +13,7 @@
     NSMutableArray *torrents;
 }
 
-@property (copy) NSMutableArray *torrents;
+@property (retain) NSMutableArray *torrents;
 
 + (Config *)instance;
 

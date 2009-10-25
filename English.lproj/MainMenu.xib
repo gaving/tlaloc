@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="545"/>
 			<integer value="29"/>
+			<integer value="371"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1340,6 +1340,7 @@
 							<string>55F1EEE1-BCD4-4A5C-BE5C-F26D31961F98</string>
 							<string>5DA02999-14FA-482A-BDD8-0BF452E6C509</string>
 							<string>6F524F17-C3D9-4DAA-9457-F0F1641D7A67</string>
+							<string>7B1A6477-B258-4170-8019-786005237712</string>
 							<string>C627514D-302A-45BC-B266-3B566AFCA164</string>
 							<string>E64EF252-D084-402E-BFFA-C14254EBE25A</string>
 							<string>EC763F3C-D41B-4095-B3B0-B22CE472D0A1</string>
@@ -1380,9 +1381,11 @@
 								<string key="NSToolbarItemPaletteLabel">Search</string>
 								<nil key="NSToolbarItemToolTip"/>
 								<object class="NSSearchField" key="NSToolbarItemView" id="478358116">
-									<nil key="NSNextResponder"/>
+									<reference key="NSNextResponder"/>
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{0, 14}, {200, 22}}</string>
+									<reference key="NSSuperview"/>
+									<reference key="NSWindow"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSSearchFieldCell" key="NSCell" id="596268074">
 										<int key="NSCellFlags">343014976</int>
@@ -1481,6 +1484,28 @@
 								<object class="NSCustomResource" key="NSToolbarItemImage">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">NSRefreshTemplate</string>
+								</object>
+								<nil key="NSToolbarItemTarget"/>
+								<nil key="NSToolbarItemAction"/>
+								<string key="NSToolbarItemMinSize">{0, 0}</string>
+								<string key="NSToolbarItemMaxSize">{0, 0}</string>
+								<bool key="NSToolbarItemEnabled">YES</bool>
+								<bool key="NSToolbarItemAutovalidates">YES</bool>
+								<int key="NSToolbarItemTag">-1</int>
+								<bool key="NSToolbarIsUserRemovable">YES</bool>
+								<int key="NSToolbarItemVisibilityPriority">0</int>
+							</object>
+							<object class="NSToolbarItem" id="87340923">
+								<object class="NSMutableString" key="NSToolbarItemIdentifier">
+									<characters key="NS.bytes">7B1A6477-B258-4170-8019-786005237712</characters>
+								</object>
+								<string key="NSToolbarItemLabel">Remove</string>
+								<string key="NSToolbarItemPaletteLabel">Remove</string>
+								<string key="NSToolbarItemToolTip"/>
+								<nil key="NSToolbarItemView"/>
+								<object class="NSCustomResource" key="NSToolbarItemImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">NSRemoveTemplate</string>
 								</object>
 								<nil key="NSToolbarItemTarget"/>
 								<nil key="NSToolbarItemAction"/>
@@ -1664,6 +1689,7 @@
 					<object class="NSArray" key="NSToolbarIBAllowedItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="579745584"/>
+						<reference ref="87340923"/>
 						<reference ref="816734455"/>
 						<reference ref="314789245"/>
 						<reference ref="382276821"/>
@@ -1677,6 +1703,7 @@
 					<object class="NSMutableArray" key="NSToolbarIBDefaultItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="579745584"/>
+						<reference ref="87340923"/>
 						<reference ref="197246762"/>
 						<reference ref="816734455"/>
 						<reference ref="382276821"/>
@@ -2739,28 +2766,12 @@
 					<int key="connectionID">532</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">fetchTorrents:</string>
-						<reference key="source" ref="773831130"/>
-						<reference key="destination" ref="816734455"/>
-					</object>
-					<int key="connectionID">581</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">refreshItem</string>
 						<reference key="source" ref="773831130"/>
 						<reference key="destination" ref="816734455"/>
 					</object>
 					<int key="connectionID">582</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">updateFilterAction:</string>
-						<reference key="source" ref="773831130"/>
-						<reference key="destination" ref="632627872"/>
-					</object>
-					<int key="connectionID">605</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -2821,6 +2832,86 @@
 						<reference key="destination" ref="1047461437"/>
 					</object>
 					<int key="connectionID">645</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">removeItem</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="87340923"/>
+					</object>
+					<int key="connectionID">647</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">removeTorrent:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="87340923"/>
+					</object>
+					<int key="connectionID">648</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">addItem</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="579745584"/>
+					</object>
+					<int key="connectionID">649</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">addTorrent:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="579745584"/>
+					</object>
+					<int key="connectionID">650</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">refreshTorrents:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="816734455"/>
+					</object>
+					<int key="connectionID">651</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">filterTorrent:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="632627872"/>
+					</object>
+					<int key="connectionID">652</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">infoTorrent:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="314789245"/>
+					</object>
+					<int key="connectionID">653</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">preferences:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="286472543"/>
+					</object>
+					<int key="connectionID">654</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">infoItem</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="314789245"/>
+					</object>
+					<int key="connectionID">655</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">preferencesItem</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="286472543"/>
+					</object>
+					<int key="connectionID">656</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3932,6 +4023,7 @@
 							<reference ref="286472543"/>
 							<reference ref="314789245"/>
 							<reference ref="382276821"/>
+							<reference ref="87340923"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -4061,6 +4153,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">627</int>
 						<reference key="object" ref="382276821"/>
+						<reference key="parent" ref="912729080"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">646</int>
+						<reference key="object" ref="87340923"/>
 						<reference key="parent" ref="912729080"/>
 					</object>
 				</object>
@@ -4319,6 +4416,7 @@
 					<string>603.IBPluginDependency</string>
 					<string>626.IBPluginDependency</string>
 					<string>627.IBPluginDependency</string>
+					<string>646.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>72.ImportedFromIB2</string>
 					<string>73.IBPluginDependency</string>
@@ -4477,9 +4575,9 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{84, 106}, {579, 492}}</string>
+					<string>{{370, 83}, {579, 492}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{84, 106}, {579, 492}}</string>
+					<string>{{370, 83}, {579, 492}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
@@ -4580,7 +4678,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{641, 770}, {617, 0}}</string>
+					<string>{{351, 575}, {617, 0}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{286, 129}, {275, 183}}</string>
@@ -4593,6 +4691,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4648,7 +4747,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">645</int>
+			<int key="maxID">656</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4667,11 +4766,19 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>fetchTorrents:</string>
-							<string>updateFilterAction:</string>
+							<string>addTorrent:</string>
+							<string>filterTorrent:</string>
+							<string>infoTorrent:</string>
+							<string>preferences:</string>
+							<string>refreshTorrents:</string>
+							<string>removeTorrent:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -4680,14 +4787,22 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>addItem</string>
 							<string>arrayTorrents</string>
+							<string>infoItem</string>
+							<string>preferencesItem</string>
 							<string>refreshItem</string>
+							<string>removeItem</string>
 							<string>searchField</string>
 							<string>tableView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSToolbarItem</string>
 							<string>NSArrayController</string>
+							<string>NSToolbarItem</string>
+							<string>NSToolbarItem</string>
+							<string>NSToolbarItem</string>
 							<string>NSToolbarItem</string>
 							<string>NSSearchField</string>
 							<string>NSTableView</string>

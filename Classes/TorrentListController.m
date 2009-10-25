@@ -55,7 +55,7 @@ NSPredicate *predicateTemplate;
     return ([Torrent loadAll] == YES);
 }
 
-- (IBAction)fetchTorrents:(id)sender {
+- (IBAction)refreshTorrents:(id)sender {
     if ([self grabTorrents]) {
         [torrents release];
         torrents  = [[NSMutableArray alloc] init];
@@ -64,24 +64,61 @@ NSPredicate *predicateTemplate;
     }
 }
 
-- (IBAction)updateFilterAction:(id)sender {
+- (IBAction)addTorrent:(id)sender {
+    NSLog(@"Open up the add dialog!");
+    int i;
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+    [openDlg setCanChooseFiles:YES];
+    [openDlg setCanChooseDirectories:YES];
+    if ( [openDlg runModalForDirectory:nil file:nil] == NSOKButton ) {
+        NSArray* files = [openDlg filenames];
+        for( i = 0; i < [files count]; i++ ) {
+            NSString* fileName = [files objectAtIndex:i];
+            NSLog(@"Do something with: %@", fileName);
+        }
+    }
+}
+
+- (IBAction)removeTorrent:(id)sender {
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    [alert addButtonWithTitle:@"Yes"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Are you sure you wish to delete the torrent?"];
+    [alert setInformativeText:@"This action cannot be undone."];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert beginSheetModalForWindow:[tableView window] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+}
+
+- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
+    if (returnCode == NSAlertFirstButtonReturn) {
+        NSLog(@"Find the currently selected torrent and remove it");
+        NSLog(@"Call the torrent action controller");
+        int rowIndex = [tableView selectedRow];
+        NSLog(@"This is the hash: %@", [[torrents objectAtIndex:rowIndex] hash]);
+    }
+}
+
+- (IBAction)filterTorrent:(id)sender {
     NSString *searchString = [searchField stringValue];
     NSPredicate *predicate;
 
-    //if the search field is empty do not search!
     if ([searchString isEqualToString:@""]) {
         predicate = nil;
     } else {
-        //create a new dictionary with the search string
         NSMutableDictionary *bindVariables = [[NSMutableDictionary alloc] init];
         [bindVariables setObject:searchString forKey:@"searchString"];
-
-        //and create a predicate from the template by replacing the variable with its actual value
         predicate = [predicateTemplate predicateWithSubstitutionVariables:bindVariables];
     }
 
-    //apply the predicate to the array controller
     [arrayTorrents setFilterPredicate:predicate];
+}
+
+- (IBAction)infoTorrent:(id)sender {
+    NSLog(@"Show the torrent info");
+}
+
+- (IBAction)preferences:(id)sender {
+    NSLog(@"Show the preferences dialog");
 }
 
 @end

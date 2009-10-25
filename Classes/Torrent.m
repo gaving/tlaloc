@@ -14,7 +14,7 @@
 
 @implementation Torrent
 
-NSString * const XMLRPCUserAgent = @"rt-control";
+NSString* const XMLRPCUserAgent = @"rt-control";
 
 @synthesize name;
 @synthesize uri;
