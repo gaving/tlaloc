@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>Torrent</string>
+	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>net.brokentrain.rtcontrol</string>
 	<key>CFBundleInfoDictionaryVersion</key>

@@ -17,18 +17,13 @@ NSPredicate *predicateTemplate;
 
 - (id) init {
     if (self = [super init]) {
-        // build up some sample data
-
         if ([self grabTorrents]) {
-
-            //initialize the contacts array
             torrents  = [[NSMutableArray alloc] init];
-
             [self buildTorrents];
         } else {
             NSAlert* alert = [NSAlert new];
             [alert setInformativeText: @"Couldn't connect fetch torrents"];
-            [alert setMessageText:     @"Please check your connection settings"];
+            [alert setMessageText: @"Please check your connection settings"];
             [alert runModal];
         }
     }

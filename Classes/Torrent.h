@@ -14,6 +14,7 @@
     NSString *hash;
     NSString *uri;
     NSString *filename;
+    NSString *state;
     NSNumber *bytesDone;
     NSNumber *bytesTotal;
     NSString *bytesDoneReadable;
@@ -21,10 +22,13 @@
     NSString *sizeFiles;
 }
 
+extern NSString* const XMLRPCUserAgent;
+
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *uri;
 @property (nonatomic, retain) NSString *hash;
 @property (nonatomic, retain) NSString *filename;
+@property (nonatomic, retain) NSString *state;
 @property (nonatomic, retain) NSNumber *bytesDone;
 @property (nonatomic, retain) NSNumber *bytesTotal;
 @property (nonatomic, retain) NSString *bytesDoneReadable;
@@ -33,7 +37,6 @@
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize;
 + (NSURL *) rtorrentRPCURL;
-+ (id) fetchInfo:(NSString *)methodName param:(NSString *)param;
 + (id) executeXMLRPCRequest:(XMLRPCRequest *)req;
 + (BOOL) loadAll;
 
