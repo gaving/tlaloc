@@ -10,14 +10,16 @@
 
 @interface ImageTextCell : NSTextFieldCell {
     NSObject* delegate;
-    NSString* iconKeyPath;
+    NSString* typeIconKeyPath;
+    NSString* ratioIconKeyPath;
     NSString* primaryTextKeyPath;
     NSString* secondaryTextKeyPath;
     NSProgressIndicator *progressIndicator;
 }
 
 - (void) setDataDelegate: (NSObject*) aDelegate;
-- (void) setIconKeyPath: (NSString*) path;
+- (void) setTypeIconKeyPath: (NSString*) path;
+- (void) setRatioIconKeyPath: (NSString*) path;
 - (void) setPrimaryTextKeyPath: (NSString*) path;
 - (void) setSecondaryTextKeyPath: (NSString*) path;
 
@@ -25,7 +27,8 @@
 
 @interface NSObject(ImageTextCellDelegate)
 
-- (NSImage*) iconForCell: (ImageTextCell*) cell data: (NSObject*) data;
+- (NSImage*) typeIconForCell: (ImageTextCell*) cell data: (NSObject*) data;
+- (NSImage*) ratioIconForCell: (ImageTextCell*) cell data: (NSObject*) data;
 - (NSString*) primaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data;
 - (NSString*) secondaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data;
 

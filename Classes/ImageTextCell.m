@@ -14,7 +14,8 @@
 
 - (void)dealloc {
     [self setDataDelegate: nil];
-    [self setIconKeyPath: nil];
+    [self setTypeIconKeyPath: nil];
+    [self setRatioIconKeyPath: nil];
     [self setPrimaryTextKeyPath: nil];
     [self setSecondaryTextKeyPath: nil];
     [super dealloc];
@@ -27,10 +28,16 @@
     return cell;
 }
 
-- (void) setIconKeyPath: (NSString*) path {
-    [iconKeyPath autorelease];
-    iconKeyPath = [path retain];
+- (void) setTypeIconKeyPath: (NSString*) path {
+    [typeIconKeyPath autorelease];
+    typeIconKeyPath = [path retain];
 }
+
+- (void) setRatioIconKeyPath: (NSString*) path {
+    [ratioIconKeyPath autorelease];
+    ratioIconKeyPath = [path retain];
+}
+
 - (void) setPrimaryTextKeyPath: (NSString*) path {
     [primaryTextKeyPath autorelease];
     primaryTextKeyPath = [path retain];
@@ -60,9 +67,6 @@
    if ([[self dataDelegate] respondsToSelector: @selector(dataElementForCell:)]) {
         data = [[self dataDelegate] dataElementForCell:self];
    }
-
-   //TODO: Selection with gradient and selection color in white with shadow
-        // check out http://www.cocoadev.com/index.pl?NSTableView
 
    BOOL elementDisabled    = NO;
    if ([[self dataDelegate] respondsToSelector: @selector(disabledForCell:data:)]) {
@@ -110,6 +114,8 @@
        // [progressIndicator setFrame:progressIndicatorFrame];
    // }
 
+   /* File type icon */
+
    [[NSGraphicsContext currentContext] saveGraphicsState];
    float yOffset = cellFrame.origin.y;
    if ([controlView isFlipped]) {
@@ -119,7 +125,7 @@
        [xform concat];
        yOffset = 0-cellFrame.origin.y;
    }
-   NSImage* icon = [[self dataDelegate] iconForCell:self data: data];
+   NSImage* icon = [[self dataDelegate] typeIconForCell:self data: data];
 
    NSImageInterpolation interpolation = [[NSGraphicsContext currentContext] imageInterpolation];
    [[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
@@ -130,25 +136,58 @@
            fraction:1.0];
 
    [[NSGraphicsContext currentContext] setImageInterpolation: interpolation];
+   [[NSGraphicsContext currentContext] restoreGraphicsState];
 
+   /* Ratio icon */
+
+   [[NSGraphicsContext currentContext] saveGraphicsState];
+   yOffset = cellFrame.origin.y;
+   if ([controlView isFlipped]) {
+       NSAffineTransform* xform = [NSAffineTransform transform];
+       [xform translateXBy:0.0 yBy: cellFrame.size.height];
+       [xform scaleXBy:1.0 yBy:-1.0];
+       [xform concat];
+       yOffset = 0-cellFrame.origin.y;
+   }
+
+   NSImage* ratio = [[self dataDelegate] ratioIconForCell:self data: data];
+
+   NSImageInterpolation ratioInterpolation = [[NSGraphicsContext currentContext] imageInterpolation];
+   [[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
+
+   [ratio drawInRect:NSMakeRect(cellFrame.size.width-40,yOffset+3,cellFrame.size.height-6, cellFrame.size.height-6)
+           fromRect:NSMakeRect(0,0,[ratio size].width, [ratio size].height)
+          operation:NSCompositeSourceOver
+           fraction:1.0];
+
+   [[NSGraphicsContext currentContext] setImageInterpolation: ratioInterpolation];
    [[NSGraphicsContext currentContext] restoreGraphicsState];
 }
 
 #pragma mark -
 #pragma mark Delegate methods
 
-- (NSImage*) iconForCell: (ImageTextCell*) cell data: (NSObject*) data {
-    if (iconKeyPath) {
-        return [data valueForKeyPath: iconKeyPath];
+- (NSImage*) typeIconForCell: (ImageTextCell*) cell data: (NSObject*) data {
+    if (typeIconKeyPath) {
+        return [data valueForKeyPath: typeIconKeyPath];
     }
     return nil;
 }
+
+- (NSImage*) ratioIconForCell: (ImageTextCell*) cell data: (NSObject*) data {
+    if (ratioIconKeyPath) {
+        return [data valueForKeyPath: ratioIconKeyPath];
+    }
+    return nil;
+}
+
 - (NSString*) primaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data {
     if (primaryTextKeyPath) {
         return [data valueForKeyPath: primaryTextKeyPath];
     }
     return nil;
 }
+
 - (NSString*) secondaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data {
     if (primaryTextKeyPath) {
         return [data valueForKeyPath: secondaryTextKeyPath];

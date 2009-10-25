@@ -4,19 +4,16 @@ rt-controller TODO
 A bunch of general TODOs:-
 
 - [_] Set a decent application icon
-- [!] Think of a better name
-- [_] Calculate the ratio and display it somewhere
+- [x] Think of a better name
 - [_] Reorganise file system structure
 - [x] Custom NSTableView cells and friends
 - [_] Info pane
 - [_] Status bar showing meaningful stats
 - [_] Preferences panel (make things configurable)
-- [_] Handle errors (basic error dialog in place)
+- [x] Handle connection error (basic error dialog in place)
 - [_] Make the ratio column display an image at the side
 - [_] Link the destination with a volume/folder to allow easy opening
 - [_] Add functionality to add an address/file to rtorrent
 - [_] Drag and drop to start a new download
-- [_] Multicalls to make fetching less heavy?
-- [_] Get the filter box working (with the new custom cells)
-    - http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/CocoaBindings/Tasks/filtering.html
-    - http://stackoverflow.com/questions/815480/how-do-you-get-search-capability-similar-to-spotlight-or-itunes
+- [x] Multicalls to make fetching less heavy?
+- [x] Get the filter box working (with the new custom cells)

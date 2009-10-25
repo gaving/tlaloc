@@ -25,6 +25,13 @@
 		8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F9109311B800ACABF0 /* NSDataAdditions.m */; };
 		8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* MainMenu.xib */; };
 		8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42C1093130000ACABF0 /* InfoPlist.strings */; };
+		86C3DB641094F2E700FB592F /* wink.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5D1094F2E700FB592F /* wink.png */; };
+		86C3DB651094F2E700FB592F /* surprise.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5E1094F2E700FB592F /* surprise.png */; };
+		86C3DB661094F2E700FB592F /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5F1094F2E700FB592F /* smile.png */; };
+		86C3DB671094F2E700FB592F /* smile-big.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB601094F2E700FB592F /* smile-big.png */; };
+		86C3DB681094F2E700FB592F /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB611094F2E700FB592F /* sad.png */; };
+		86C3DB691094F2E700FB592F /* plain.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB621094F2E700FB592F /* plain.png */; };
+		86C3DB6A1094F2E700FB592F /* crying.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB631094F2E700FB592F /* crying.png */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +81,13 @@
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8650F4551093142000ACABF0 /* rt_control-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rt_control-Info.plist"; sourceTree = "<group>"; };
 		86802D0410934360003CB030 /* rt-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rt-control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C3DB5D1094F2E700FB592F /* wink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wink.png; path = Resources/emotes/wink.png; sourceTree = "<group>"; };
+		86C3DB5E1094F2E700FB592F /* surprise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = surprise.png; path = Resources/emotes/surprise.png; sourceTree = "<group>"; };
+		86C3DB5F1094F2E700FB592F /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smile.png; path = Resources/emotes/smile.png; sourceTree = "<group>"; };
+		86C3DB601094F2E700FB592F /* smile-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "smile-big.png"; path = "Resources/emotes/smile-big.png"; sourceTree = "<group>"; };
+		86C3DB611094F2E700FB592F /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sad.png; path = Resources/emotes/sad.png; sourceTree = "<group>"; };
+		86C3DB621094F2E700FB592F /* plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plain.png; path = Resources/emotes/plain.png; sourceTree = "<group>"; };
+		86C3DB631094F2E700FB592F /* crying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crying.png; path = Resources/emotes/crying.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +172,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				86C3DB5D1094F2E700FB592F /* wink.png */,
+				86C3DB5E1094F2E700FB592F /* surprise.png */,
+				86C3DB5F1094F2E700FB592F /* smile.png */,
+				86C3DB601094F2E700FB592F /* smile-big.png */,
+				86C3DB611094F2E700FB592F /* sad.png */,
+				86C3DB621094F2E700FB592F /* plain.png */,
+				86C3DB631094F2E700FB592F /* crying.png */,
 				8650F4551093142000ACABF0 /* rt_control-Info.plist */,
 				8650F42A1093130000ACABF0 /* MainMenu.xib */,
 				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
@@ -248,6 +269,13 @@
 			files = (
 				8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */,
 				8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */,
+				86C3DB641094F2E700FB592F /* wink.png in Resources */,
+				86C3DB651094F2E700FB592F /* surprise.png in Resources */,
+				86C3DB661094F2E700FB592F /* smile.png in Resources */,
+				86C3DB671094F2E700FB592F /* smile-big.png in Resources */,
+				86C3DB681094F2E700FB592F /* sad.png in Resources */,
+				86C3DB691094F2E700FB592F /* plain.png in Resources */,
+				86C3DB6A1094F2E700FB592F /* crying.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

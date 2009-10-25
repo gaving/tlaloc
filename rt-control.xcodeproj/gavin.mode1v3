@@ -216,51 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>86C3DA661094D4F100FB592F</string>
+						<string>86C3DB851094F30B00FB592F</string>
 						<key>history</key>
 						<array>
 							<string>86C3D9D51094CB4900FB592F</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1051, 902}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>81 230 1051 943 0 0 1920 1178 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>864EA0F4109488E0002A4812</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Torrent.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>864EA0F5109488E0002A4812</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Torrent.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>86C3DA671094D4F100FB592F</string>
-						<key>history</key>
-						<array>
-							<string>864EA1DB1094AC8B002A4812</string>
-							<string>864EA20D1094B93D002A4812</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -311,6 +270,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -355,7 +316,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
 									<integer>18</integer>
 									<integer>0</integer>
 								</array>
@@ -408,7 +368,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>86C3DA651094D4F100FB592F</string>
+										<string>86C3DB841094F30B00FB592F</string>
 										<key>history</key>
 										<array>
 											<string>861845F0108B9C1300D72F2D</string>
@@ -416,12 +376,13 @@
 											<string>8650F3D11093115600ACABF0</string>
 											<string>8650F46710932A6C00ACABF0</string>
 											<string>8650F46A10932A6C00ACABF0</string>
-											<string>8650F46B10932A6C00ACABF0</string>
 											<string>864EA0C0109485F3002A4812</string>
 											<string>864EA15810948FC3002A4812</string>
 											<string>864EA15910948FC3002A4812</string>
-											<string>86C3DA061094CE5800FB592F</string>
-											<string>86C3DA071094CE5800FB592F</string>
+											<string>86C3DA881094E32800FB592F</string>
+											<string>86C3DA891094E32800FB592F</string>
+											<string>86C3DB191094ECF500FB592F</string>
+											<string>86C3DB6F1094F2FB00FB592F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -621,12 +582,12 @@
 	<array>
 		<string>86C3D9E01094CB5800FB592F</string>
 		<string>86C3D9E11094CB5800FB592F</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>864EA0F4109488E0002A4812</string>
-		<string>86C3D9DB1094CB5800FB592F</string>
-		<string>/Users/gavin/Coding/rt-control/rt-control.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>86228CF6108A918F00C8C6FC</string>
+		<string>864EA0F4109488E0002A4812</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>86C3D9DB1094CB5800FB592F</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/gavin/Coding/rt-control/rt-control.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>315 213 958 942 0 0 1920 1178 </string>
@@ -721,7 +682,7 @@
 			<key>WindowToolGUID</key>
 			<string>86228CF6108A918F00C8C6FC</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

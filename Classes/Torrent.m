@@ -144,8 +144,14 @@ NSString* const XMLRPCUserAgent = @"rt-control";
     return copy;
 }
 
-- (NSImage*) icon {
+- (NSImage*) typeIcon {
     NSImage *image = [[NSWorkspace sharedWorkspace] iconForFileType:[filename pathExtension]];
+    return image;
+}
+
+- (NSImage*) ratioIcon {
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"sad" ofType:@"png"]; 
+    NSImage *image = [[NSImage alloc] initWithContentsOfFile: textPath];
     return image;
 }
 
@@ -154,6 +160,9 @@ NSString* const XMLRPCUserAgent = @"rt-control";
     [hash release];
     [filename release];
     [uri release];
+    [bytesDone release];
+    [bytesTotal release];
+    [state release];
     [super dealloc];
 }
 

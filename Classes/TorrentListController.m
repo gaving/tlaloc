@@ -38,7 +38,8 @@ NSPredicate *predicateTemplate;
 
     [cell setPrimaryTextKeyPath: @"filename"];
     [cell setSecondaryTextKeyPath: @"bytesDoneReadable"];
-    [cell setIconKeyPath: @"icon"];
+    [cell setTypeIconKeyPath: @"typeIcon"];
+    [cell setRatioIconKeyPath: @"ratioIcon"];
 
     predicateTemplate = [[NSPredicate predicateWithFormat:@"(filename contains[cd] $searchString)"] retain];
 }
@@ -55,6 +56,9 @@ NSPredicate *predicateTemplate;
     return ([Torrent loadAll] == YES);
 }
 
+#pragma mark -
+#pragma mark Toolbar actions
+
 - (IBAction)refreshTorrents:(id)sender {
     if ([self grabTorrents]) {
         [torrents release];
@@ -66,13 +70,12 @@ NSPredicate *predicateTemplate;
 
 - (IBAction)addTorrent:(id)sender {
     NSLog(@"Open up the add dialog!");
-    int i;
     NSOpenPanel* openDlg = [NSOpenPanel openPanel];
     [openDlg setCanChooseFiles:YES];
     [openDlg setCanChooseDirectories:YES];
-    if ( [openDlg runModalForDirectory:nil file:nil] == NSOKButton ) {
+    if ([openDlg runModalForDirectory:nil file:nil] == NSOKButton ) {
         NSArray* files = [openDlg filenames];
-        for( i = 0; i < [files count]; i++ ) {
+        for(int i = 0; i < [files count]; i++ ) {
             NSString* fileName = [files objectAtIndex:i];
             NSLog(@"Do something with: %@", fileName);
         }
