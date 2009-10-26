@@ -1,6 +1,6 @@
 //
-//  rt_controlAppDelegate.h
-//  rt-control
+//  tlalocAppDelegate.h
+//  tlaloc
 //
 //  Created by Gavin Gilmour on 18/10/2009.
 //  Copyright 2009. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface rt_controlAppDelegate : NSObject <NSApplicationDelegate> {
+@interface tlalocAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
 }
 

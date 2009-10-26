@@ -1,6 +1,6 @@
 //
 //  Torrent.h
-//  rt-control
+//  tlaloc
 //
 //  Created by Gavin Gilmour on 18/07/2009.
 //  Copyright 2009. All rights reserved.

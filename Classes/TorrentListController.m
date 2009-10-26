@@ -1,6 +1,6 @@
 //
 //  TorrentListController.m
-//  rt-control
+//  tlaloc
 //
 //  Created by Gavin Gilmour on 18/10/2009.
 //  Copyright 2009. All rights reserved.

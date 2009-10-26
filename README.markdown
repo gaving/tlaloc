@@ -1,4 +1,4 @@
-# rt-control
+# tlaloc
 
 Native cocoa based mac application for interfacing with rtorrent.
 
@@ -12,5 +12,5 @@ key 'rtorrentRPCURL' and the value of your listening rtorrent xmlrpc uri.
 
 ## Screenshots
 
-![main interface!](http://github.com/gaving/rt-control/tree/master/site/1.png?raw=true)
+![main interface!](http://github.com/gaving/tlaloc/tree/master/site/1.png?raw=true)
 

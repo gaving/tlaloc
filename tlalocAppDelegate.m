@@ -1,14 +1,14 @@
 //
-//  rt_controlAppDelegate.m
-//  rt-control
+//  tlalocAppDelegate.m
+//  tlaloc
 //
 //  Created by Gavin Gilmour on 18/10/2009.
 //  Copyright 2009. All rights reserved.
 //
 
-#import "rt_controlAppDelegate.h"
+#import "tlalocAppDelegate.h"
 
-@implementation rt_controlAppDelegate
+@implementation tlalocAppDelegate
 
 @synthesize window;
 

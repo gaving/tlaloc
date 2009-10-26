@@ -12,7 +12,6 @@
 		8610519310930EDE002078AA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517410930EDE002078AA /* Config.m */; };
 		8610519410930EDE002078AA /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517710930EDE002078AA /* ImageTextCell.m */; };
 		8610519510930EDE002078AA /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517910930EDE002078AA /* Torrent.m */; };
-		8650F3C2109310BA00ACABF0 /* rt_controlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3C0109310BA00ACABF0 /* rt_controlAppDelegate.m */; };
 		8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */; };
 		8650F3FD109311B800ACABF0 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E7109311B800ACABF0 /* XMLRPCResponse.m */; };
 		8650F3FE109311B800ACABF0 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E9109311B800ACABF0 /* XMLRPCRequest.m */; };
@@ -33,6 +32,8 @@
 		86C3DB681094F2E700FB592F /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB611094F2E700FB592F /* sad.png */; };
 		86C3DB691094F2E700FB592F /* plain.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB621094F2E700FB592F /* plain.png */; };
 		86C3DB6A1094F2E700FB592F /* crying.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB631094F2E700FB592F /* crying.png */; };
+		86F43E0710964252003EDB14 /* tlalocAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F43E0310964252003EDB14 /* tlalocAppDelegate.m */; };
+		86F43E0810964252003EDB14 /* tlaloc-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F43E0610964252003EDB14 /* tlaloc-Info.plist */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +41,6 @@
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		256AC3F00F4B6AF500CF3369 /* rt_control_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rt_control_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -54,8 +54,6 @@
 		8610517810930EDE002078AA /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextCell.h; sourceTree = "<group>"; };
 		8610517910930EDE002078AA /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
 		8610517A10930EDE002078AA /* Torrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torrent.h; sourceTree = "<group>"; };
-		8650F3C0109310BA00ACABF0 /* rt_controlAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rt_controlAppDelegate.m; sourceTree = "<group>"; };
-		8650F3C1109310BA00ACABF0 /* rt_controlAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rt_controlAppDelegate.h; sourceTree = "<group>"; };
 		8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCTreeBasedParser.m; sourceTree = "<group>"; };
 		8650F3E6109311B800ACABF0 /* XMLRPCTreeBasedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCTreeBasedParser.h; sourceTree = "<group>"; };
 		8650F3E7109311B800ACABF0 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
@@ -80,8 +78,7 @@
 		8650F3FA109311B800ACABF0 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
 		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8650F4551093142000ACABF0 /* rt_control-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rt_control-Info.plist"; sourceTree = "<group>"; };
-		86802D0410934360003CB030 /* rt-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rt-control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86802D0410934360003CB030 /* tlaloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tlaloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C2920710962B0800ED24C0 /* TorrentActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentActionController.h; sourceTree = "<group>"; };
 		86C2920810962B0800ED24C0 /* TorrentActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentActionController.m; sourceTree = "<group>"; };
 		86C3DB5D1094F2E700FB592F /* wink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wink.png; path = Resources/emotes/wink.png; sourceTree = "<group>"; };
@@ -91,6 +88,10 @@
 		86C3DB611094F2E700FB592F /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sad.png; path = Resources/emotes/sad.png; sourceTree = "<group>"; };
 		86C3DB621094F2E700FB592F /* plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plain.png; path = Resources/emotes/plain.png; sourceTree = "<group>"; };
 		86C3DB631094F2E700FB592F /* crying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crying.png; path = Resources/emotes/crying.png; sourceTree = "<group>"; };
+		86F43E0310964252003EDB14 /* tlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tlalocAppDelegate.m; sourceTree = "<group>"; };
+		86F43E0410964252003EDB14 /* tlalocAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlalocAppDelegate.h; sourceTree = "<group>"; };
+		86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlaloc_Prefix.pch; sourceTree = "<group>"; };
+		86F43E0610964252003EDB14 /* tlaloc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tlaloc-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,12 +147,12 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				86802D0410934360003CB030 /* rt-control.app */,
+				86802D0410934360003CB030 /* tlaloc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* rt-control */ = {
+		29B97314FDCFA39411CA2CEA /* tlaloc */ = {
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -160,15 +161,12 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
-			name = "rt-control";
+			name = tlaloc;
 			sourceTree = "<group>";
 		};
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8650F3C0109310BA00ACABF0 /* rt_controlAppDelegate.m */,
-				8650F3C1109310BA00ACABF0 /* rt_controlAppDelegate.h */,
-				256AC3F00F4B6AF500CF3369 /* rt_control_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -177,6 +175,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				86F43E0310964252003EDB14 /* tlalocAppDelegate.m */,
+				86F43E0410964252003EDB14 /* tlalocAppDelegate.h */,
+				86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */,
+				86F43E0610964252003EDB14 /* tlaloc-Info.plist */,
 				86C3DB5D1094F2E700FB592F /* wink.png */,
 				86C3DB5E1094F2E700FB592F /* surprise.png */,
 				86C3DB5F1094F2E700FB592F /* smile.png */,
@@ -184,7 +186,6 @@
 				86C3DB611094F2E700FB592F /* sad.png */,
 				86C3DB621094F2E700FB592F /* plain.png */,
 				86C3DB631094F2E700FB592F /* crying.png */,
-				8650F4551093142000ACABF0 /* rt_control-Info.plist */,
 				8650F42A1093130000ACABF0 /* MainMenu.xib */,
 				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
 			);
@@ -232,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* rt-control */ = {
+		8D1107260486CEB800E47090 /* tlaloc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "rt-control" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tlaloc" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -244,10 +245,10 @@
 			);
 			dependencies = (
 			);
-			name = "rt-control";
+			name = tlaloc;
 			productInstallPath = "$(HOME)/Applications";
-			productName = "rt-control";
-			productReference = 86802D0410934360003CB030 /* rt-control.app */;
+			productName = tlaloc;
+			productReference = 86802D0410934360003CB030 /* tlaloc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -255,14 +256,14 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rt-control" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tlaloc" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
-			mainGroup = 29B97314FDCFA39411CA2CEA /* rt-control */;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* tlaloc */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* rt-control */,
+				8D1107260486CEB800E47090 /* tlaloc */,
 			);
 		};
 /* End PBXProject section */
@@ -281,6 +282,7 @@
 				86C3DB681094F2E700FB592F /* sad.png in Resources */,
 				86C3DB691094F2E700FB592F /* plain.png in Resources */,
 				86C3DB6A1094F2E700FB592F /* crying.png in Resources */,
+				86F43E0810964252003EDB14 /* tlaloc-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +299,6 @@
 				8610519310930EDE002078AA /* Config.m in Sources */,
 				8610519410930EDE002078AA /* ImageTextCell.m in Sources */,
 				8610519510930EDE002078AA /* Torrent.m in Sources */,
-				8650F3C2109310BA00ACABF0 /* rt_controlAppDelegate.m in Sources */,
 				8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */,
 				8650F3FD109311B800ACABF0 /* XMLRPCResponse.m in Sources */,
 				8650F3FE109311B800ACABF0 /* XMLRPCRequest.m in Sources */,
@@ -309,6 +310,7 @@
 				8650F404109311B800ACABF0 /* NSStringAdditions.m in Sources */,
 				8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */,
 				86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */,
+				86F43E0710964252003EDB14 /* tlalocAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,10 +346,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = rt_control_Prefix.pch;
-				INFOPLIST_FILE = "rt_control-Info.plist";
+				GCC_PREFIX_HEADER = tlaloc_Prefix.pch;
+				INFOPLIST_FILE = "tlaloc-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "rt-control";
+				PRODUCT_NAME = tlaloc;
 			};
 			name = Debug;
 		};
@@ -358,10 +360,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = rt_control_Prefix.pch;
-				INFOPLIST_FILE = "rt_control-Info.plist";
+				GCC_PREFIX_HEADER = tlaloc_Prefix.pch;
+				INFOPLIST_FILE = "tlaloc-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "rt-control";
+				PRODUCT_NAME = tlaloc;
 			};
 			name = Release;
 		};
@@ -394,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "rt-control" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tlaloc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -403,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rt-control" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tlaloc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

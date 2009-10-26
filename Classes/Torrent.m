@@ -1,6 +1,6 @@
 //
 //  Torrent.m
-//  rt-control
+//  tlaloc
 //
 //  Created by Gavin Gilmour on 18/07/2009.
 //  Copyright 2009. All rights reserved.
@@ -14,7 +14,7 @@
 
 @implementation Torrent
 
-NSString* const XMLRPCUserAgent = @"rt-control";
+NSString* const XMLRPCUserAgent = @"tlaloc";
 
 @synthesize name;
 @synthesize uri;
