@@ -7,6 +7,7 @@
 //
 
 #import "TorrentListController.h"
+#import "TorrentActionController.h"
 #import "Config.h"
 #import "Torrent.h"
 #import "ImageTextCell.h"
@@ -20,6 +21,7 @@ NSPredicate *predicateTemplate;
         if ([self grabTorrents]) {
             torrents  = [[NSMutableArray alloc] init];
             [self buildTorrents];
+            actionController = [TorrentActionController alloc];
         } else {
             NSAlert* alert = [NSAlert new];
             [alert setInformativeText: @"Couldn't connect fetch torrents"];
@@ -37,7 +39,7 @@ NSPredicate *predicateTemplate;
     [column setDataCell: cell];
 
     [cell setPrimaryTextKeyPath: @"filename"];
-    [cell setSecondaryTextKeyPath: @"bytesDoneReadable"];
+    [cell setSecondaryTextKeyPath: @"remainingString"];
     [cell setTypeIconKeyPath: @"typeIcon"];
     [cell setRatioIconKeyPath: @"ratioIcon"];
 
@@ -98,6 +100,7 @@ NSPredicate *predicateTemplate;
         NSLog(@"Call the torrent action controller");
         int rowIndex = [tableView selectedRow];
         NSLog(@"This is the hash: %@", [[torrents objectAtIndex:rowIndex] hash]);
+        [actionController removeTorrent:[torrents objectAtIndex:rowIndex]];
     }
 }
 

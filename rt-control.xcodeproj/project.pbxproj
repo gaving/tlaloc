@@ -25,6 +25,7 @@
 		8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F9109311B800ACABF0 /* NSDataAdditions.m */; };
 		8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* MainMenu.xib */; };
 		8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42C1093130000ACABF0 /* InfoPlist.strings */; };
+		86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
 		86C3DB641094F2E700FB592F /* wink.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5D1094F2E700FB592F /* wink.png */; };
 		86C3DB651094F2E700FB592F /* surprise.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5E1094F2E700FB592F /* surprise.png */; };
 		86C3DB661094F2E700FB592F /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5F1094F2E700FB592F /* smile.png */; };
@@ -81,6 +82,8 @@
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8650F4551093142000ACABF0 /* rt_control-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rt_control-Info.plist"; sourceTree = "<group>"; };
 		86802D0410934360003CB030 /* rt-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rt-control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C2920710962B0800ED24C0 /* TorrentActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentActionController.h; sourceTree = "<group>"; };
+		86C2920810962B0800ED24C0 /* TorrentActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentActionController.m; sourceTree = "<group>"; };
 		86C3DB5D1094F2E700FB592F /* wink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wink.png; path = Resources/emotes/wink.png; sourceTree = "<group>"; };
 		86C3DB5E1094F2E700FB592F /* surprise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = surprise.png; path = Resources/emotes/surprise.png; sourceTree = "<group>"; };
 		86C3DB5F1094F2E700FB592F /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smile.png; path = Resources/emotes/smile.png; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				8610517810930EDE002078AA /* ImageTextCell.h */,
 				8610517910930EDE002078AA /* Torrent.m */,
 				8610517A10930EDE002078AA /* Torrent.h */,
+				86C2920710962B0800ED24C0 /* TorrentActionController.h */,
+				86C2920810962B0800ED24C0 /* TorrentActionController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				8650F403109311B800ACABF0 /* XMLRPCConnection.m in Sources */,
 				8650F404109311B800ACABF0 /* NSStringAdditions.m in Sources */,
 				8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */,
+				86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

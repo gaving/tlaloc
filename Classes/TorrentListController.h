@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "TorrentActionController.h"
+
 @interface TorrentListController : NSObject {
     IBOutlet NSToolbarItem *addItem;
     IBOutlet NSToolbarItem *refreshItem;
@@ -20,6 +22,7 @@
     IBOutlet NSArrayController *arrayTorrents;
 
     NSMutableArray* torrents;
+    TorrentActionController* actionController;
 }
 
 - (BOOL)grabTorrents;

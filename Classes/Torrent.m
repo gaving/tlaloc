@@ -140,7 +140,10 @@ NSString* const XMLRPCUserAgent = @"rt-control";
 - (id)copyWithZone:(NSZone *)zone {
     Torrent *copy = [[self class] allocWithZone: zone];
     [copy setFilename:[self filename]];
+    [copy setBytesDone:[self bytesDone]];
+    [copy setBytesTotal:[self bytesTotal]];
     [copy setBytesDoneReadable:[self bytesDoneReadable]];
+    [copy setBytesTotalReadable:[self bytesTotalReadable]];
     return copy;
 }
 
@@ -153,6 +156,11 @@ NSString* const XMLRPCUserAgent = @"rt-control";
     NSString *textPath = [[NSBundle mainBundle] pathForResource:@"sad" ofType:@"png"]; 
     NSImage *image = [[NSImage alloc] initWithContentsOfFile: textPath];
     return image;
+}
+
+- (NSString*) remainingString {
+    NSNumber* percentage = [NSNumber numberWithInt:([bytesDone intValue] / [bytesTotal intValue]) * 100];
+    return [NSString stringWithFormat: @"%@ / %@ (%@%%)", bytesDoneReadable, bytesTotalReadable, percentage];
 }
 
 - (void) dealloc {
