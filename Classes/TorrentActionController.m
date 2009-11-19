@@ -12,7 +12,8 @@
 @implementation TorrentActionController
 
 - (BOOL)removeTorrent:(Torrent *)torrent {
-      NSLog(@"Right, NUKE: %@", [torrent hash]);
+    NSLog(@"TorrentActionController removeTorrent: %@", [torrent hash]);
+    return YES;
 }
 
 @end

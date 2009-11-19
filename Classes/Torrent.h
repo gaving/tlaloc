@@ -20,6 +20,7 @@
     NSString *bytesDoneReadable;
     NSString *bytesTotalReadable;
     NSString *sizeFiles;
+    NSNumber *ratio;
 }
 
 extern NSString* const XMLRPCUserAgent;
@@ -34,6 +35,7 @@ extern NSString* const XMLRPCUserAgent;
 @property (nonatomic, retain) NSString *bytesDoneReadable;
 @property (nonatomic, retain) NSString *bytesTotalReadable;
 @property (nonatomic, retain) NSString *sizeFiles;
+@property (nonatomic, retain) NSNumber *ratio;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize;
 + (NSURL *) rtorrentRPCURL;

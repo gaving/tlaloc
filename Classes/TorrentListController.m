@@ -7,7 +7,6 @@
 //
 
 #import "TorrentListController.h"
-#import "TorrentActionController.h"
 #import "Config.h"
 #import "Torrent.h"
 #import "ImageTextCell.h"
@@ -21,7 +20,6 @@ NSPredicate *predicateTemplate;
         if ([self grabTorrents]) {
             torrents  = [[NSMutableArray alloc] init];
             [self buildTorrents];
-            actionController = [TorrentActionController alloc];
         } else {
             NSAlert* alert = [NSAlert new];
             [alert setInformativeText: @"Couldn't connect fetch torrents"];
@@ -46,8 +44,8 @@ NSPredicate *predicateTemplate;
     predicateTemplate = [[NSPredicate predicateWithFormat:@"(filename contains[cd] $searchString)"] retain];
 }
 
-- (NSArray*) torrents {
-        return torrents;
+- (NSMutableArray*) torrents {
+    return torrents;
 }
 
 - (void)buildTorrents {
@@ -66,7 +64,8 @@ NSPredicate *predicateTemplate;
         [torrents release];
         torrents  = [[NSMutableArray alloc] init];
         [self buildTorrents];
-        [tableView reloadData];
+        // [tableView reloadData];
+        [arrayTorrents setContent:torrents];
     }
 }
 
@@ -76,31 +75,12 @@ NSPredicate *predicateTemplate;
     [openDlg setCanChooseFiles:YES];
     [openDlg setCanChooseDirectories:YES];
     if ([openDlg runModalForDirectory:nil file:nil] == NSOKButton ) {
+
         NSArray* files = [openDlg filenames];
         for(int i = 0; i < [files count]; i++ ) {
             NSString* fileName = [files objectAtIndex:i];
             NSLog(@"Do something with: %@", fileName);
         }
-    }
-}
-
-- (IBAction)removeTorrent:(id)sender {
-    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    [alert addButtonWithTitle:@"Yes"];
-    [alert addButtonWithTitle:@"Cancel"];
-    [alert setMessageText:@"Are you sure you wish to delete the torrent?"];
-    [alert setInformativeText:@"This action cannot be undone."];
-    [alert setAlertStyle:NSWarningAlertStyle];
-    [alert beginSheetModalForWindow:[tableView window] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-}
-
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-    if (returnCode == NSAlertFirstButtonReturn) {
-        NSLog(@"Find the currently selected torrent and remove it");
-        NSLog(@"Call the torrent action controller");
-        int rowIndex = [tableView selectedRow];
-        NSLog(@"This is the hash: %@", [[torrents objectAtIndex:rowIndex] hash]);
-        [actionController removeTorrent:[torrents objectAtIndex:rowIndex]];
     }
 }
 

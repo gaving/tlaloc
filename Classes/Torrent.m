@@ -26,6 +26,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
 @synthesize bytesDoneReadable;
 @synthesize bytesTotalReadable;
 @synthesize sizeFiles;
+@synthesize ratio;
 
 + (NSURL *)rtorrentRPCURL {
 
@@ -100,6 +101,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
     [params addObject:@"d.get_up_total="];
     [params addObject:@"d.get_creation_date="];
     [params addObject:@"d.get_complete="];
+    [params addObject:@"d.get_ratio="];
     [params addObject:@"d.is_active="];
     [params addObject:@"d.is_hash_checking="];
 
@@ -127,6 +129,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
         [tempTorrent setBytesTotal:[value objectAtIndex:4]];
         [tempTorrent setBytesDoneReadable:[Torrent stringFromFileSize: [tempTorrent bytesDone]]];
         [tempTorrent setBytesTotalReadable:[Torrent stringFromFileSize: [tempTorrent bytesTotal]]];
+        [tempTorrent setRatio:[value objectAtIndex:15]];
 
         [torrents addObject:tempTorrent];
     }
@@ -144,6 +147,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
     [copy setBytesTotal:[self bytesTotal]];
     [copy setBytesDoneReadable:[self bytesDoneReadable]];
     [copy setBytesTotalReadable:[self bytesTotalReadable]];
+    [copy setRatio:[self ratio]];
     return copy;
 }
 
@@ -153,7 +157,28 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
 }
 
 - (NSImage*) ratioIcon {
-    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"sad" ofType:@"png"]; 
+
+    NSString* resource = [[NSString alloc] init];
+    float torrentRatio = [[self ratio] floatValue] / 1000;
+    
+    /* Grab the correct image for the ratio */
+    if (torrentRatio >= 0.95) {
+        resource = @"surprise";
+    } else if (torrentRatio >= 0.90) {
+        resource = @"grin";
+    } else if (torrentRatio >= 0.75) {
+        resource = @"smile-big";
+    } else if (torrentRatio >= 0.60) {
+        resource = @"smile";
+    } else if (torrentRatio >= 0.50) {
+        resource = @"plain";
+    } else if (torrentRatio >= 0.30) {
+        resource = @"sad";
+    } else {
+        resource = @"crying";
+    }
+
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:resource ofType:@"png"]; 
     NSImage *image = [[NSImage alloc] initWithContentsOfFile: textPath];
     return image;
 }
