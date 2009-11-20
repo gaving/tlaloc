@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>Torrent.icns</string>
+	<string>Tlaloc.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>net.brokentrain.tlaloc</string>
 	<key>CFBundleInfoDictionaryVersion</key>

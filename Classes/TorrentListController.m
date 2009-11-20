@@ -60,7 +60,6 @@ NSPredicate *predicateTemplate;
 #pragma mark -
 #pragma mark Toolbar actions
 
-
 - (BOOL)validateToolbarItem:(NSToolbarItem *)toolbarItem {
     if ([[toolbarItem itemIdentifier] isEqualTo:@"InfoTorrent"]) {
 
