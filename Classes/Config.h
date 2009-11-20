@@ -18,6 +18,7 @@ extern NSString* const XMLRPCUserAgent;
 @property (retain) NSMutableArray *torrents;
 
 + (NSURL *) rtorrentRPCURL;
++ (NSString *) torrentDestination;
 + (id) executeXMLRPCRequest:(XMLRPCRequest *)req;
 + (Config *)instance;
 

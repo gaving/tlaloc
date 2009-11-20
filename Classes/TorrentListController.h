@@ -21,6 +21,8 @@
     IBOutlet NSSearchField *searchField;
     IBOutlet TorrentArrayController *arrayTorrents;
 
+    IBOutlet NSProgressIndicator *progressIndicator;
+
     NSMutableArray* torrents;
 }
 
@@ -30,6 +32,7 @@
 
 - (IBAction)refreshTorrents:(id)sender;
 - (IBAction)filterTorrent:(id)sender;
+- (IBAction)openDestination:(id)sender;
 - (IBAction)infoTorrent:(id)sender;
 - (IBAction)preferences:(id)sender;
 

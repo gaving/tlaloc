@@ -41,6 +41,20 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
     return [NSURL URLWithString:  rtorrentRPCURL];
 }
 
++ (NSString *)torrentDestination {
+
+    /* Make this configurable in the settings page */
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *torrentDestination = [userDefaults stringForKey:@"torrentDestination"];
+
+    if ([torrentDestination length] == 0) {
+        NSLog(@"No volume specified.");
+        return nil;
+    }
+
+    return torrentDestination;
+}
+
 + (id)executeXMLRPCRequest:(XMLRPCRequest *)req {
     XMLRPCResponse *userInfoResponse = [XMLRPCConnection sendSynchronousXMLRPCRequest:req];
     // NSLog(@"Response body: %@", [userInfoResponse body]);

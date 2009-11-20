@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 86802D0510934360003CB030 /* tlaloc */;
 		activeTarget = 8D1107260486CEB800E47090 /* tlaloc */;
 		addToTargets = (
@@ -46,7 +46,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					426,
+					274,
 					20,
 					48,
 					43,
@@ -63,29 +63,50 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 280376015;
-			PBXWorkspaceStateSaveDate = 280376015;
+			PBXPerProjectTemplateStateSaveDate = 280409838;
+			PBXWorkspaceStateSaveDate = 280409838;
 		};
 		perUserProjectItems = {
-			861845F0108B9C1300D72F2D /* PBXBookmark */ = 861845F0108B9C1300D72F2D /* PBXBookmark */;
-			862967EA10B618C700191673 /* PBXTextBookmark */ = 862967EA10B618C700191673 /* PBXTextBookmark */;
-			862967EB10B618C700191673 /* PBXTextBookmark */ = 862967EB10B618C700191673 /* PBXTextBookmark */;
-			862967EF10B618C700191673 /* PBXBookmark */ = 862967EF10B618C700191673 /* PBXBookmark */;
-			862967F010B618C700191673 /* PBXTextBookmark */ = 862967F010B618C700191673 /* PBXTextBookmark */;
-			8629680E10B61A7E00191673 /* PBXTextBookmark */ = 8629680E10B61A7E00191673 /* PBXTextBookmark */;
-			864EA0C0109485F3002A4812 /* PBXTextBookmark */ = 864EA0C0109485F3002A4812 /* PBXTextBookmark */;
-			8650C7C710B56D500003287E /* PBXTextBookmark */ = 8650C7C710B56D500003287E /* PBXTextBookmark */;
-			8650C7C810B56D500003287E /* PlistBookmark */ = 8650C7C810B56D500003287E /* PlistBookmark */;
-			8650C98E10B5A7660003287E /* PBXTextBookmark */ = 8650C98E10B5A7660003287E /* PBXTextBookmark */;
-			8650F46A10932A6C00ACABF0 /* PBXTextBookmark */ = 8650F46A10932A6C00ACABF0 /* PBXTextBookmark */;
-			867D597110B63F0700C1D809 /* PBXTextBookmark */ = 867D597110B63F0700C1D809 /* PBXTextBookmark */;
-			867D597210B63F0700C1D809 /* XCBuildMessageTextBookmark */ = 867D597210B63F0700C1D809 /* XCBuildMessageTextBookmark */;
-			867D597F10B6421600C1D809 /* PBXTextBookmark */ = 867D597F10B6421600C1D809 /* PBXTextBookmark */;
-			86C3DA881094E32800FB592F /* PBXTextBookmark */ = 86C3DA881094E32800FB592F /* PBXTextBookmark */;
-			86C3DA891094E32800FB592F /* PBXTextBookmark */ = 86C3DA891094E32800FB592F /* PBXTextBookmark */;
-			86C4C9E91093091700DEBB16 /* PBXTextBookmark */ = 86C4C9E91093091700DEBB16 /* PBXTextBookmark */;
-			86F43E1910964283003EDB14 /* PBXTextBookmark */ = 86F43E1910964283003EDB14 /* PBXTextBookmark */;
-			86F43E1C10964283003EDB14 /* PBXTextBookmark */ = 86F43E1C10964283003EDB14 /* PBXTextBookmark */;
+			861845F0108B9C1300D72F2D = 861845F0108B9C1300D72F2D /* PBXBookmark */;
+			862967EA10B618C700191673 = 862967EA10B618C700191673 /* PBXTextBookmark */;
+			862967EB10B618C700191673 = 862967EB10B618C700191673 /* PBXTextBookmark */;
+			862967EF10B618C700191673 = 862967EF10B618C700191673 /* PBXBookmark */;
+			862967F010B618C700191673 = 862967F010B618C700191673 /* PBXTextBookmark */;
+			8629680E10B61A7E00191673 = 8629680E10B61A7E00191673 /* PBXTextBookmark */;
+			862F34F610B6B6F50030B745 /* PBXTextBookmark */ = 862F34F610B6B6F50030B745 /* PBXTextBookmark */;
+			862F350D10B6BC960030B745 /* XCBuildMessageTextBookmark */ = 862F350D10B6BC960030B745 /* XCBuildMessageTextBookmark */;
+			862F350E10B6BC960030B745 /* PBXTextBookmark */ = 862F350E10B6BC960030B745 /* PBXTextBookmark */;
+			862F351610B6BC970030B745 /* PBXTextBookmark */ = 862F351610B6BC970030B745 /* PBXTextBookmark */;
+			862F351710B6BC970030B745 /* XCBuildMessageTextBookmark */ = 862F351710B6BC970030B745 /* XCBuildMessageTextBookmark */;
+			862F351810B6BC970030B745 /* PBXTextBookmark */ = 862F351810B6BC970030B745 /* PBXTextBookmark */;
+			862F352610B6C1490030B745 /* PBXTextBookmark */ = 862F352610B6C1490030B745 /* PBXTextBookmark */;
+			862F352710B6C1490030B745 /* XCBuildMessageTextBookmark */ = 862F352710B6C1490030B745 /* XCBuildMessageTextBookmark */;
+			862F352810B6C1490030B745 /* PBXTextBookmark */ = 862F352810B6C1490030B745 /* PBXTextBookmark */;
+			862F352910B6C14A0030B745 /* PBXTextBookmark */ = 862F352910B6C14A0030B745 /* PBXTextBookmark */;
+			862F352A10B6C14A0030B745 /* XCBuildMessageTextBookmark */ = 862F352A10B6C14A0030B745 /* XCBuildMessageTextBookmark */;
+			862F352B10B6C14A0030B745 /* PBXTextBookmark */ = 862F352B10B6C14A0030B745 /* PBXTextBookmark */;
+			862F352E10B6C1D90030B745 /* PBXTextBookmark */ = 862F352E10B6C1D90030B745 /* PBXTextBookmark */;
+			862F353110B6C1F40030B745 /* XCBuildMessageTextBookmark */ = 862F353110B6C1F40030B745 /* XCBuildMessageTextBookmark */;
+			862F353210B6C1F40030B745 /* PBXTextBookmark */ = 862F353210B6C1F40030B745 /* PBXTextBookmark */;
+			862F353710B6C2050030B745 /* PBXTextBookmark */ = 862F353710B6C2050030B745 /* PBXTextBookmark */;
+			862F353B10B6C2BB0030B745 /* PBXTextBookmark */ = 862F353B10B6C2BB0030B745 /* PBXTextBookmark */;
+			862F354010B6C3680030B745 /* PBXTextBookmark */ = 862F354010B6C3680030B745 /* PBXTextBookmark */;
+			862F356F10B6D0670030B745 /* PBXTextBookmark */ = 862F356F10B6D0670030B745 /* PBXTextBookmark */;
+			862F357A10B6D0AC0030B745 /* PBXTextBookmark */ = 862F357A10B6D0AC0030B745 /* PBXTextBookmark */;
+			862F359B10B6D5C10030B745 /* PBXTextBookmark */ = 862F359B10B6D5C10030B745 /* PBXTextBookmark */;
+			864EA0C0109485F3002A4812 = 864EA0C0109485F3002A4812 /* PBXTextBookmark */;
+			8650C7C710B56D500003287E = 8650C7C710B56D500003287E /* PBXTextBookmark */;
+			8650C7C810B56D500003287E = 8650C7C810B56D500003287E /* PlistBookmark */;
+			8650C98E10B5A7660003287E = 8650C98E10B5A7660003287E /* PBXTextBookmark */;
+			8650F46A10932A6C00ACABF0 = 8650F46A10932A6C00ACABF0 /* PBXTextBookmark */;
+			867D597110B63F0700C1D809 = 867D597110B63F0700C1D809 /* PBXTextBookmark */;
+			867D597210B63F0700C1D809 = 867D597210B63F0700C1D809 /* PBXTextBookmark */;
+			867D597F10B6421600C1D809 = 867D597F10B6421600C1D809 /* PBXTextBookmark */;
+			86C3DA881094E32800FB592F = 86C3DA881094E32800FB592F /* PBXTextBookmark */;
+			86C3DA891094E32800FB592F = 86C3DA891094E32800FB592F /* PBXTextBookmark */;
+			86C4C9E91093091700DEBB16 = 86C4C9E91093091700DEBB16 /* PBXTextBookmark */;
+			86F43E1910964283003EDB14 = 86F43E1910964283003EDB14 /* PBXTextBookmark */;
+			86F43E1C10964283003EDB14 = 86F43E1C10964283003EDB14 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 86228CF8108A918F00C8C6FC /* Source Control */;
 		userBuildSettings = {
@@ -101,16 +122,16 @@
 	};
 	8610517110930EDE002078AA /* TorrentTableView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {848, 884}}";
-			sepNavSelRange = "{1432, 0}";
-			sepNavVisRange = "{0, 860}";
+			sepNavIntBoundsRect = "{{0, 0}, {698, 494}}";
+			sepNavSelRange = "{930, 0}";
+			sepNavVisRange = "{192, 738}";
 		};
 	};
 	8610517310930EDE002078AA /* TorrentListController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 1430}}";
-			sepNavSelRange = "{2948, 0}";
-			sepNavVisRange = "{2044, 899}";
+			sepNavIntBoundsRect = "{{0, 0}, {635, 1755}}";
+			sepNavSelRange = "{2354, 0}";
+			sepNavVisRange = "{2213, 744}";
 			sepNavWindowFrame = "{{81, 174}, {1051, 999}}";
 		};
 	};
@@ -152,9 +173,9 @@
 	};
 	8610517910930EDE002078AA /* Torrent.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {604, 2548}}";
+			sepNavIntBoundsRect = "{{0, 0}, {572, 2548}}";
 			sepNavSelRange = "{1145, 0}";
-			sepNavVisRange = "{712, 865}";
+			sepNavVisRange = "{706, 593}";
 			sepNavWindowFrame = "{{81, 174}, {1051, 999}}";
 		};
 	};
@@ -245,6 +266,211 @@
 		rType = 0;
 		vrLen = 238;
 		vrLoc = 0;
+	};
+	862F34F610B6B6F50030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517910930EDE002078AA /* Torrent.m */;
+		name = "Torrent.m: 53";
+		rLen = 0;
+		rLoc = 1145;
+		rType = 0;
+		vrLen = 833;
+		vrLoc = 712;
+	};
+	862F350D10B6BC960030B745 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'Config' may not respond to '+torrentDestination'";
+		fRef = 8610517310930EDE002078AA /* TorrentListController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 94;
+		rType = 1;
+	};
+	862F350E10B6BC960030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517310930EDE002078AA /* TorrentListController.m */;
+		name = "TorrentListController.m: 95";
+		rLen = 0;
+		rLoc = 2354;
+		rType = 0;
+		vrLen = 1229;
+		vrLoc = 1852;
+	};
+	862F351610B6BC970030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517910930EDE002078AA /* Torrent.m */;
+		name = "Torrent.m: 53";
+		rLen = 0;
+		rLoc = 1145;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 706;
+	};
+	862F351710B6BC970030B745 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'Config' may not respond to '+torrentDestination'";
+		fRef = 8610517310930EDE002078AA /* TorrentListController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 94;
+		rType = 1;
+	};
+	862F351810B6BC970030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517310930EDE002078AA /* TorrentListController.m */;
+		name = "TorrentListController.m: 95";
+		rLen = 0;
+		rLoc = 2354;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 2213;
+	};
+	862F352610B6C1490030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517310930EDE002078AA /* TorrentListController.m */;
+		name = "TorrentListController.m: 95";
+		rLen = 0;
+		rLoc = 2354;
+		rType = 0;
+		vrLen = 1321;
+		vrLoc = 1852;
+	};
+	862F352710B6C1490030B745 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'myObject' undeclared (first use in this function)";
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 29;
+		rType = 1;
+	};
+	862F352810B6C1490030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 30";
+		rLen = 0;
+		rLoc = 832;
+		rType = 0;
+		vrLen = 928;
+		vrLoc = 0;
+	};
+	862F352910B6C14A0030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517310930EDE002078AA /* TorrentListController.m */;
+		name = "TorrentListController.m: 95";
+		rLen = 0;
+		rLoc = 2354;
+		rType = 0;
+		vrLen = 744;
+		vrLoc = 2213;
+	};
+	862F352A10B6C14A0030B745 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'myObject' undeclared (first use in this function)";
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 29;
+		rType = 1;
+	};
+	862F352B10B6C14A0030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 30";
+		rLen = 0;
+		rLoc = 832;
+		rType = 0;
+		vrLen = 798;
+		vrLoc = 129;
+	};
+	862F352E10B6C1D90030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 40";
+		rLen = 0;
+		rLoc = 1098;
+		rType = 0;
+		vrLen = 905;
+		vrLoc = 193;
+	};
+	862F353110B6C1F40030B745 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'TorrentListController' undeclared (first use in this function)";
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 31;
+		rType = 1;
+	};
+	862F353210B6C1F40030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 32";
+		rLen = 0;
+		rLoc = 981;
+		rType = 0;
+		vrLen = 926;
+		vrLoc = 215;
+	};
+	862F353710B6C2050030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 41";
+		rLen = 0;
+		rLoc = 1175;
+		rType = 0;
+		vrLen = 925;
+		vrLoc = 249;
+	};
+	862F353B10B6C2BB0030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 41";
+		rLen = 0;
+		rLoc = 1163;
+		rType = 0;
+		vrLen = 914;
+		vrLoc = 249;
+	};
+	862F354010B6C3680030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 38";
+		rLen = 0;
+		rLoc = 930;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 192;
+	};
+	862F356F10B6D0670030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 38";
+		rLen = 0;
+		rLoc = 930;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 192;
+	};
+	862F357A10B6D0AC0030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 38";
+		rLen = 0;
+		rLoc = 930;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 192;
+	};
+	862F359B10B6D5C10030B745 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8610517110930EDE002078AA /* TorrentTableView.m */;
+		name = "TorrentTableView.m: 38";
+		rLen = 0;
+		rLoc = 930;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 192;
 	};
 	8640E3D1108FB6CD007A8941 /* TorrentTableView.h */ = {
 		isa = PBXFileReference;
@@ -341,9 +567,9 @@
 	};
 	8650C98310B5A71B0003287E /* TorrentArrayController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {848, 514}}";
-			sepNavSelRange = "{1023, 0}";
-			sepNavVisRange = "{0, 1023}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 871}}";
+			sepNavSelRange = "{429, 0}";
+			sepNavVisRange = "{0, 1805}";
 			sepNavWindowFrame = "{{104, 153}, {1051, 999}}";
 		};
 	};
@@ -392,11 +618,10 @@
 		vrLen = 1067;
 		vrLoc = 3733;
 	};
-	867D597210B63F0700C1D809 /* XCBuildMessageTextBookmark */ = {
+	867D597210B63F0700C1D809 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "'Config' may not respond to '+rtorrentRPCURL'";
 		fRef = 8610517910930EDE002078AA /* Torrent.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 52;
 		rType = 1;

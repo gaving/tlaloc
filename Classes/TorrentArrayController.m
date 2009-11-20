@@ -16,6 +16,7 @@
 
 - (IBAction)add:(id)sender {
     NSLog(@"TorrentArrayController add");
+
     NSOpenPanel* openDlg = [NSOpenPanel openPanel];
     [openDlg setCanChooseFiles:YES];
     [openDlg setCanChooseDirectories:YES];
@@ -25,7 +26,7 @@
             NSString* fileName = [files objectAtIndex:i];
             NSLog(@"Fire add action with: %@", fileName);
             if ([actionController addTorrent:fileName]) {
-                // [super add:sender];
+                // [torrentListController refreshTorrents];
             }
         }
     }
