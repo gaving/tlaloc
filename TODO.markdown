@@ -5,7 +5,10 @@
 - [x] Multicalls to make fetching less heavy?
 - [x] Get the filter box working (with the new custom cells)
 - [_] Drag and drop to start a new download
+- [_] Notification area
 - [_] Status bar showing meaningful stats
+- [_] Allow multiple selections for actions
+- [_] Version dialog of some kind
 
 ## 0.1
 
@@ -19,7 +22,12 @@
 - [x] Make the ratio column display an image at the side
 - [x] Preferences panel (make things configurable)
 - [_] Link the destination with a volume/folder to allow easy opening
-- [_] Add torrent
-- [_] Remove torrent
-- [_] Refresh torrents
-- [_] Delete torrent
+- [x] Add torrent
+- [x] Remove torrent
+- [x] Refresh torrents
+- [_] Refresh automatically
+
+## Resources
+
+- Overflow issue on large file sizes: http://libtorrent.rakshasa.no/ticket/1303
+- RTorrentCommandsRaw - http://libtorrent.rakshasa.no/wiki/RTorrentCommandsRaw

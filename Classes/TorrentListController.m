@@ -70,21 +70,6 @@ NSPredicate *predicateTemplate;
     }
 }
 
-- (IBAction)addTorrent:(id)sender {
-    NSLog(@"Open up the add dialog!");
-    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
-    [openDlg setCanChooseFiles:YES];
-    [openDlg setCanChooseDirectories:YES];
-    if ([openDlg runModalForDirectory:nil file:nil] == NSOKButton ) {
-
-        NSArray* files = [openDlg filenames];
-        for(int i = 0; i < [files count]; i++ ) {
-            NSString* fileName = [files objectAtIndex:i];
-            NSLog(@"Fire add action with: %@", fileName);
-        }
-    }
-}
-
 - (IBAction)filterTorrent:(id)sender {
     NSString *searchString = [searchField stringValue];
     NSPredicate *predicate;

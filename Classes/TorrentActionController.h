@@ -13,6 +13,7 @@
 
 }
 
+- (BOOL)addTorrent:(NSString *)fileName;
 - (BOOL)removeTorrent:(Torrent *)torrent;
 
 @end

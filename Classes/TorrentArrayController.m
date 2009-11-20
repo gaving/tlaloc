@@ -15,6 +15,20 @@
 }
 
 - (IBAction)add:(id)sender {
+    NSLog(@"TorrentArrayController add");
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+    [openDlg setCanChooseFiles:YES];
+    [openDlg setCanChooseDirectories:YES];
+    if ([openDlg runModalForDirectory:nil file:nil] == NSOKButton) {
+        NSArray* files = [openDlg filenames];
+        for(int i = 0; i < [files count]; i++ ) {
+            NSString* fileName = [files objectAtIndex:i];
+            NSLog(@"Fire add action with: %@", fileName);
+            if ([actionController addTorrent:fileName]) {
+                // [super add:sender];
+            }
+        }
+    }
 }
 
 - (IBAction)remove:(id)sender {
@@ -30,9 +44,12 @@
         if ([actionController removeTorrent:torrent]) {
             [super remove:sender];
         }
-
-        /* Report the error if something happened */
     }
+}
+
+- (void) dealloc {
+    [actionController release];
+    [super dealloc];
 }
 
 @end

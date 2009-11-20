@@ -14,8 +14,6 @@
 
 @implementation Torrent
 
-NSString* const XMLRPCUserAgent = @"tlaloc";
-
 @synthesize name;
 @synthesize uri;
 @synthesize hash;
@@ -27,26 +25,6 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
 @synthesize bytesTotalReadable;
 @synthesize sizeFiles;
 @synthesize ratio;
-
-+ (NSURL *)rtorrentRPCURL {
-
-    /* Make this configurable in the settings page */
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *rtorrentRPCURL = [userDefaults stringForKey:@"rtorrentRPCURL"];
-
-    if ([rtorrentRPCURL length] == 0) {
-        NSLog(@"No rtorrent RPC URL specified. Aborting.");
-        return nil;
-    }
-
-    return [NSURL URLWithString:  rtorrentRPCURL];
-}
-
-+ (id)executeXMLRPCRequest:(XMLRPCRequest *)req {
-    XMLRPCResponse *userInfoResponse = [XMLRPCConnection sendSynchronousXMLRPCRequest:req];
-    // NSLog(@"Response body: %@", [userInfoResponse body]);
-    return [userInfoResponse object];
-}
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize {
     float floatSize = [theSize floatValue];
@@ -72,7 +50,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
 
     NSLog(@"Fetching the torrent list");
 
-    NSURL *rtorrentRPCURL = [Torrent rtorrentRPCURL];
+    NSURL *rtorrentRPCURL = [Config rtorrentRPCURL];
 
     if (rtorrentRPCURL == nil) {
 
@@ -107,7 +85,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
 
     [request setMethod:@"d.multicall" withParameter:params];
 
-    NSObject *response = [Torrent executeXMLRPCRequest:request];
+    NSObject *response = [Config executeXMLRPCRequest:request];
     [request release];
 
     if ([response isKindOfClass:[NSError class]]) {
@@ -160,7 +138,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
 
     NSString* resource = [[NSString alloc] init];
     float torrentRatio = [[self ratio] floatValue] / 1000;
-    
+
     /* Grab the correct image for the ratio */
     if (torrentRatio >= 0.95) {
         resource = @"surprise";
@@ -178,7 +156,7 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
         resource = @"crying";
     }
 
-    NSString *textPath = [[NSBundle mainBundle] pathForResource:resource ofType:@"png"]; 
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:resource ofType:@"png"];
     NSImage *image = [[NSImage alloc] initWithContentsOfFile: textPath];
     return image;
 }

@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XMLRPCRequest.h"
 
 @interface Torrent : NSObject <NSCopying> {
     NSString *name;
@@ -23,8 +22,6 @@
     NSNumber *ratio;
 }
 
-extern NSString* const XMLRPCUserAgent;
-
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *uri;
 @property (nonatomic, retain) NSString *hash;
@@ -38,8 +35,6 @@ extern NSString* const XMLRPCUserAgent;
 @property (nonatomic, retain) NSNumber *ratio;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize;
-+ (NSURL *) rtorrentRPCURL;
-+ (id) executeXMLRPCRequest:(XMLRPCRequest *)req;
 + (BOOL) loadAll;
 
 @end
