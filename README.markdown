@@ -1,16 +1,14 @@
 # tlaloc
 
-Native cocoa based mac application for interfacing with rtorrent.
+Native cocoa-based mac application for interfacing with rtorrent over xmlrpc.
 
 ## Installation
 
-Early days, compilation is necessary and not a lot else works but the torrent
-list display.
+- Configure your preferences and enter your rtorrent RPC URI
 
-Add ~/Library/Preferences/net.brokentrain.rtcontrol.plist and add a string with
-key 'rtorrentRPCURL' and the value of your listening rtorrent xmlrpc uri.
+- Optionally fill out the accessible destination path if you want launching to work
 
 ## Screenshots
 
-![main interface!](http://github.com/gaving/tlaloc/tree/master/site/1.png?raw=true)
+![main window!](http://github.com/gaving/tlaloc/tree/master/site/1.png?raw=true)
 
