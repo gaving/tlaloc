@@ -276,7 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>39</integer>
+									<integer>25</integer>
 									<integer>23</integer>
 									<integer>0</integer>
 								</array>
@@ -329,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>867D597810B63F6C00C1D809</string>
+										<string>867D597F10B6421600C1D809</string>
 										<key>history</key>
 										<array>
 											<string>861845F0108B9C1300D72F2D</string>
@@ -550,9 +550,9 @@
 		<string>867D592B10B632D400C1D809</string>
 		<string>867D592C10B632D400C1D809</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/gavin/Coding/tlaloc/tlaloc.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>86228CF6108A918F00C8C6FC</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/gavin/Coding/tlaloc/tlaloc.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>529 134 958 942 0 0 1920 1178 </string>
@@ -576,7 +576,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Torrent.m</string>
+								<string>XMLRPCEventBasedParserDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -647,7 +647,7 @@
 			<key>WindowToolGUID</key>
 			<string>86228CF6108A918F00C8C6FC</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
