@@ -10,6 +10,7 @@
 #import "Config.h"
 #import "Torrent.h"
 #import "ImageTextCell.h"
+#import "AppPrefsWindowController.h"
 
 @implementation TorrentListController
 
@@ -21,10 +22,7 @@ NSPredicate *predicateTemplate;
             torrents  = [[NSMutableArray alloc] init];
             [self buildTorrents];
         } else {
-            NSAlert* alert = [NSAlert new];
-            [alert setInformativeText: @"Couldn't connect fetch torrents"];
-            [alert setMessageText: @"Please check your connection settings"];
-            [alert runModal];
+            [self showError];
         }
     }
     return self;
@@ -64,8 +62,11 @@ NSPredicate *predicateTemplate;
         [torrents release];
         torrents  = [[NSMutableArray alloc] init];
         [self buildTorrents];
-        // [tableView reloadData];
+
+        /* Set the array controllers new content */
         [arrayTorrents setContent:torrents];
+    } else {
+        [self showError];
     }
 }
 
@@ -79,7 +80,7 @@ NSPredicate *predicateTemplate;
         NSArray* files = [openDlg filenames];
         for(int i = 0; i < [files count]; i++ ) {
             NSString* fileName = [files objectAtIndex:i];
-            NSLog(@"Do something with: %@", fileName);
+            NSLog(@"Fire add action with: %@", fileName);
         }
     }
 }
@@ -104,7 +105,15 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)preferences:(id)sender {
-    NSLog(@"Show the preferences dialog");
+    [[AppPrefsWindowController sharedPrefsWindowController] showWindow:nil];
+    (void)sender;
+}
+
+- (void)showError {
+    NSAlert* alert = [NSAlert new];
+    [alert setInformativeText: @"Couldn't connect fetch torrents"];
+    [alert setMessageText: @"Please check your connection settings"];
+    [alert runModal];
 }
 
 @end

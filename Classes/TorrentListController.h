@@ -26,6 +26,7 @@
 
 - (BOOL)grabTorrents;
 - (void)buildTorrents;
+- (void)showError;
 
 - (IBAction)addTorrent:(id)sender;
 - (IBAction)refreshTorrents:(id)sender;
