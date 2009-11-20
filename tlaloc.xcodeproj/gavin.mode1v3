@@ -327,7 +327,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>862F359B10B6D5C10030B745</string>
+										<string>862F35A010B6D7440030B745</string>
 										<key>history</key>
 										<array>
 											<string>861845F0108B9C1300D72F2D</string>
@@ -550,9 +550,9 @@
 		<string>862F351A10B6BC970030B745</string>
 		<string>862F351B10B6BC970030B745</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/gavin/Coding/tlaloc/tlaloc.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>86228CF6108A918F00C8C6FC</string>
+		<string>/Users/gavin/Coding/tlaloc/tlaloc.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>204 247 806 884 0 0 1920 1178 </string>
