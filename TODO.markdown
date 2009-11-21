@@ -12,6 +12,7 @@
 - [_] Version dialog of some kind
 - [_] Menu item actions for each table cell
 - [_] Info pane when you view a torrent
+- [_] Use sparkle for the software updates
 
 ## 0.1
 
@@ -30,10 +31,11 @@
 - [!] Refresh automatically
 - [x] Double click on completed torrents launches if destination configured
 - [x] Spinner for refresh action
-- [_] Show folders for multifiles
+- [x] Show folders for multifiles
 
 ## Resources
 
 - Overflow issue on large file sizes: http://libtorrent.rakshasa.no/ticket/1303
 - RTorrentCommandsRaw - http://libtorrent.rakshasa.no/wiki/RTorrentCommandsRaw
 - http://209.85.229.132/search?q=cache:J5P_N3tXKKQJ:trac.transmissionbt.com/browser/trunk/macosx/Torrent.m%3Frev%3D261%26format%3Dtxt+nsworkspace+filetype+iconforfiletype+nil&cd=9&hl=en&ct=clnk&gl=uk&client=firefox-a
+- http://sparkle.andymatuschak.org/

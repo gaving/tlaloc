@@ -1804,7 +1804,7 @@
 												</object>
 											</object>
 											<double key="NSRowHeight">40</double>
-											<int key="NSTvFlags">-692060160</int>
+											<int key="NSTvFlags">-557842432</int>
 											<reference key="NSDelegate"/>
 											<reference key="NSDataSource"/>
 											<int key="NSGridStyleMask">1</int>

@@ -37,13 +37,16 @@
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     [alert addButtonWithTitle:@"Yes"];
     [alert addButtonWithTitle:@"Cancel"];
-    [alert setMessageText:@"Are you sure you wish to delete the torrent?"];
+    [alert setMessageText:@"Are you sure you wish to delete the selected torrents?"];
     [alert setInformativeText:@"This action cannot be undone."];
     [alert setAlertStyle:NSWarningAlertStyle];
     if ([alert runModal] == NSAlertFirstButtonReturn) {
-        Torrent *torrent = [[self selectedObjects] objectAtIndex:0];
-        if ([actionController removeTorrent:torrent]) {
-            [super remove:sender];
+        NSArray *torrents = [self selectedObjects];
+        for (int i = 0; i < [torrents count]; i++) {
+            Torrent *torrent = [torrents objectAtIndex:i];
+            if ([actionController removeTorrent:torrent]) {
+                [super remove:sender];
+            }
         }
     }
 }
