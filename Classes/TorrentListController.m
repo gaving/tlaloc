@@ -61,13 +61,55 @@ NSPredicate *predicateTemplate;
 #pragma mark Toolbar actions
 
 - (BOOL)validateToolbarItem:(NSToolbarItem *)toolbarItem {
+
+
     if ([[toolbarItem itemIdentifier] isEqualTo:@"InfoTorrent"]) {
 
         /* TODO: Implement this */
         return NO;
+    } else if ([[toolbarItem itemIdentifier] isEqualTo:@"Remove"]) {
+        return [[arrayTorrents selectedObjects] count] > 0;
     }
 
     return YES;
+}
+
+- (IBAction)addTorrent:(id)sender {
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+    NSArray* fileTypes = [NSArray arrayWithObjects: @"torrent", nil];
+    [openDlg setCanChooseFiles:YES];
+    [openDlg setCanChooseDirectories:YES];
+    [openDlg setAllowsMultipleSelection:YES];
+    if ([openDlg runModalForDirectory:nil file:nil types:fileTypes] == NSOKButton) {
+        NSArray* files = [openDlg filenames];
+        for(int i = 0; i < [files count]; i++ ) {
+            NSString* fileName = [files objectAtIndex:i];
+            if (![arrayTorrents add:fileName]) {
+                NSAlert* alert = [NSAlert new];
+                [alert setInformativeText: @"Could not add torrent!"];
+                [alert setMessageText: @"Check the torrent file you are trying to add"];
+                [alert runModal];
+                [alert release];
+            }
+        }
+        [self refreshTorrents:self];
+    }
+}
+
+- (IBAction)removeTorrent:(id)sender {
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    [alert addButtonWithTitle:@"Yes"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Are you sure you wish to delete the selected torrents?"];
+    [alert setInformativeText:@"This action cannot be undone."];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    if ([alert runModal] == NSAlertFirstButtonReturn) {
+        NSArray *selectedTorrents = [arrayTorrents selectedObjects];
+        for (int i = 0; i < [selectedTorrents count]; i++) {
+            Torrent *torrent = [selectedTorrents objectAtIndex:i];
+            [arrayTorrents remove:torrent];
+        }
+    }
 }
 
 - (IBAction)refreshTorrents:(id)sender {
@@ -112,6 +154,7 @@ NSPredicate *predicateTemplate;
         [alert setInformativeText: @"No destination set in preferences"];
         [alert setMessageText: @"Please configure this in the preferences panel"];
         [alert runModal];
+        [alert release];
     } else {
         Torrent *torrent = [[arrayTorrents selectedObjects] objectAtIndex:0];
         NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]]; 
@@ -129,11 +172,13 @@ NSPredicate *predicateTemplate;
         [alert setInformativeText: @"Couldn't open destination"];
         [alert setMessageText: @"Please check your preferences"];
         [alert runModal];
+        [alert release];
     } else if ([fileManager fileExistsAtPath: torrentDestination] == NO) { 
         NSAlert* alert = [NSAlert new];
         [alert setInformativeText: @"Couldn't open destination"];
         [alert setMessageText: @"Path does not exist"];
         [alert runModal];
+        [alert release];
     } else {
         [[NSWorkspace sharedWorkspace] openFile:torrentDestination];
     }
@@ -153,6 +198,7 @@ NSPredicate *predicateTemplate;
     [alert setInformativeText: @"Couldn't connect fetch torrents"];
     [alert setMessageText: @"Please check your connection settings"];
     [alert runModal];
+    [alert release];
 }
 
 - (void) dealloc {

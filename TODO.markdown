@@ -5,14 +5,16 @@
 - [x] Multicalls to make fetching less heavy?
 - [x] Get the filter box working (with the new custom cells)
 - [_] Drag and drop to start a new download
+- [_] Open with torrent default add action
 - [_] Notification area
 - [_] Growls?
 - [_] Status bar showing meaningful stats (download/upload) Also: action updates
-- [_] Allow multiple selections for actions
+- [x] Allow multiple selections for actions
 - [_] Version dialog of some kind
 - [_] Menu item actions for each table cell
 - [_] Info pane when you view a torrent
 - [_] Use sparkle for the software updates
+- [_] Release process dmg bundling etc
 
 ## 0.1
 
@@ -28,7 +30,7 @@
 - [x] Add torrent
 - [x] Remove torrent
 - [x] Refresh torrents
-- [!] Refresh automatically
+- [!] Refresh automatically (polling of some sort)
 - [x] Double click on completed torrents launches if destination configured
 - [x] Spinner for refresh action
 - [x] Show folders for multifiles

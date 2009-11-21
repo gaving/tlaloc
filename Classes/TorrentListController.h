@@ -30,6 +30,8 @@
 - (void)buildTorrents;
 - (void)showError;
 
+- (IBAction)addTorrent:(id)sender;
+- (IBAction)removeTorrent:(id)sender;
 - (IBAction)refreshTorrents:(id)sender;
 - (IBAction)filterTorrent:(id)sender;
 - (IBAction)openDestination:(id)sender;

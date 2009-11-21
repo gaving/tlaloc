@@ -1,9 +1,9 @@
 //
 //  ImageTextCell.m
-//  SofaControl
+//  tlaloc
 //
-//  Created by Martin Kahr on 10.10.06.
-//  Copyright 2006 CASE Apps. All rights reserved.
+//  Created by Gavin Gilmour on 18/10/2009.
+//  Copyright 2009. All rights reserved.
 //
 
 #import "ImageTextCell.h"

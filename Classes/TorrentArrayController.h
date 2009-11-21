@@ -8,12 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TorrentActionController.h"
+#import "Torrent.h"
 
 @interface TorrentArrayController : NSArrayController {
     TorrentActionController* actionController;
 }
 
-- (IBAction)add:(id)sender;
-- (IBAction)remove:(id)sender;
+- (BOOL)add:(NSString *)fileName;
+- (BOOL)remove:(Torrent *)torrent;
 
 @end

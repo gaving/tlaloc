@@ -1,9 +1,9 @@
 //
 //  ImageTextCell.h
-//  SofaControl
+//  tlaloc
 //
-//  Created by Martin Kahr on 10.10.06.
-//  Copyright 2006 CASE Apps. All rights reserved.
+//  Created by Gavin Gilmour on 18/10/2009.
+//  Copyright 2009. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -31,14 +31,8 @@
 - (NSImage*) ratioIconForCell: (ImageTextCell*) cell data: (NSObject*) data;
 - (NSString*) primaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data;
 - (NSString*) secondaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data;
-
-// optional: give the delegate a chance to set a different data object
-// This is especially useful for those cases where you do not want that NSCell creates copies of your data objects (e.g. Core Data objects).
-// In this case you bind a value to the NSTableColumn that enables you to retrieve the correct data object. You retrieve the objects
-// in the method dataElementForCell
 - (NSObject*) dataElementForCell: (ImageTextCell*) cell;
 
-// optional
 - (BOOL) disabledForCell: (ImageTextCell*) cell data: (NSObject*) data;
 
 @end
