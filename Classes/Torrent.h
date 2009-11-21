@@ -20,6 +20,7 @@
     NSString *bytesTotalReadable;
     NSString *sizeFiles;
     NSNumber *ratio;
+    NSNumber *multiFile;
 }
 
 @property (nonatomic, retain) NSString *name;
@@ -33,6 +34,7 @@
 @property (nonatomic, retain) NSString *bytesTotalReadable;
 @property (nonatomic, retain) NSString *sizeFiles;
 @property (nonatomic, retain) NSNumber *ratio;
+@property (nonatomic, retain) NSNumber *multiFile;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize;
 + (BOOL) loadAll;

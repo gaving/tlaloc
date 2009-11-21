@@ -7,7 +7,7 @@
 - [_] Drag and drop to start a new download
 - [_] Notification area
 - [_] Growls?
-- [_] Status bar showing meaningful stats (download/upload)
+- [_] Status bar showing meaningful stats (download/upload) Also: action updates
 - [_] Allow multiple selections for actions
 - [_] Version dialog of some kind
 - [_] Menu item actions for each table cell
@@ -30,8 +30,10 @@
 - [!] Refresh automatically
 - [x] Double click on completed torrents launches if destination configured
 - [x] Spinner for refresh action
+- [_] Show folders for multifiles
 
 ## Resources
 
 - Overflow issue on large file sizes: http://libtorrent.rakshasa.no/ticket/1303
 - RTorrentCommandsRaw - http://libtorrent.rakshasa.no/wiki/RTorrentCommandsRaw
+- http://209.85.229.132/search?q=cache:J5P_N3tXKKQJ:trac.transmissionbt.com/browser/trunk/macosx/Torrent.m%3Frev%3D261%26format%3Dtxt+nsworkspace+filetype+iconforfiletype+nil&cd=9&hl=en&ct=clnk&gl=uk&client=firefox-a

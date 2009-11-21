@@ -25,6 +25,7 @@
 @synthesize bytesTotalReadable;
 @synthesize sizeFiles;
 @synthesize ratio;
+@synthesize multiFile;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize {
     float floatSize = [theSize floatValue];
@@ -82,6 +83,7 @@
     [params addObject:@"d.get_ratio="];
     [params addObject:@"d.is_active="];
     [params addObject:@"d.is_hash_checking="];
+    [params addObject:@"d.is_multi_file="];
 
     [request setMethod:@"d.multicall" withParameter:params];
 
@@ -108,6 +110,7 @@
         [tempTorrent setBytesDoneReadable:[Torrent stringFromFileSize: [tempTorrent bytesDone]]];
         [tempTorrent setBytesTotalReadable:[Torrent stringFromFileSize: [tempTorrent bytesTotal]]];
         [tempTorrent setRatio:[value objectAtIndex:15]];
+        [tempTorrent setMultiFile:[value objectAtIndex:18]];
 
         [torrents addObject:tempTorrent];
     }
@@ -126,11 +129,13 @@
     [copy setBytesDoneReadable:[self bytesDoneReadable]];
     [copy setBytesTotalReadable:[self bytesTotalReadable]];
     [copy setRatio:[self ratio]];
+    [copy setMultiFile:[self multiFile]];
     return copy;
 }
 
 - (NSImage*) typeIcon {
-    NSImage *image = [[NSWorkspace sharedWorkspace] iconForFileType:[filename pathExtension]];
+    NSString * pathExtension = [multiFile boolValue] ? NSFileTypeForHFSTypeCode('fldr') : [filename pathExtension];
+    NSImage* image = [[NSWorkspace sharedWorkspace] iconForFileType:pathExtension];
     return image;
 }
 
@@ -143,7 +148,7 @@
     if (torrentRatio >= 0.95) {
         resource = @"surprise";
     } else if (torrentRatio >= 0.90) {
-        resource = @"grin";
+        resource = @"wink";
     } else if (torrentRatio >= 0.75) {
         resource = @"smile-big";
     } else if (torrentRatio >= 0.60) {
