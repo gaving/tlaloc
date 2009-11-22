@@ -107,7 +107,7 @@
 		86F43E0310964252003EDB14 /* tlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tlalocAppDelegate.m; sourceTree = "<group>"; };
 		86F43E0410964252003EDB14 /* tlalocAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlalocAppDelegate.h; sourceTree = "<group>"; };
 		86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlaloc_Prefix.pch; sourceTree = "<group>"; };
-		86F43E0610964252003EDB14 /* tlaloc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tlaloc-Info.plist"; sourceTree = "<group>"; };
+		86F43E0610964252003EDB14 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +204,7 @@
 				86F43E0310964252003EDB14 /* tlalocAppDelegate.m */,
 				86F43E0410964252003EDB14 /* tlalocAppDelegate.h */,
 				86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */,
-				86F43E0610964252003EDB14 /* tlaloc-Info.plist */,
+				86F43E0610964252003EDB14 /* Info.plist */,
 				86C3DB5D1094F2E700FB592F /* wink.png */,
 				86C3DB5E1094F2E700FB592F /* surprise.png */,
 				86C3DB5F1094F2E700FB592F /* smile.png */,
@@ -379,7 +379,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = tlaloc_Prefix.pch;
-				INFOPLIST_FILE = "tlaloc-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = tlaloc;
 			};
@@ -393,7 +393,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = tlaloc_Prefix.pch;
-				INFOPLIST_FILE = "tlaloc-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = tlaloc;
 			};
@@ -409,6 +409,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				PRODUCT_NAME = Tlaloc;
 				SDKROOT = macosx10.6;
 			};
 			name = Debug;
@@ -421,6 +422,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				PRODUCT_NAME = Tlaloc;
 				SDKROOT = macosx10.6;
 			};
 			name = Release;

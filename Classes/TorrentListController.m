@@ -18,6 +18,7 @@ NSPredicate *predicateTemplate;
 
 - (id) init {
     if (self = [super init]) {
+        [NSApp setDelegate:self];
         if ([self grabTorrents]) {
             torrents  = [[NSMutableArray alloc] init];
             [self buildTorrents];
@@ -88,6 +89,7 @@ NSPredicate *predicateTemplate;
                 NSAlert* alert = [NSAlert new];
                 [alert setInformativeText: @"Could not add torrent!"];
                 [alert setMessageText: @"Check the torrent file you are trying to add"];
+                [alert setAlertStyle: NSCriticalAlertStyle];
                 [alert runModal];
                 [alert release];
             }
@@ -191,6 +193,30 @@ NSPredicate *predicateTemplate;
 - (IBAction)preferences:(id)sender {
     [[AppPrefsWindowController sharedPrefsWindowController] showWindow:nil];
     (void)sender;
+}
+
+- (IBAction) productWebsite:(id) sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/gaving/tlaloc/"]];
+}
+
+- (void) application: (NSApplication *) app openFiles: (NSArray *) filenames {
+    [self openFiles: filenames];
+}
+
+- (void) openFiles: (NSArray *) filenames {
+    NSLog(@"openFiles handling given files");
+    for(int i = 0; i < [filenames count]; i++ ) {
+        NSString* fileName = [filenames objectAtIndex:i];
+        if (![arrayTorrents add:fileName]) {
+            NSAlert* alert = [NSAlert new];
+            [alert setInformativeText: @"Could not add torrent!"];
+            [alert setMessageText: @"Check the torrent file you are trying to add"];
+            [alert setAlertStyle: NSCriticalAlertStyle];
+            [alert runModal];
+            [alert release];
+        }
+    }
+    [self refreshTorrents:self];
 }
 
 - (void)showError {

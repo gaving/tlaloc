@@ -38,4 +38,8 @@
 - (IBAction)infoTorrent:(id)sender;
 - (IBAction)preferences:(id)sender;
 
+- (IBAction)productWebsite:(id)sender;
+
+- (void)openFiles:(NSArray *) filenames;
+
 @end

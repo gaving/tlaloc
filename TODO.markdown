@@ -5,7 +5,7 @@
 - [x] Multicalls to make fetching less heavy?
 - [x] Get the filter box working (with the new custom cells)
 - [_] Drag and drop to start a new download
-- [_] Open with torrent default add action
+- [x] Open with torrent default open with/dock drag action
 - [_] Notification area
 - [_] Growls?
 - [_] Status bar showing meaningful stats (download/upload) Also: action updates
@@ -34,6 +34,7 @@
 - [x] Double click on completed torrents launches if destination configured
 - [x] Spinner for refresh action
 - [x] Show folders for multifiles
+- [x] Menus and items for toolbar actions
 
 ## Resources
 
