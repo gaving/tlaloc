@@ -4,7 +4,7 @@
 
 - [x] Multicalls to make fetching less heavy?
 - [x] Get the filter box working (with the new custom cells)
-- [_] Drag and drop to start a new download
+- [x] Drag and drop to start a new download
 - [x] Open with torrent default open with/dock drag action
 - [_] Notification area
 - [_] Growls?
@@ -15,6 +15,7 @@
 - [_] Info pane when you view a torrent
 - [_] Use sparkle for the software updates
 - [_] Release process dmg bundling etc
+- [_] iTunes import torrent target
 
 ## 0.1
 
@@ -35,6 +36,7 @@
 - [x] Spinner for refresh action
 - [x] Show folders for multifiles
 - [x] Menus and items for toolbar actions
+- [x] Copy torrent path on cell copy
 
 ## Resources
 
@@ -42,3 +44,4 @@
 - RTorrentCommandsRaw - http://libtorrent.rakshasa.no/wiki/RTorrentCommandsRaw
 - http://209.85.229.132/search?q=cache:J5P_N3tXKKQJ:trac.transmissionbt.com/browser/trunk/macosx/Torrent.m%3Frev%3D261%26format%3Dtxt+nsworkspace+filetype+iconforfiletype+nil&cd=9&hl=en&ct=clnk&gl=uk&client=firefox-a
 - http://sparkle.andymatuschak.org/
+- http://ask.metafilter.com/106827/How-can-I-automatically-add-tracks-to-the-OS-X-iTunes-Library

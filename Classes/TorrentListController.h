@@ -31,9 +31,11 @@
 - (void)showError;
 
 - (IBAction)addTorrent:(id)sender;
+- (IBAction)copyTorrent:(id)sender;
 - (IBAction)removeTorrent:(id)sender;
 - (IBAction)refreshTorrents:(id)sender;
 - (IBAction)filterTorrent:(id)sender;
+- (IBAction)openTorrent:(id)sender;
 - (IBAction)openDestination:(id)sender;
 - (IBAction)infoTorrent:(id)sender;
 - (IBAction)preferences:(id)sender;

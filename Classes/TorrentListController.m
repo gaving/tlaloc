@@ -98,15 +98,50 @@ NSPredicate *predicateTemplate;
     }
 }
 
+- (IBAction)copyTorrent:(id)sender {
+
+    NSArray *selectedTorrents = [arrayTorrents selectedObjects];
+    if ([selectedTorrents count] == 0) {
+        return;
+    }
+
+    NSString *torrentDestination = [Config torrentDestination];
+    NSMutableArray *fileNames = [NSMutableArray array];
+    for (int i = 0; i < [selectedTorrents count]; i++) {
+        Torrent *torrent = [selectedTorrents objectAtIndex:i];
+        NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]]; 
+        [fileNames addObject: realPath];
+    }
+
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
+    [pb declareTypes:types owner:self];
+    [pb setString: [fileNames componentsJoinedByString:@","] forType:NSStringPboardType];
+}
+
 - (IBAction)removeTorrent:(id)sender {
+
+    NSArray *selectedTorrents = [arrayTorrents selectedObjects];
+    if ([selectedTorrents count] == 0) {
+        return;
+    }
+
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     [alert addButtonWithTitle:@"Yes"];
     [alert addButtonWithTitle:@"Cancel"];
-    [alert setMessageText:@"Are you sure you wish to delete the selected torrents?"];
+
+    NSString* messageText;
+    if ([selectedTorrents count] == 1) {
+        Torrent *torrent = [selectedTorrents objectAtIndex:0];
+        messageText = [NSString stringWithFormat: @"Are you sure you want to delete %@?", [torrent filename]];
+    } else {
+        messageText = [NSString stringWithFormat: @"Are you sure you want to delete the selected torrents?"];
+    }
+
+    [alert setMessageText:messageText];
     [alert setInformativeText:@"This action cannot be undone."];
     [alert setAlertStyle:NSWarningAlertStyle];
     if ([alert runModal] == NSAlertFirstButtonReturn) {
-        NSArray *selectedTorrents = [arrayTorrents selectedObjects];
         for (int i = 0; i < [selectedTorrents count]; i++) {
             Torrent *torrent = [selectedTorrents objectAtIndex:i];
             [arrayTorrents remove:torrent];
@@ -148,7 +183,6 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)openTorrent:(id)sender {
-    NSLog(@"Open the torrent");
     NSString *torrentDestination = [Config torrentDestination];
 
     if (torrentDestination == nil) {
@@ -165,7 +199,6 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)openDestination:(id)sender {
-    NSLog(@"Open the volume in preferences");
     NSString *torrentDestination = [Config torrentDestination];
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
@@ -187,7 +220,7 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)infoTorrent:(id)sender {
-    NSLog(@"Show the torrent info");
+   NSLog(@"TODO: Fire up the fancy info window");
 }
 
 - (IBAction)preferences:(id)sender {
@@ -204,7 +237,6 @@ NSPredicate *predicateTemplate;
 }
 
 - (void) openFiles: (NSArray *) filenames {
-    NSLog(@"openFiles handling given files");
     for(int i = 0; i < [filenames count]; i++ ) {
         NSString* fileName = [filenames objectAtIndex:i];
         if (![arrayTorrents add:fileName]) {
