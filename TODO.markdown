@@ -15,7 +15,7 @@
 - [_] Info pane when you view a torrent
 - [_] Use sparkle for the software updates
 - [_] Release process dmg bundling etc
-- [_] iTunes import torrent target
+- [x] iTunes import torrent target
 
 ## 0.1
 
@@ -45,3 +45,4 @@
 - http://209.85.229.132/search?q=cache:J5P_N3tXKKQJ:trac.transmissionbt.com/browser/trunk/macosx/Torrent.m%3Frev%3D261%26format%3Dtxt+nsworkspace+filetype+iconforfiletype+nil&cd=9&hl=en&ct=clnk&gl=uk&client=firefox-a
 - http://sparkle.andymatuschak.org/
 - http://ask.metafilter.com/106827/How-can-I-automatically-add-tracks-to-the-OS-X-iTunes-Library
+- http://osdir.com/ml/cocoa-dev/2009-09/msg01907.html

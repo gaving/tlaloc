@@ -29,6 +29,7 @@ NSPredicate *predicateTemplate;
     return self;
 }
 
+#define TorrentTableViewDragAndDropDataType @"TorrentTableViewDragAndDropDataType"
 -(void)awakeFromNib {
 
     NSTableColumn* column = [[tableView tableColumns] objectAtIndex:0];
@@ -44,6 +45,9 @@ NSPredicate *predicateTemplate;
 
     [tableView setTarget:self];
     [tableView setDoubleAction:@selector(openTorrent:)];
+
+    [tableView registerForDraggedTypes: [NSArray arrayWithObject:NSFilenamesPboardType] ];
+    [tableView setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO]; 
 }
 
 - (NSMutableArray*) torrents {

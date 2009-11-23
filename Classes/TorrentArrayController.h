@@ -12,6 +12,7 @@
 
 @interface TorrentArrayController : NSArrayController {
     TorrentActionController* actionController;
+    IBOutlet NSTableView *tableView;
 }
 
 - (BOOL)add:(NSString *)fileName;

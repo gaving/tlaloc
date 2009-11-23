@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,8 +274,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>39</integer>
-									<integer>23</integer>
+									<integer>6</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -317,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TorrentListController.m</string>
+								<string>TorrentArrayController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TorrentListController.m</string>
+										<string>TorrentArrayController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>86C6C9A510BA16A300DD4B1F</string>
+										<string>86D1E37A10BB2E0400559C66</string>
 										<key>history</key>
 										<array>
 											<string>861845F0108B9C1300D72F2D</string>
@@ -350,7 +348,8 @@
 											<string>86BDE0C010B8611400A1C68D</string>
 											<string>86BDE0C110B8611400A1C68D</string>
 											<string>86DC34C110B95B7700221791</string>
-											<string>86C6C97810BA10FB00DD4B1F</string>
+											<string>86D1E37810BB2E0400559C66</string>
+											<string>86D1E37910BB2E0400559C66</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -362,16 +361,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {694, 561}}</string>
+								<string>{{0, 0}, {694, 552}}</string>
 								<key>RubberWindowFrame</key>
 								<string>298 117 987 1011 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>561pt</string>
+							<string>552pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -382,14 +383,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 566}, {694, 404}}</string>
+								<string>{{0, 557}, {694, 413}}</string>
 								<key>RubberWindowFrame</key>
 								<string>298 117 987 1011 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>404pt</string>
+							<string>413pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -408,9 +409,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>86C6C95F10BA0D3700DD4B1F</string>
+				<string>86D1E2F810BB212E00559C66</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>86C6C96010BA0D3700DD4B1F</string>
+				<string>86D1E2F910BB212E00559C66</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -548,8 +549,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>86C6C97010BA109100DD4B1F</string>
-		<string>86C6C97110BA109100DD4B1F</string>
+		<string>86D1E30D10BB21CD00559C66</string>
+		<string>86D1E30E10BB21CD00559C66</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/gavin/Coding/tlaloc/tlaloc.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -577,21 +578,21 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TorrentListController.m</string>
+								<string>TorrentArrayController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {923, 193}}</string>
+								<string>{{0, 0}, {923, 507}}</string>
 								<key>RubberWindowFrame</key>
 								<string>847 130 923 857 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>193pt</string>
+							<string>507pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -610,14 +611,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 198}, {923, 618}}</string>
+								<string>{{0, 512}, {923, 304}}</string>
 								<key>RubberWindowFrame</key>
 								<string>847 130 923 857 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
 							<key>Proportion</key>
-							<string>618pt</string>
+							<string>304pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -635,7 +636,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>86228CF6108A918F00C8C6FC</string>
-				<string>86C6C96110BA0D3700DD4B1F</string>
+				<string>86D1E2FA10BB212E00559C66</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -757,13 +758,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>86C6C96810BA109100DD4B1F</string>
+				<string>86D1E30410BB21CC00559C66</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>86C6C96910BA109100DD4B1F</string>
-				<string>86C6C96A10BA109100DD4B1F</string>
-				<string>86C6C96B10BA109100DD4B1F</string>
-				<string>86C6C96C10BA109100DD4B1F</string>
-				<string>86C6C96D10BA109100DD4B1F</string>
+				<string>86D1E30510BB21CC00559C66</string>
+				<string>86D1E30610BB21CC00559C66</string>
+				<string>86D1E30710BB21CC00559C66</string>
+				<string>86D1E30810BB21CC00559C66</string>
+				<string>86D1E30910BB21CC00559C66</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -927,7 +928,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>86C6C96E10BA109100DD4B1F</string>
+				<string>86D1E30A10BB21CC00559C66</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
