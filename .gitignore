@@ -4,3 +4,4 @@ build/
 .DS_Store
 Icon?
 dsa_priv.pem
+Sparkle.framework/
