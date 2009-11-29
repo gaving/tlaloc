@@ -8,6 +8,7 @@
 
 #import "TorrentListController.h"
 #import "Config.h"
+#import "Util.h"
 #import "Torrent.h"
 #import "ImageTextCell.h"
 #import "AppPrefsWindowController.h"
@@ -23,7 +24,7 @@ NSPredicate *predicateTemplate;
             torrents  = [[NSMutableArray alloc] init];
             [self buildTorrents];
         } else {
-            [self showError];
+            [self showFetchError];
         }
     }
     return self;
@@ -45,9 +46,8 @@ NSPredicate *predicateTemplate;
 
     [tableView setTarget:self];
     [tableView setDoubleAction:@selector(openTorrent:)];
-
     [tableView registerForDraggedTypes: [NSArray arrayWithObject:NSFilenamesPboardType] ];
-    [tableView setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO]; 
+    [tableView setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO];
 }
 
 - (NSMutableArray*) torrents {
@@ -90,12 +90,7 @@ NSPredicate *predicateTemplate;
         for(int i = 0; i < [files count]; i++ ) {
             NSString* fileName = [files objectAtIndex:i];
             if (![arrayTorrents add:fileName]) {
-                NSAlert* alert = [NSAlert new];
-                [alert setInformativeText: @"Could not add torrent!"];
-                [alert setMessageText: @"Check the torrent file you are trying to add"];
-                [alert setAlertStyle: NSCriticalAlertStyle];
-                [alert runModal];
-                [alert release];
+                [Util showError:@"Couldn't add torrent" withMessage: @"Please verify this file is a valid torrent file."];
             }
         }
         [self refreshTorrents:self];
@@ -113,7 +108,7 @@ NSPredicate *predicateTemplate;
     NSMutableArray *fileNames = [NSMutableArray array];
     for (int i = 0; i < [selectedTorrents count]; i++) {
         Torrent *torrent = [selectedTorrents objectAtIndex:i];
-        NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]]; 
+        NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]];
         [fileNames addObject: realPath];
     }
 
@@ -121,6 +116,36 @@ NSPredicate *predicateTemplate;
     NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
     [pb declareTypes:types owner:self];
     [pb setString: [fileNames componentsJoinedByString:@","] forType:NSStringPboardType];
+}
+
+- (IBAction)deleteFile:(id)sender {
+
+    NSArray *selectedTorrents = [arrayTorrents selectedObjects];
+    if ([selectedTorrents count] == 0) {
+        return;
+    }
+
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    [alert addButtonWithTitle:@"Yes"];
+    [alert addButtonWithTitle:@"Cancel"];
+
+    NSString* messageText;
+    if ([selectedTorrents count] == 1) {
+        Torrent *torrent = [selectedTorrents objectAtIndex:0];
+        messageText = [NSString stringWithFormat: @"Are you sure you want to delete %@?", [torrent filename]];
+    } else {
+        messageText = [NSString stringWithFormat: @"Are you sure you want to delete the selected torrents (and associated files)?"];
+    }
+
+    [alert setMessageText:messageText];
+    [alert setInformativeText:@"This action cannot be undone."];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    if ([alert runModal] == NSAlertFirstButtonReturn) {
+        for (int i = 0; i < [selectedTorrents count]; i++) {
+            Torrent *torrent = [selectedTorrents objectAtIndex:i];
+            [arrayTorrents delete:torrent];
+        }
+    }
 }
 
 - (IBAction)removeTorrent:(id)sender {
@@ -137,14 +162,15 @@ NSPredicate *predicateTemplate;
     NSString* messageText;
     if ([selectedTorrents count] == 1) {
         Torrent *torrent = [selectedTorrents objectAtIndex:0];
-        messageText = [NSString stringWithFormat: @"Are you sure you want to delete %@?", [torrent filename]];
+        messageText = [NSString stringWithFormat: @"Are you sure you want to remove %@?", [torrent filename]];
     } else {
-        messageText = [NSString stringWithFormat: @"Are you sure you want to delete the selected torrents?"];
+        messageText = [NSString stringWithFormat: @"Are you sure you want to remove the selected torrents?"];
     }
 
     [alert setMessageText:messageText];
     [alert setInformativeText:@"This action cannot be undone."];
     [alert setAlertStyle:NSWarningAlertStyle];
+
     if ([alert runModal] == NSAlertFirstButtonReturn) {
         for (int i = 0; i < [selectedTorrents count]; i++) {
             Torrent *torrent = [selectedTorrents objectAtIndex:i];
@@ -165,7 +191,7 @@ NSPredicate *predicateTemplate;
         /* Set the array controllers new content */
         [arrayTorrents setContent:torrents];
     } else {
-        [self showError];
+        [self showFetchError];
     }
 
     [progressIndicator stopAnimation: self];
@@ -190,14 +216,10 @@ NSPredicate *predicateTemplate;
     NSString *torrentDestination = [Config torrentDestination];
 
     if (torrentDestination == nil) {
-        NSAlert* alert = [NSAlert new];
-        [alert setInformativeText: @"No destination set in preferences"];
-        [alert setMessageText: @"Please configure this in the preferences panel"];
-        [alert runModal];
-        [alert release];
+        [Util showError:@"Couldn't open destination" withMessage: @"No torrent destination defined in preferences."];
     } else {
         Torrent *torrent = [[arrayTorrents selectedObjects] objectAtIndex:0];
-        NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]]; 
+        NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]];
         [[NSWorkspace sharedWorkspace] openFile:realPath];
     }
 }
@@ -207,17 +229,9 @@ NSPredicate *predicateTemplate;
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
     if (torrentDestination == nil) {
-        NSAlert* alert = [NSAlert new];
-        [alert setInformativeText: @"Couldn't open destination"];
-        [alert setMessageText: @"Please check your preferences"];
-        [alert runModal];
-        [alert release];
-    } else if ([fileManager fileExistsAtPath: torrentDestination] == NO) { 
-        NSAlert* alert = [NSAlert new];
-        [alert setInformativeText: @"Couldn't open destination"];
-        [alert setMessageText: @"Path does not exist"];
-        [alert runModal];
-        [alert release];
+         [Util showError:@"Couldn't open destination" withMessage: @"No torrent destination defined in preferences."];
+    } else if ([fileManager fileExistsAtPath: torrentDestination] == NO) {
+         [Util showError:@"Couldn't open destination" withMessage: @"Torrent destination is not a valid folder."];
     } else {
         [[NSWorkspace sharedWorkspace] openFile:torrentDestination];
     }
@@ -233,7 +247,7 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction) productWebsite:(id) sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/gaving/tlaloc/"]];
+    [Util openWebsite];
 }
 
 - (void) application: (NSApplication *) app openFiles: (NSArray *) filenames {
@@ -244,23 +258,14 @@ NSPredicate *predicateTemplate;
     for(int i = 0; i < [filenames count]; i++ ) {
         NSString* fileName = [filenames objectAtIndex:i];
         if (![arrayTorrents add:fileName]) {
-            NSAlert* alert = [NSAlert new];
-            [alert setInformativeText: @"Could not add torrent!"];
-            [alert setMessageText: @"Check the torrent file you are trying to add"];
-            [alert setAlertStyle: NSCriticalAlertStyle];
-            [alert runModal];
-            [alert release];
+            [Util showError:@"Couldn't add torrent" withMessage: @"Please verify this file is a valid torrent file."];
         }
     }
     [self refreshTorrents:self];
 }
 
-- (void)showError {
-    NSAlert* alert = [NSAlert new];
-    [alert setInformativeText: @"Couldn't connect fetch torrents"];
-    [alert setMessageText: @"Please check your connection settings"];
-    [alert runModal];
-    [alert release];
+- (void)showFetchError {
+    [Util showError:@"Couldn't fetch torrents" withMessage: @"Please check your connection settings."];
 }
 
 - (void) dealloc {

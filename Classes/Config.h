@@ -7,19 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XMLRPCRequest.h"
 
 @interface Config : NSObject {
     NSMutableArray *torrents;
 }
 
 extern NSString* const XMLRPCUserAgent;
+extern NSString* const ProductWebsite;
 
 @property (retain) NSMutableArray *torrents;
 
 + (NSURL *) rtorrentRPCURL;
 + (NSString *) torrentDestination;
-+ (id) executeXMLRPCRequest:(XMLRPCRequest *)req;
++ (NSString *) productWebsite;
 + (Config *)instance;
 
 @end

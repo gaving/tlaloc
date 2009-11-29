@@ -28,10 +28,11 @@
 
 - (BOOL)grabTorrents;
 - (void)buildTorrents;
-- (void)showError;
+- (void)showFetchError;
 
 - (IBAction)addTorrent:(id)sender;
 - (IBAction)copyTorrent:(id)sender;
+- (IBAction)deleteFile:(id)sender;
 - (IBAction)removeTorrent:(id)sender;
 - (IBAction)refreshTorrents:(id)sender;
 - (IBAction)filterTorrent:(id)sender;

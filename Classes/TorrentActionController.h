@@ -15,5 +15,6 @@
 
 - (BOOL)addTorrent:(NSString *)fileName;
 - (BOOL)removeTorrent:(Torrent *)torrent;
+- (BOOL)deleteFile:(Torrent *)torrent;
 
 @end

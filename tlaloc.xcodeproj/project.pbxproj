@@ -39,6 +39,7 @@
 		86C3DB681094F2E700FB592F /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB611094F2E700FB592F /* sad.png */; };
 		86C3DB691094F2E700FB592F /* plain.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB621094F2E700FB592F /* plain.png */; };
 		86C3DB6A1094F2E700FB592F /* crying.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB631094F2E700FB592F /* crying.png */; };
+		86E9E6AA10C1FB670082415E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E9E6A810C1FB670082415E /* Util.m */; };
 		86F43E0710964252003EDB14 /* tlalocAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F43E0310964252003EDB14 /* tlalocAppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -104,6 +105,8 @@
 		86C3DB611094F2E700FB592F /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sad.png; path = Resources/emotes/sad.png; sourceTree = "<group>"; };
 		86C3DB621094F2E700FB592F /* plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plain.png; path = Resources/emotes/plain.png; sourceTree = "<group>"; };
 		86C3DB631094F2E700FB592F /* crying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crying.png; path = Resources/emotes/crying.png; sourceTree = "<group>"; };
+		86E9E6A810C1FB670082415E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		86E9E6A910C1FB670082415E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		86F43E0310964252003EDB14 /* tlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tlalocAppDelegate.m; sourceTree = "<group>"; };
 		86F43E0410964252003EDB14 /* tlalocAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlalocAppDelegate.h; sourceTree = "<group>"; };
 		86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlaloc_Prefix.pch; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				86E9E6A810C1FB670082415E /* Util.m */,
+				86E9E6A910C1FB670082415E /* Util.h */,
 				862967BD10B6142C00191673 /* DBPrefsWindowController.h */,
 				862967BE10B6142C00191673 /* DBPrefsWindowController.m */,
 				862967BF10B6142C00191673 /* AppPrefsWindowController.m */,
@@ -343,6 +348,7 @@
 				8650C98410B5A71B0003287E /* TorrentArrayController.m in Sources */,
 				862967C110B6142C00191673 /* DBPrefsWindowController.m in Sources */,
 				862967C210B6142C00191673 /* AppPrefsWindowController.m in Sources */,
+				86E9E6AA10C1FB670082415E /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

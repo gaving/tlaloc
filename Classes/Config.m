@@ -7,15 +7,13 @@
 //
 
 #import "Config.h"
-#import "XMLRPCRequest.h"
-#import "XMLRPCResponse.h"
-#import "XMLRPCConnection.h"
 
 @implementation Config
 
 @synthesize torrents;
 
 NSString* const XMLRPCUserAgent = @"tlaloc";
+NSString* const ProductWebsite = @"http://github.com/gaving/tlaloc/";
 
 + (Config *)instance {
     static Config *gInstance = NULL;
@@ -55,10 +53,8 @@ NSString* const XMLRPCUserAgent = @"tlaloc";
     return torrentDestination;
 }
 
-+ (id)executeXMLRPCRequest:(XMLRPCRequest *)req {
-    XMLRPCResponse *userInfoResponse = [XMLRPCConnection sendSynchronousXMLRPCRequest:req];
-    // NSLog(@"Response body: %@", [userInfoResponse body]);
-    return [userInfoResponse object];
++ (NSString *)productWebsite {
+    return ProductWebsite;
 }
 
 - (void) dealloc {

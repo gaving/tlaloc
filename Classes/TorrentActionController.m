@@ -9,39 +9,46 @@
 #import "Torrent.h"
 #import "TorrentActionController.h"
 #import "Config.h"
+#import "Util.h"
 #import "XMLRPCRequest.h"
 #import "XMLRPCResponse.h"
 #import "XMLRPCConnection.h"
 
 @implementation TorrentActionController
 
-- (BOOL)addTorrent:(NSString *)fileName {
-    NSLog(@"TorrentActionController addTorrent: %@", fileName);
-    NSData *data = [NSData dataWithContentsOfFile:fileName];
-
-    /* Send the data of the torrent over */
++ (BOOL)executeCommand:(NSString *)command withData:(NSObject *)data {
     NSURL *rtorrentRPCURL = [Config rtorrentRPCURL];
     XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:rtorrentRPCURL];
     [request setUserAgent:XMLRPCUserAgent];
-    [request setMethod:@"load_raw_start" withParameter:data];
-    NSObject *response = [Config executeXMLRPCRequest:request];
+    [request setMethod:command withParameter:data];
+    NSObject *response = [Util executeXMLRPCRequest:request];
     [request release];
 
-    return !([response isKindOfClass:[NSError class]]);
+    if ([response isKindOfClass:[NSError class]]) {
+
+        /* TODO: Present some sort of error dialog */
+        return NO;
+    }
+
+    return YES;
+}
+
+- (BOOL)addTorrent:(NSString *)fileName {
+    NSLog(@"TorrentActionController addTorrent: %@", fileName);
+    NSData *data = [NSData dataWithContentsOfFile:fileName];
+    return [TorrentActionController executeCommand:@"load_raw_start" withData:data];
 }
 
 - (BOOL)removeTorrent:(Torrent *)torrent {
     NSLog(@"TorrentActionController removeTorrent: %@", [torrent hash]);
+    return [TorrentActionController executeCommand:@"d.erase" withData:[torrent hash]];
+}
 
-    /* Nuke the torrent */
-    NSURL *rtorrentRPCURL = [Config rtorrentRPCURL];
-    XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:rtorrentRPCURL];
-    [request setUserAgent:XMLRPCUserAgent];
-    [request setMethod:@"d.erase" withParameter:[torrent hash]];
-    NSObject *response = [Config executeXMLRPCRequest:request];
-    [request release];
+- (BOOL)deleteFile:(Torrent *)torrent {
+    NSLog(@"TorrentActionController deleteFile: %@", [torrent hash]);
 
-    return !([response isKindOfClass:[NSError class]]);
+    /* Delete the actual file */
+    return [TorrentActionController executeCommand:@"d.delete_tied" withData:[torrent hash]];
 }
 
 @end

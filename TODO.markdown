@@ -14,8 +14,10 @@
 - [_] Menu item actions for each table cell
 - [_] Info pane when you view a torrent
 - [_] Use sparkle for the software updates
+- [_] Make toolbar visibility a preference option
 - [_] Release process dmg bundling etc
 - [x] iTunes import torrent target
+- [!] Refresh automatically (polling of some sort)
 
 ## 0.1
 
@@ -31,12 +33,13 @@
 - [x] Add torrent
 - [x] Remove torrent
 - [x] Refresh torrents
-- [!] Refresh automatically (polling of some sort)
 - [x] Double click on completed torrents launches if destination configured
 - [x] Spinner for refresh action
 - [x] Show folders for multifiles
 - [x] Menus and items for toolbar actions
 - [x] Copy torrent path on cell copy
+- [_] Fix multiple remove bug
+- [_] Fix spinner issue
 
 ## Resources
 
@@ -46,3 +49,4 @@
 - http://sparkle.andymatuschak.org/
 - http://ask.metafilter.com/106827/How-can-I-automatically-add-tracks-to-the-OS-X-iTunes-Library
 - http://osdir.com/ml/cocoa-dev/2009-09/msg01907.html
+- http://drnicwilliams.com/2009/02/03/choctop-packaging-and-deployment-of-cocoa-applications/

@@ -8,6 +8,7 @@
 
 #import "Torrent.h"
 #import "Config.h"
+#import "Util.h"
 #import "XMLRPCRequest.h"
 #import "XMLRPCResponse.h"
 #import "XMLRPCConnection.h"
@@ -87,7 +88,7 @@
 
     [request setMethod:@"d.multicall" withParameter:params];
 
-    NSObject *response = [Config executeXMLRPCRequest:request];
+    NSObject *response = [Util executeXMLRPCRequest:request];
     [request release];
 
     if ([response isKindOfClass:[NSError class]]) {

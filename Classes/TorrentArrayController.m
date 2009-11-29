@@ -24,6 +24,14 @@
     return NO;
 }
 
+- (BOOL)delete:(Torrent *)torrent {
+    if ([actionController deleteFile:torrent]) {
+        [super remove:self];
+        return YES;
+    }
+    return NO;
+}
+
 - (BOOL)remove:(Torrent *)torrent {
     if ([actionController removeTorrent:torrent]) {
         [super remove:self];

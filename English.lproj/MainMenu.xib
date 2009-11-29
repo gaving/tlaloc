@@ -11,8 +11,8 @@
 			<string key="NS.object.0">732</string>
 		</object>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="29"/>
 			<integer value="664"/>
+			<integer value="205"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -201,7 +201,7 @@
 						<object class="NSMenu" key="NSSubmenu" id="789758025">
 							<string key="NSTitle">Edit</string>
 							<array class="NSMutableArray" key="NSMenuItems">
-								<object class="NSMenuItem" id="412134352">
+								<object class="NSMenuItem" id="437104165">
 									<reference key="NSMenu" ref="789758025"/>
 									<string key="NSTitle">Copy</string>
 									<string key="NSKeyEquiv">c</string>
@@ -210,9 +210,9 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="437104165">
+								<object class="NSMenuItem" id="244679602">
 									<reference key="NSMenu" ref="789758025"/>
-									<string key="NSTitle">Delete</string>
+									<string key="NSTitle">Remove</string>
 									<string type="base64-UTF8" key="NSKeyEquiv">CA</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -235,6 +235,16 @@
 									<string key="NSTitle"/>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
+								<object class="NSMenuItem" id="267284584">
+									<reference key="NSMenu" ref="789758025"/>
+									<bool key="NSIsDisabled">YES</bool>
+									<bool key="NSIsHidden">YES</bool>
+									<string key="NSTitle">Delete</string>
+									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
@@ -1428,14 +1438,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">removeTorrent:</string>
-						<reference key="source" ref="773831130"/>
-						<reference key="destination" ref="437104165"/>
-					</object>
-					<int key="connectionID">673</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">refreshTorrents:</string>
 						<reference key="source" ref="773831130"/>
 						<reference key="destination" ref="941355133"/>
@@ -1483,14 +1485,6 @@
 					<int key="connectionID">696</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">copyTorrent:</string>
-						<reference key="source" ref="773831130"/>
-						<reference key="destination" ref="412134352"/>
-					</object>
-					<int key="connectionID">699</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">tableView</string>
 						<reference key="source" ref="1047461437"/>
@@ -1505,6 +1499,30 @@
 						<reference key="destination" ref="1047461437"/>
 					</object>
 					<int key="connectionID">701</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">deleteFile:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="267284584"/>
+					</object>
+					<int key="connectionID">704</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">removeTorrent:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="244679602"/>
+					</object>
+					<int key="connectionID">706</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">copyTorrent:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="437104165"/>
+					</object>
+					<int key="connectionID">707</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1602,7 +1620,8 @@
 							<reference ref="916643869"/>
 							<reference ref="989499368"/>
 							<reference ref="372576078"/>
-							<reference ref="412134352"/>
+							<reference ref="267284584"/>
+							<reference ref="244679602"/>
 						</array>
 						<reference key="parent" ref="952259628"/>
 					</object>
@@ -2057,8 +2076,13 @@
 						<reference key="parent" ref="789758025"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">697</int>
-						<reference key="object" ref="412134352"/>
+						<int key="objectID">702</int>
+						<reference key="object" ref="267284584"/>
+						<reference key="parent" ref="789758025"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">705</int>
+						<reference key="object" ref="244679602"/>
 						<reference key="parent" ref="789758025"/>
 					</object>
 				</array>
@@ -2092,7 +2116,7 @@
 				<integer value="1" key="198.ImportedFromIB2"/>
 				<string key="202.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="202.ImportedFromIB2"/>
-				<string key="205.IBEditorWindowLastContentRect">{{492, 783}, {144, 53}}</string>
+				<string key="205.IBEditorWindowLastContentRect">{{492, 693}, {150, 143}}</string>
 				<string key="205.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="205.ImportedFromIB2"/>
 				<string key="205.editorWindowContentRectSynchronizationRect">{{187, 434}, {243, 243}}</string>
@@ -2186,8 +2210,10 @@
 				<integer value="1" key="693.ImportedFromIB2"/>
 				<string key="694.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="694.ImportedFromIB2"/>
-				<string key="697.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<integer value="1" key="697.ImportedFromIB2"/>
+				<string key="702.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<integer value="1" key="702.ImportedFromIB2"/>
+				<string key="705.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<integer value="1" key="705.ImportedFromIB2"/>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="72.ImportedFromIB2"/>
 				<string key="81.IBEditorWindowLastContentRect">{{450, 813}, {127, 23}}</string>
@@ -2203,7 +2229,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">701</int>
+			<int key="maxID">707</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2232,6 +2258,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="addTorrent:">id</string>
 						<string key="copyTorrent:">id</string>
+						<string key="deleteFile:">id</string>
 						<string key="filterTorrent:">id</string>
 						<string key="infoTorrent:">id</string>
 						<string key="openDestination:">id</string>
