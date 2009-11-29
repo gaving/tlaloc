@@ -1,2 +1,5 @@
-.DS_Store
 build/
+*.pbxuser
+*.modelv3
+.DS_Store
+Icon?
