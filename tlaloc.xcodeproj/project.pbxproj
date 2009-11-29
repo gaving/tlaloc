@@ -18,6 +18,9 @@
 		8629680210B61A3C00191673 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 862967FE10B61A3C00191673 /* Preferences.nib */; };
 		8629680410B61A3C00191673 /* Updates.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8629680010B61A3C00191673 /* Updates.tiff */; };
 		8629680510B61A3C00191673 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 8629680110B61A3C00191673 /* General.png */; };
+		8631E68510C2F381009A8820 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8631E68410C2F381009A8820 /* Sparkle.framework */; };
+		8631E6A910C2F3FA009A8820 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8631E68410C2F381009A8820 /* Sparkle.framework */; };
+		8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8631E80210C2F6D9009A8820 /* dsa_pub.pem */; };
 		8650C98410B5A71B0003287E /* TorrentArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650C98310B5A71B0003287E /* TorrentArrayController.m */; };
 		8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */; };
 		8650F3FD109311B800ACABF0 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E7109311B800ACABF0 /* XMLRPCResponse.m */; };
@@ -45,6 +48,20 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8631E6A210C2F3C1009A8820 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8631E6A910C2F3FA009A8820 /* Sparkle.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -69,6 +86,8 @@
 		862967FE10B61A3C00191673 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/Preferences.nib; sourceTree = "<group>"; };
 		8629680010B61A3C00191673 /* Updates.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Updates.tiff; path = Resources/Updates.tiff; sourceTree = "<group>"; };
 		8629680110B61A3C00191673 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = General.png; path = Resources/General.png; sourceTree = "<group>"; };
+		8631E68410C2F381009A8820 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		8631E80210C2F6D9009A8820 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
 		8650C98210B5A71B0003287E /* TorrentArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentArrayController.h; sourceTree = "<group>"; };
 		8650C98310B5A71B0003287E /* TorrentArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentArrayController.m; sourceTree = "<group>"; };
 		8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCTreeBasedParser.m; sourceTree = "<group>"; };
@@ -119,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				8631E68510C2F381009A8820 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +176,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8631E68410C2F381009A8820 /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -202,6 +223,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8631E80210C2F6D9009A8820 /* dsa_pub.pem */,
 				8616D83B10B6E90F00049A4D /* Tlaloc.icns */,
 				862967FE10B61A3C00191673 /* Preferences.nib */,
 				8629680010B61A3C00191673 /* Updates.tiff */,
@@ -271,6 +293,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				8631E6A210C2F3C1009A8820 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,6 +340,7 @@
 				8629680410B61A3C00191673 /* Updates.tiff in Resources */,
 				8629680510B61A3C00191673 /* General.png in Resources */,
 				8616D83C10B6E90F00049A4D /* Tlaloc.icns in Resources */,
+				8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +403,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -396,6 +424,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = tlaloc_Prefix.pch;

@@ -18,6 +18,7 @@
 - [_] Release process dmg bundling etc
 - [x] iTunes import torrent target
 - [!] Refresh automatically (polling of some sort)
+- [_] General preferences browse button
 
 ## 0.1
 
@@ -38,8 +39,10 @@
 - [x] Show folders for multifiles
 - [x] Menus and items for toolbar actions
 - [x] Copy torrent path on cell copy
-- [_] Fix multiple remove bug
-- [_] Fix spinner issue
+- [!] Fix multiple remove bug
+- [x] Fix spinner issue
+- [x] Use sparkle for the software updates
+- [x] Check out and setup choctop for release automation
 
 ## Resources
 
