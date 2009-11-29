@@ -11,7 +11,3 @@ Native cocoa-based mac application for interfacing with rtorrent over xmlrpc.
 ## Screenshots
 
 ![main window!](http://github.com/gaving/tlaloc/tree/master/site/1.png?raw=true)
-
-## Development
-
-- Link sparkle framework
