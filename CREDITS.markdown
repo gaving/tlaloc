@@ -1,3 +1,3 @@
 # Credits
 
-- Icon: http://interfacelift.com/icons-mac/details.php?id=1656
+- Icon: http://jonasraskdesign.com/downloads/downloads.html

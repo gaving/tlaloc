@@ -12,7 +12,6 @@
 		8610519310930EDE002078AA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517410930EDE002078AA /* Config.m */; };
 		8610519410930EDE002078AA /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517710930EDE002078AA /* ImageTextCell.m */; };
 		8610519510930EDE002078AA /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517910930EDE002078AA /* Torrent.m */; };
-		8616D83C10B6E90F00049A4D /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8616D83B10B6E90F00049A4D /* Tlaloc.icns */; };
 		862967C110B6142C00191673 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862967BE10B6142C00191673 /* DBPrefsWindowController.m */; };
 		862967C210B6142C00191673 /* AppPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862967BF10B6142C00191673 /* AppPrefsWindowController.m */; };
 		8629680210B61A3C00191673 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 862967FE10B61A3C00191673 /* Preferences.nib */; };
@@ -34,6 +33,7 @@
 		8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F9109311B800ACABF0 /* NSDataAdditions.m */; };
 		8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* MainMenu.xib */; };
 		8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42C1093130000ACABF0 /* InfoPlist.strings */; };
+		869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 869ED6F110C4732E009814CD /* Tlaloc.icns */; };
 		86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
 		86C3DB641094F2E700FB592F /* wink.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5D1094F2E700FB592F /* wink.png */; };
 		86C3DB651094F2E700FB592F /* surprise.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5E1094F2E700FB592F /* surprise.png */; };
@@ -78,7 +78,6 @@
 		8610517810930EDE002078AA /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextCell.h; sourceTree = "<group>"; };
 		8610517910930EDE002078AA /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
 		8610517A10930EDE002078AA /* Torrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torrent.h; sourceTree = "<group>"; };
-		8616D83B10B6E90F00049A4D /* Tlaloc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tlaloc.icns; path = Resources/Tlaloc.icns; sourceTree = "<group>"; };
 		862967BD10B6142C00191673 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		862967BE10B6142C00191673 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
 		862967BF10B6142C00191673 /* AppPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPrefsWindowController.m; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86802D0410934360003CB030 /* tlaloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tlaloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		869ED6F110C4732E009814CD /* Tlaloc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tlaloc.icns; path = Resources/Tlaloc.icns; sourceTree = "<group>"; };
 		86C2920710962B0800ED24C0 /* TorrentActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentActionController.h; sourceTree = "<group>"; };
 		86C2920810962B0800ED24C0 /* TorrentActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentActionController.m; sourceTree = "<group>"; };
 		86C3DB5D1094F2E700FB592F /* wink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wink.png; path = Resources/emotes/wink.png; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				869ED6F110C4732E009814CD /* Tlaloc.icns */,
 				8631E80210C2F6D9009A8820 /* dsa_pub.pem */,
-				8616D83B10B6E90F00049A4D /* Tlaloc.icns */,
 				862967FE10B61A3C00191673 /* Preferences.nib */,
 				8629680010B61A3C00191673 /* Updates.tiff */,
 				8629680110B61A3C00191673 /* General.png */,
@@ -339,8 +339,8 @@
 				8629680210B61A3C00191673 /* Preferences.nib in Resources */,
 				8629680410B61A3C00191673 /* Updates.tiff in Resources */,
 				8629680510B61A3C00191673 /* General.png in Resources */,
-				8616D83C10B6E90F00049A4D /* Tlaloc.icns in Resources */,
 				8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */,
+				869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
