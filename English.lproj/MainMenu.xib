@@ -12,7 +12,7 @@
 		</object>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<integer value="205"/>
-			<integer value="372"/>
+			<integer value="545"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -972,6 +972,9 @@
 				<double key="NSContentBorderThicknessMinY">32</double>
 			</object>
 			<object class="NSArrayController" id="1047461437">
+				<array class="NSMutableArray" key="NSDeclaredKeys">
+					<string>torrents</string>
+				</array>
 				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
 				<bool key="NSAvoidsEmptySelection">YES</bool>
@@ -1304,7 +1307,7 @@
 						<string key="label">contentArray: torrents</string>
 						<reference key="source" ref="1047461437"/>
 						<reference key="destination" ref="773831130"/>
-						<object class="NSNibBindingConnector" key="connector">
+						<object class="NSNibBindingConnector" key="connector" id="28309496">
 							<reference key="NSSource" ref="1047461437"/>
 							<reference key="NSDestination" ref="773831130"/>
 							<string key="NSLabel">contentArray: torrents</string>
@@ -1322,26 +1325,6 @@
 						<reference key="destination" ref="585696044"/>
 					</object>
 					<int key="connectionID">640</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects</string>
-						<reference key="source" ref="367661146"/>
-						<reference key="destination" ref="1047461437"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="367661146"/>
-							<reference key="NSDestination" ref="1047461437"/>
-							<string key="NSLabel">value: arrangedObjects</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSConditionallySetsEditable</string>
-								<boolean value="YES" key="NS.object.0"/>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">641</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1550,6 +1533,43 @@
 						<reference key="destination" ref="656175214"/>
 					</object>
 					<int key="connectionID">710</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentArrayForMultipleSelection: torrents</string>
+						<reference key="source" ref="1047461437"/>
+						<reference key="destination" ref="773831130"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="1047461437"/>
+							<reference key="NSDestination" ref="773831130"/>
+							<string key="NSLabel">contentArrayForMultipleSelection: torrents</string>
+							<string key="NSBinding">contentArrayForMultipleSelection</string>
+							<string key="NSKeyPath">torrents</string>
+							<reference key="NSPreviousConnector" ref="28309496"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">719</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects</string>
+						<reference key="source" ref="367661146"/>
+						<reference key="destination" ref="1047461437"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="367661146"/>
+							<reference key="NSDestination" ref="1047461437"/>
+							<string key="NSLabel">value: arrangedObjects</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSConditionallySetsEditable</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">723</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2256,7 +2276,6 @@
 				<integer value="1" key="702.ImportedFromIB2"/>
 				<string key="705.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="705.ImportedFromIB2"/>
-				<string key="708.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="709.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="72.ImportedFromIB2"/>
@@ -2273,7 +2292,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">710</int>
+			<int key="maxID">726</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

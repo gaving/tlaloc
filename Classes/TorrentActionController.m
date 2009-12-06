@@ -27,6 +27,7 @@
     if ([response isKindOfClass:[NSError class]]) {
 
         /* TODO: Present some sort of error dialog */
+        NSLog(@"%@", [(NSError *)response localizedDescription]);
         return NO;
     }
 

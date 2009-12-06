@@ -26,7 +26,7 @@
 
 - (BOOL)delete:(Torrent *)torrent {
     if ([actionController deleteFile:torrent]) {
-        [super remove:self];
+        [super removeObject:torrent];
         return YES;
     }
     return NO;
@@ -34,7 +34,7 @@
 
 - (BOOL)remove:(Torrent *)torrent {
     if ([actionController removeTorrent:torrent]) {
-        [super remove:self];
+        [super removeObject:torrent];
         return YES;
     }
     return NO;

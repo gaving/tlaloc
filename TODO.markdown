@@ -39,7 +39,7 @@
 - [x] Show folders for multifiles
 - [x] Menus and items for toolbar actions
 - [x] Copy torrent path on cell copy
-- [!] Fix multiple remove bug
+- [x] Fix multiple remove bug
 - [x] Fix spinner issue
 - [x] Use sparkle for the software updates
 - [x] Check out and setup choctop for release automation
