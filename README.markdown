@@ -1,21 +1,20 @@
 # Tlaloc
 
 This application aims to be a native, cocoa-based mac application for
-interacting with rtorrent over xmlrpc.
-
-It's currently in very early stages of development.
+interacting with rtorrent via the exposed xmlrpc interface.
 
 ## Installation
 
-- Check out the downloads page and grab the latest build
 - Configure rtorrent to actually use xmlrpc (see the official guide [here][1])
+- Check out the downloads page and grab the latest build of tlaloc
 - Open the preferences panel and enter your rtorrent RPC URI (e.g. http://192.168.1.100/RPC2)
 
 And optionally..
 
-- Fill out the accessible destination path (assuming you can reach the download
-directory) if you want launching to work, double clicking to open the files,
-quick jump to destination folder, etc.
+- Fill out the accessible destination path (this isn't strictly necessary, and
+assumes you can reach the download directory from the machine running tlaloc)
+if you want launching to work, double clicking to open the files, quickly
+opening the destination folder, etc.
 
 [1]: http://libtorrent.rakshasa.no/wiki/RTorrentXMLRPCGuide "here"
 
@@ -26,4 +25,4 @@ quick jump to destination folder, etc.
 ## Download
 
 Check out the [releases page](http://github.com/gaving/tlaloc/downloads) on
-github.
+github for the latest release.

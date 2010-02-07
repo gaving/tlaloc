@@ -1,26 +1,30 @@
 # tlaloc TODO
 
-## 0.2+
+## 0.3+
+
+- [_] Fancy Growls for things?
+
+## 0.2+ (2009-03-01)
 
 - [x] Multicalls to make fetching less heavy?
 - [x] Get the filter box working (with the new custom cells)
 - [x] Drag and drop to start a new download
 - [x] Open with torrent default open with/dock drag action
-- [_] Notification area
-- [_] Growls?
+- [_] Notification area show outstanding torrents on click (think airport)
 - [_] Status bar showing meaningful stats (download/upload) Also: action updates
 - [x] Allow multiple selections for actions
 - [_] Version dialog of some kind
-- [_] Menu item actions for each table cell
-- [_] Info pane when you view a torrent
-- [_] Use sparkle for the software updates
+- [_] Menu item actions for each table cell (launch, remove, pause, stop)
+- [!] Info pane when you view a torrent (heavy going)
 - [_] Make toolbar visibility a preference option
-- [_] Release process dmg bundling etc
 - [x] iTunes import torrent target
 - [!] Refresh automatically (polling of some sort)
-- [_] General preferences browse button
+- [_] General preferences browse button to find the destination directory
+- [_] Allow show/hide completed torrents (sort order too?)
+- [_] Focus (i.e. select) newly added torrent
+- [_] Option to look and open a media file within the folder downloaded
 
-## 0.1
+## 0.1 (2009-12-07)
 
 - [x] Set a decent application icon
 - [x] Think of a better name
