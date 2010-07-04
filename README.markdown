@@ -20,7 +20,7 @@ opening the destination folder, etc.
 
 ## Screenshots
 
-![main window!](http://github.com/gaving/tlaloc/tree/master/site/1.png?raw=true)
+![main window!](http://github.com/gaving/tlaloc/raw/master/site/1.png)
 
 ## Download
 
