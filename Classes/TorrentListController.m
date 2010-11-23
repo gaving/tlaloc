@@ -13,6 +13,24 @@
 #import "ImageTextCell.h"
 #import "AppPrefsWindowController.h"
 
+#import <Quartz/Quartz.h>
+#include <QuickLook/QuickLook.h>
+
+@interface Torrent (QLPreviewItem) <QLPreviewItem>
+@end
+
+@implementation Torrent (QLPreviewItem)
+
+- (NSURL *)previewItemURL {
+    return [NSURL fileURLWithPath: [self fullPath]];
+}
+
+- (NSString *)previewItemTitle {
+    return self.filename;
+}
+
+@end
+
 @implementation TorrentListController
 
 NSPredicate *predicateTemplate;
@@ -66,7 +84,6 @@ NSPredicate *predicateTemplate;
 #pragma mark Toolbar actions
 
 - (BOOL)validateToolbarItem:(NSToolbarItem *)toolbarItem {
-
 
     if ([[toolbarItem itemIdentifier] isEqualTo:@"InfoTorrent"]) {
 
@@ -266,6 +283,49 @@ NSPredicate *predicateTemplate;
 
 - (void)showFetchError {
     [Util showError:@"Couldn't fetch torrents" withMessage: @"Please check your connection settings."];
+}
+
+#pragma mark -
+#pragma mark Quick look source
+
+- (IBAction)togglePreviewPanel:(id)previewPanel {
+    if ([QLPreviewPanel sharedPreviewPanelExists] && [[QLPreviewPanel sharedPreviewPanel] isVisible]) {
+        [[QLPreviewPanel sharedPreviewPanel] orderOut:nil];
+    } else {
+        [[QLPreviewPanel sharedPreviewPanel] makeKeyAndOrderFront:nil];
+    }
+}
+
+-(BOOL)acceptsPreviewPanelControl:(QLPreviewPanel *)panel {
+    return YES;
+}
+
+-(void)beginPreviewPanelControl:(QLPreviewPanel *)panel {
+    previewPanel = [panel retain];
+    panel.delegate = self;
+    panel.dataSource = self;
+}
+
+-(void)endPreviewPanelControl:(QLPreviewPanel *)panel {
+    [previewPanel release];
+    previewPanel = nil;
+
+}
+
+-(NSInteger)numberOfPreviewItemsInPreviewPanel:(QLPreviewPanel *)panel {
+    return [[arrayTorrents selectedObjects] count];
+}
+
+-(id <QLPreviewItem>)previewPanel:(QLPreviewPanel *)panel previewItemAtIndex:(NSInteger)index {
+    return [[arrayTorrents selectedObjects] objectAtIndex:index];
+}
+
+-(BOOL)previewPanel:(QLPreviewPanel *)panel handleEvent:(NSEvent *)event {
+    if ([event type] == NSKeyDown) {
+        [tableView keyDown:event];
+        return YES;
+    }
+    return NO;
 }
 
 - (void) dealloc {

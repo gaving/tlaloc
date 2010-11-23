@@ -13,7 +13,11 @@
 #import "XMLRPCResponse.h"
 #import "XMLRPCConnection.h"
 
+#include <QuickLook/QuickLook.h>
+
 @implementation Torrent
+
+#define ICON_SIZE 32.0
 
 @synthesize name;
 @synthesize uri;
@@ -27,6 +31,10 @@
 @synthesize sizeFiles;
 @synthesize ratio;
 @synthesize multiFile;
+@synthesize iconImage;
+
+static NSDictionary* quickLookOptions = nil;
+static NSOperationQueue* downloadIconQueue = nil;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize {
     float floatSize = [theSize floatValue];
@@ -135,9 +143,35 @@
 }
 
 - (NSImage*) typeIcon {
-    NSString * pathExtension = [multiFile boolValue] ? NSFileTypeForHFSTypeCode('fldr') : [filename pathExtension];
-    NSImage* image = [[NSWorkspace sharedWorkspace] iconForFileType:pathExtension];
-    return image;
+    //    NSString * pathExtension = [multiFile boolValue] ? NSFileTypeForHFSTypeCode('fldr') : [filename pathExtension];
+    //    NSImage* image = [[NSWorkspace sharedWorkspace] iconForFileType:pathExtension];
+    //    return image;
+
+    if (iconImage == nil) {
+        NSString* realPath = [self fullPath];
+        iconImage = [[[NSWorkspace sharedWorkspace] iconForFile:realPath] retain];
+        [iconImage setSize:NSMakeSize(ICON_SIZE, ICON_SIZE)];
+        if (!downloadIconQueue) {
+            downloadIconQueue = [[NSOperationQueue alloc] init];
+            [downloadIconQueue setMaxConcurrentOperationCount:2];
+            quickLookOptions = [[NSDictionary alloc] initWithObjectsAndKeys:
+                (id)kCFBooleanTrue, (id)kQLThumbnailOptionIconModeKey,
+                nil];
+        }
+
+        [downloadIconQueue addOperationWithBlock:^{
+            CFURLRef baseURL = (CFURLRef) [[NSURL alloc] initFileURLWithPath:realPath];
+            CGImageRef quickLookIcon = QLThumbnailImageCreate(NULL, baseURL, CGSizeMake(ICON_SIZE, ICON_SIZE), (CFDictionaryRef)quickLookOptions);
+            if (quickLookIcon != NULL) {
+                NSImage* betterIcon = [[NSImage alloc] initWithCGImage:quickLookIcon size:NSMakeSize(ICON_SIZE, ICON_SIZE)];
+                [self performSelectorOnMainThread:@selector(setIconImage:) withObject:betterIcon waitUntilDone:NO];
+                [betterIcon release];
+                CFRelease(quickLookIcon);
+            }
+        }];
+    }
+    return iconImage;
+
 }
 
 - (NSImage*) ratioIcon {
@@ -165,6 +199,12 @@
     NSString *textPath = [[NSBundle mainBundle] pathForResource:resource ofType:@"png"];
     NSImage *image = [[NSImage alloc] initWithContentsOfFile: textPath];
     return image;
+}
+
+- (NSString*) fullPath {
+    NSString *torrentDestination = [Config torrentDestination];
+    NSString *realPath = [torrentDestination stringByAppendingPathComponent: self.filename];
+    return realPath;
 }
 
 - (NSString*) remainingString {

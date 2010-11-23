@@ -1,8 +1,10 @@
-# tlaloc TODO
+# Tlaloc TODO
 
 ## 0.3+
 
 - [_] Fancy Growls for things?
+- [_] Notification area show outstanding torrents on click (think airport)
+- [_] Status bar showing meaningful stats (download/upload) Also: action updates
 
 ## 0.2+ (2009-03-01)
 
@@ -10,8 +12,6 @@
 - [x] Get the filter box working (with the new custom cells)
 - [x] Drag and drop to start a new download
 - [x] Open with torrent default open with/dock drag action
-- [_] Notification area show outstanding torrents on click (think airport)
-- [_] Status bar showing meaningful stats (download/upload) Also: action updates
 - [x] Allow multiple selections for actions
 - [_] Version dialog of some kind
 - [_] Menu item actions for each table cell (launch, remove, pause, stop)
@@ -23,6 +23,7 @@
 - [_] Allow show/hide completed torrents (sort order too?)
 - [_] Focus (i.e. select) newly added torrent
 - [_] Option to look and open a media file within the folder downloaded
+- [_] Quick look individual files with spacebar
 
 ## 0.1 (2009-12-07)
 
@@ -57,3 +58,4 @@
 - http://ask.metafilter.com/106827/How-can-I-automatically-add-tracks-to-the-OS-X-iTunes-Library
 - http://osdir.com/ml/cocoa-dev/2009-09/msg01907.html
 - http://drnicwilliams.com/2009/02/03/choctop-packaging-and-deployment-of-cocoa-applications/
+- http://development.christopherdrum.com/blog/?p=109

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Quartz/Quartz.h>
 
 @interface Torrent : NSObject <NSCopying> {
     NSString *name;
@@ -21,6 +22,7 @@
     NSString *sizeFiles;
     NSNumber *ratio;
     NSNumber *multiFile;
+    NSImage *iconImage;
 }
 
 @property (nonatomic, retain) NSString *name;
@@ -35,8 +37,10 @@
 @property (nonatomic, retain) NSString *sizeFiles;
 @property (nonatomic, retain) NSNumber *ratio;
 @property (nonatomic, retain) NSNumber *multiFile;
+@property (retain) NSImage* iconImage;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize;
 + (BOOL) loadAll;
+- (NSString *)fullPath;
 
 @end

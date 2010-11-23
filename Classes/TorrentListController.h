@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Quartz/Quartz.h>
 
 #import "TorrentArrayController.h"
 
-@interface TorrentListController : NSObject {
+@interface TorrentListController : NSObject <QLPreviewPanelDataSource, QLPreviewPanelDelegate> {
     IBOutlet NSToolbarItem *addItem;
     IBOutlet NSToolbarItem *refreshItem;
     IBOutlet NSToolbarItem *infoItem;
@@ -19,10 +20,11 @@
 
     IBOutlet NSTableView *tableView;
     IBOutlet NSSearchField *searchField;
-    IBOutlet TorrentArrayController *arrayTorrents;
-
     IBOutlet NSProgressIndicator *progressIndicator;
 
+    IBOutlet TorrentArrayController *arrayTorrents;
+
+    QLPreviewPanel * previewPanel;
     NSMutableArray* torrents;
 }
 
