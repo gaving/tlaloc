@@ -98,7 +98,6 @@ NSPredicate *predicateTemplate;
     NSArray *selectedTorrents = [self torrents];
     int complete = 0;
     for (int i = 0; i < [selectedTorrents count]; i++) {
-        NSLog(@"%@", [[selectedTorrents objectAtIndex:i] complete]);
         if ([[[selectedTorrents objectAtIndex:i] complete] intValue] == 0) {
             complete++;
         }
@@ -345,7 +344,6 @@ NSPredicate *predicateTemplate;
 -(void)endPreviewPanelControl:(QLPreviewPanel *)panel {
     [previewPanel release];
     previewPanel = nil;
-
 }
 
 -(NSInteger)numberOfPreviewItemsInPreviewPanel:(QLPreviewPanel *)panel {
@@ -369,7 +367,6 @@ NSPredicate *predicateTemplate;
 
 - (void) updateUI {
     if (![NSApp isHidden]) {
-        NSLog(@"update torrents");
         if ([mainWindow isVisible]) {
             [self updateTorrents];
         }

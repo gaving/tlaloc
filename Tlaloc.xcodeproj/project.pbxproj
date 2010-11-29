@@ -31,7 +31,7 @@
 		8650F403109311B800ACABF0 /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F4109311B800ACABF0 /* XMLRPCConnection.m */; };
 		8650F404109311B800ACABF0 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F7109311B800ACABF0 /* NSStringAdditions.m */; };
 		8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F9109311B800ACABF0 /* NSDataAdditions.m */; };
-		8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* MainMenu.xib */; };
+		8650F42E1093130000ACABF0 /* Tlaloc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* Tlaloc.xib */; };
 		8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42C1093130000ACABF0 /* InfoPlist.strings */; };
 		869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 869ED6F110C4732E009814CD /* Tlaloc.icns */; };
 		86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
@@ -112,7 +112,7 @@
 		8650F3F8109311B800ACABF0 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
 		8650F3F9109311B800ACABF0 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		8650F3FA109311B800ACABF0 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Tlaloc.xib; sourceTree = "<group>"; };
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86802D0410934360003CB030 /* tlaloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tlaloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869ED6F110C4732E009814CD /* Tlaloc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tlaloc.icns; path = Resources/Tlaloc.icns; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 				86F43E0410964252003EDB14 /* tlalocAppDelegate.h */,
 				86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */,
 				86F43E0610964252003EDB14 /* Info.plist */,
-				8650F42A1093130000ACABF0 /* MainMenu.xib */,
+				8650F42A1093130000ACABF0 /* Tlaloc.xib */,
 				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -346,7 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8650F42E1093130000ACABF0 /* MainMenu.xib in Resources */,
+				8650F42E1093130000ACABF0 /* Tlaloc.xib in Resources */,
 				8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */,
 				86C3DB641094F2E700FB592F /* wink.png in Resources */,
 				86C3DB651094F2E700FB592F /* surprise.png in Resources */,
@@ -398,12 +398,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8650F42A1093130000ACABF0 /* MainMenu.xib */ = {
+		8650F42A1093130000ACABF0 /* Tlaloc.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8650F42B1093130000ACABF0 /* English */,
 			);
-			name = MainMenu.xib;
+			name = Tlaloc.xib;
 			sourceTree = "<group>";
 		};
 		8650F42C1093130000ACABF0 /* InfoPlist.strings */ = {

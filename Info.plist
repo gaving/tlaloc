@@ -46,7 +46,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<string>Tlaloc</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
