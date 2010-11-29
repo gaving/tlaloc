@@ -22,6 +22,7 @@
     NSString *sizeFiles;
     NSNumber *ratio;
     NSNumber *multiFile;
+    NSNumber *complete;
     NSImage *iconImage;
 }
 
@@ -37,6 +38,7 @@
 @property (nonatomic, retain) NSString *sizeFiles;
 @property (nonatomic, retain) NSNumber *ratio;
 @property (nonatomic, retain) NSNumber *multiFile;
+@property (nonatomic, retain) NSNumber *complete;
 @property (retain) NSImage* iconImage;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize;

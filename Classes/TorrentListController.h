@@ -12,6 +12,9 @@
 #import "TorrentArrayController.h"
 
 @interface TorrentListController : NSObject <QLPreviewPanelDataSource, QLPreviewPanelDelegate> {
+
+    IBOutlet NSWindow *mainWindow;
+
     IBOutlet NSToolbarItem *addItem;
     IBOutlet NSToolbarItem *refreshItem;
     IBOutlet NSToolbarItem *infoItem;
@@ -26,10 +29,12 @@
 
     QLPreviewPanel * previewPanel;
     NSMutableArray* torrents;
+    NSTimer* timer;
 }
 
 - (BOOL)grabTorrents;
 - (void)buildTorrents;
+- (void)updateTorrents;
 - (void)showFetchError;
 
 - (IBAction)addTorrent:(id)sender;
@@ -46,5 +51,7 @@
 - (IBAction)productWebsite:(id)sender;
 
 - (void)openFiles:(NSArray *) filenames;
+- (void) updateUI;
+- (void) updateBadge;
 
 @end

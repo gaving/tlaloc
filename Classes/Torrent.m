@@ -32,6 +32,7 @@
 @synthesize ratio;
 @synthesize multiFile;
 @synthesize iconImage;
+@synthesize complete;
 
 static NSDictionary* quickLookOptions = nil;
 static NSOperationQueue* downloadIconQueue = nil;
@@ -120,6 +121,7 @@ static NSOperationQueue* downloadIconQueue = nil;
         [tempTorrent setBytesTotalReadable:[Torrent stringFromFileSize: [tempTorrent bytesTotal]]];
         [tempTorrent setRatio:[value objectAtIndex:15]];
         [tempTorrent setMultiFile:[value objectAtIndex:18]];
+        [tempTorrent setComplete:[value objectAtIndex:14]];
 
         [torrents addObject:tempTorrent];
     }
@@ -151,27 +153,29 @@ static NSOperationQueue* downloadIconQueue = nil;
         NSString* realPath = [self fullPath];
         iconImage = [[[NSWorkspace sharedWorkspace] iconForFile:realPath] retain];
         [iconImage setSize:NSMakeSize(ICON_SIZE, ICON_SIZE)];
-        if (!downloadIconQueue) {
-            downloadIconQueue = [[NSOperationQueue alloc] init];
-            [downloadIconQueue setMaxConcurrentOperationCount:2];
-            quickLookOptions = [[NSDictionary alloc] initWithObjectsAndKeys:
-                (id)kCFBooleanTrue, (id)kQLThumbnailOptionIconModeKey,
-                nil];
-        }
+        // if (!downloadIconQueue) {
+            // downloadIconQueue = [[NSOperationQueue alloc] init];
+            // [downloadIconQueue setMaxConcurrentOperationCount:2];
+            // quickLookOptions = [[NSDictionary alloc] initWithObjectsAndKeys:
+                // (id)kCFBooleanTrue, (id)kQLThumbnailOptionIconModeKey,
+                // nil];
+        // }
 
-        [downloadIconQueue addOperationWithBlock:^{
-            CFURLRef baseURL = (CFURLRef) [[NSURL alloc] initFileURLWithPath:realPath];
-            CGImageRef quickLookIcon = QLThumbnailImageCreate(NULL, baseURL, CGSizeMake(ICON_SIZE, ICON_SIZE), (CFDictionaryRef)quickLookOptions);
-            if (quickLookIcon != NULL) {
-                NSImage* betterIcon = [[NSImage alloc] initWithCGImage:quickLookIcon size:NSMakeSize(ICON_SIZE, ICON_SIZE)];
-                [self performSelectorOnMainThread:@selector(setIconImage:) withObject:betterIcon waitUntilDone:NO];
-                [betterIcon release];
-                CFRelease(quickLookIcon);
-            }
-        }];
+        // [downloadIconQueue addOperationWithBlock:^{
+            // CFURLRef baseURL = (CFURLRef) [[NSURL alloc] initFileURLWithPath:realPath];
+            // NSLog(@"%@", baseURL);
+
+            // CGImageRef quickLookIcon = QLThumbnailImageCreate(NULL, baseURL, CGSizeMake(ICON_SIZE, ICON_SIZE), (CFDictionaryRef)quickLookOptions);
+            // NSLog(@"%@", quickLookIcon);
+            // if (quickLookIcon != NULL) {
+                // NSImage* betterIcon = [[NSImage alloc] initWithCGImage:quickLookIcon size:NSMakeSize(ICON_SIZE, ICON_SIZE)];
+                // [self performSelectorOnMainThread:@selector(setIconImagez:) withObject:betterIcon waitUntilDone:YES];
+                // [betterIcon release];
+                // CFRelease(quickLookIcon);
+            // }
+        // }];
     }
     return iconImage;
-
 }
 
 - (NSImage*) ratioIcon {

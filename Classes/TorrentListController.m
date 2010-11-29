@@ -16,6 +16,8 @@
 #import <Quartz/Quartz.h>
 #include <QuickLook/QuickLook.h>
 
+#define UPDATE_UI_SECONDS   1.5
+
 @interface Torrent (QLPreviewItem) <QLPreviewItem>
 @end
 
@@ -66,6 +68,18 @@ NSPredicate *predicateTemplate;
     [tableView setDoubleAction:@selector(openTorrent:)];
     [tableView registerForDraggedTypes: [NSArray arrayWithObject:NSFilenamesPboardType] ];
     [tableView setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO];
+
+    [mainWindow setDelegate: self]; //do manually to avoid placement issue
+    [mainWindow makeFirstResponder: tableView];
+    [mainWindow setExcludedFromWindowsMenu: YES];
+
+    // Timer to update interface
+    [self updateUI];
+    timer = [NSTimer scheduledTimerWithTimeInterval: UPDATE_UI_SECONDS target: self
+                selector: @selector(updateUI) userInfo: nil repeats: YES];
+    [[NSRunLoop currentRunLoop] addTimer: timer forMode: NSModalPanelRunLoopMode];
+    [[NSRunLoop currentRunLoop] addTimer: timer forMode: NSEventTrackingRunLoopMode];
+
 }
 
 - (NSMutableArray*) torrents {
@@ -78,6 +92,19 @@ NSPredicate *predicateTemplate;
 
 - (BOOL)grabTorrents {
     return ([Torrent loadAll] == YES);
+}
+
+- (int)incompleteTorrents {
+    NSArray *selectedTorrents = [self torrents];
+    int complete = 0;
+    for (int i = 0; i < [selectedTorrents count]; i++) {
+        NSLog(@"%@", [[selectedTorrents objectAtIndex:i] complete]);
+        if ([[[selectedTorrents objectAtIndex:i] complete] intValue] == 0) {
+            complete++;
+        }
+    }
+
+    return complete;
 }
 
 #pragma mark -
@@ -197,21 +224,30 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)refreshTorrents:(id)sender {
-
     [progressIndicator startAnimation: self];
+    [self updateTorrents];
+    [progressIndicator stopAnimation: self];
+}
+
+- (void)updateTorrents {
 
     if ([self grabTorrents]) {
+        id selection = [tableView selectedRowIndexes];
+        int index = [selection firstIndex];
+
         [torrents release];
         torrents  = [[NSMutableArray alloc] init];
         [self buildTorrents];
 
         /* Set the array controllers new content */
         [arrayTorrents setContent:torrents];
+
+        if (index) {
+            [tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:index] byExtendingSelection:NO]; 
+        }
     } else {
         [self showFetchError];
     }
-
-    [progressIndicator stopAnimation: self];
 }
 
 - (IBAction)filterTorrent:(id)sender {
@@ -326,6 +362,32 @@ NSPredicate *predicateTemplate;
         return YES;
     }
     return NO;
+}
+
+#pragma mark -
+#pragma mark Interface methods
+
+- (void) updateUI {
+    if (![NSApp isHidden]) {
+        NSLog(@"update torrents");
+        if ([mainWindow isVisible]) {
+            [self updateTorrents];
+        }
+    }
+
+    [self updateBadge];
+}
+
+- (void) updateBadge {
+
+    int complete = [self incompleteTorrents];
+    if (complete == 0) {
+        return;
+    }
+
+    NSString *label = [NSString stringWithFormat:@"%d", complete];
+
+    [[NSApp dockTile] setBadgeLabel:label];
 }
 
 - (void) dealloc {
