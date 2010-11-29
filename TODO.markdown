@@ -1,29 +1,32 @@
 # Tlaloc TODO
 
-## 0.3+
+## 0.5 (2010-12-07)
 
-- [_] Fancy Growls for things?
+- [_] Growl on completed torrents
 - [_] Notification area show outstanding torrents on click (think airport)
 - [_] Status bar showing meaningful stats (download/upload) Also: action updates
+- [_] Badge dock icon to show outstanding torrents
+- [_] Upload and download speed on the interface/badge
+- [_] Toggle completed/incomplete toolbar etc
+- [_] Version dialog of some kind
+- [_] Menu item actions for each table cell (launch, remove, pause, stop)
+- [_] Make toolbar visibility a preference option
+- [_] General preferences browse button to find the destination directory
+- [_] Allow show/hide completed torrents (sort order too?)
+- [_] Focus (i.e. select) newly added torrent
+- [_] Option to look and open a media file within the folder downloaded
+- [!] Info pane when you view a torrent (heavy going)
+- [x] Refresh automatically (polling of some sort)
+- [x] Quick look individual files with spacebar
 
-## 0.2+ (2009-03-01)
+## 0.2 (2009-03-01)
 
 - [x] Multicalls to make fetching less heavy?
 - [x] Get the filter box working (with the new custom cells)
 - [x] Drag and drop to start a new download
 - [x] Open with torrent default open with/dock drag action
 - [x] Allow multiple selections for actions
-- [_] Version dialog of some kind
-- [_] Menu item actions for each table cell (launch, remove, pause, stop)
-- [!] Info pane when you view a torrent (heavy going)
-- [_] Make toolbar visibility a preference option
 - [x] iTunes import torrent target
-- [!] Refresh automatically (polling of some sort)
-- [_] General preferences browse button to find the destination directory
-- [_] Allow show/hide completed torrents (sort order too?)
-- [_] Focus (i.e. select) newly added torrent
-- [_] Option to look and open a media file within the folder downloaded
-- [_] Quick look individual files with spacebar
 
 ## 0.1 (2009-12-07)
 

@@ -151,6 +151,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8650F3D01093115300ACABF0 /* XMLRPC */,
 				86E9E6A810C1FB670082415E /* Util.m */,
 				86E9E6A910C1FB670082415E /* Util.h */,
 				862967BD10B6142C00191673 /* DBPrefsWindowController.h */,
@@ -159,7 +160,6 @@
 				862967C010B6142C00191673 /* AppPrefsWindowController.h */,
 				8650C98210B5A71B0003287E /* TorrentArrayController.h */,
 				8650C98310B5A71B0003287E /* TorrentArrayController.m */,
-				8650F3D01093115300ACABF0 /* XMLRPC */,
 				8610517110930EDE002078AA /* TorrentTableView.m */,
 				8610517210930EDE002078AA /* TorrentTableView.h */,
 				8610517310930EDE002078AA /* TorrentListController.m */,
@@ -227,22 +227,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				869ED6F110C4732E009814CD /* Tlaloc.icns */,
+				86DC3DFE12A43CA9002116EE /* Icons */,
 				8631E80210C2F6D9009A8820 /* dsa_pub.pem */,
 				862967FE10B61A3C00191673 /* Preferences.nib */,
 				8629680010B61A3C00191673 /* Updates.tiff */,
-				8629680110B61A3C00191673 /* General.png */,
 				86F43E0310964252003EDB14 /* tlalocAppDelegate.m */,
 				86F43E0410964252003EDB14 /* tlalocAppDelegate.h */,
 				86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */,
 				86F43E0610964252003EDB14 /* Info.plist */,
-				86C3DB5D1094F2E700FB592F /* wink.png */,
-				86C3DB5E1094F2E700FB592F /* surprise.png */,
-				86C3DB5F1094F2E700FB592F /* smile.png */,
-				86C3DB601094F2E700FB592F /* smile-big.png */,
-				86C3DB611094F2E700FB592F /* sad.png */,
-				86C3DB621094F2E700FB592F /* plain.png */,
-				86C3DB631094F2E700FB592F /* crying.png */,
 				8650F42A1093130000ACABF0 /* MainMenu.xib */,
 				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
 			);
@@ -287,6 +279,22 @@
 			path = XMLRPC;
 			sourceTree = "<group>";
 		};
+		86DC3DFE12A43CA9002116EE /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8629680110B61A3C00191673 /* General.png */,
+				869ED6F110C4732E009814CD /* Tlaloc.icns */,
+				86C3DB5D1094F2E700FB592F /* wink.png */,
+				86C3DB5E1094F2E700FB592F /* surprise.png */,
+				86C3DB5F1094F2E700FB592F /* smile.png */,
+				86C3DB601094F2E700FB592F /* smile-big.png */,
+				86C3DB611094F2E700FB592F /* sad.png */,
+				86C3DB621094F2E700FB592F /* plain.png */,
+				86C3DB631094F2E700FB592F /* crying.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,7 +322,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tlaloc" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tlaloc" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -488,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tlaloc" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tlaloc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

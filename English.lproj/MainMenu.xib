@@ -11,7 +11,7 @@
 			<string key="NS.object.0">804</string>
 		</object>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="545"/>
+			<integer value="371"/>
 			<integer value="205"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
@@ -1582,6 +1582,14 @@
 					</object>
 					<int key="connectionID">728</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">mainWindow</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="972006081"/>
+					</object>
+					<int key="connectionID">729</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -2214,9 +2222,9 @@
 				<string key="296.editorWindowContentRectSynchronizationRect">{{475, 832}, {234, 43}}</string>
 				<string key="297.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="298.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="371.IBEditorWindowLastContentRect">{{197, 376}, {579, 492}}</string>
+				<string key="371.IBEditorWindowLastContentRect">{{861, 319}, {579, 492}}</string>
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="371.IBWindowTemplateEditedContentRect">{{197, 376}, {579, 492}}</string>
+				<string key="371.IBWindowTemplateEditedContentRect">{{861, 319}, {579, 492}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
 				<string key="371.editorWindowContentRectSynchronizationRect">{{33, 99}, {480, 360}}</string>
 				<string key="371.windowTemplate.maxSize">{3.40282e+38, 3.40282e+38}</string>
@@ -2303,7 +2311,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">728</int>
+			<int key="maxID">729</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2399,6 +2407,7 @@
 						<string key="addItem">NSToolbarItem</string>
 						<string key="arrayTorrents">TorrentArrayController</string>
 						<string key="infoItem">NSToolbarItem</string>
+						<string key="mainWindow">NSWindow</string>
 						<string key="preferencesItem">NSToolbarItem</string>
 						<string key="progressIndicator">NSProgressIndicator</string>
 						<string key="refreshItem">NSToolbarItem</string>
@@ -2418,6 +2427,10 @@
 						<object class="IBToOneOutletInfo" key="infoItem">
 							<string key="name">infoItem</string>
 							<string key="candidateClassName">NSToolbarItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="mainWindow">
+							<string key="name">mainWindow</string>
+							<string key="candidateClassName">NSWindow</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="preferencesItem">
 							<string key="name">preferencesItem</string>
@@ -2460,17 +2473,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">tlalocAppDelegate</string>
 					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">togglePreviewPanel:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">togglePreviewPanel:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">togglePreviewPanel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">window</string>
 						<string key="NS.object.0">NSWindow</string>
