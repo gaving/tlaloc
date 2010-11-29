@@ -228,6 +228,10 @@ NSPredicate *predicateTemplate;
     [progressIndicator stopAnimation: self];
 }
 
+- (IBAction)qlTorrent:(id)sender {
+    [[NSApp delegate] togglePreviewPanel:self];
+}
+
 - (void)updateTorrents {
 
     if ([self grabTorrents]) {

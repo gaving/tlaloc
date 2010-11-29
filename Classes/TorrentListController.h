@@ -17,6 +17,7 @@
 
     IBOutlet NSToolbarItem *addItem;
     IBOutlet NSToolbarItem *refreshItem;
+    IBOutlet NSToolbarItem *qlItem;
     IBOutlet NSToolbarItem *infoItem;
     IBOutlet NSToolbarItem *removeItem;
     IBOutlet NSToolbarItem *preferencesItem;
@@ -42,6 +43,7 @@
 - (IBAction)deleteFile:(id)sender;
 - (IBAction)removeTorrent:(id)sender;
 - (IBAction)refreshTorrents:(id)sender;
+- (IBAction)qlTorrent:(id)sender;
 - (IBAction)filterTorrent:(id)sender;
 - (IBAction)openTorrent:(id)sender;
 - (IBAction)openDestination:(id)sender;

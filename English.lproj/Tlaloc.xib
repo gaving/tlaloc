@@ -11,8 +11,8 @@
 			<string key="NS.object.0">804</string>
 		</object>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="371"/>
 			<integer value="205"/>
+			<integer value="371"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -467,6 +467,28 @@
 					<int key="NSToolbarDisplayMode">1</int>
 					<int key="NSToolbarSizeMode">1</int>
 					<dictionary class="NSMutableDictionary" key="NSToolbarIBIdentifiedItems">
+						<object class="NSToolbarItem" key="4A29DB98-9D49-464C-B2CC-925CAD9A8F2D" id="280073973">
+							<object class="NSMutableString" key="NSToolbarItemIdentifier">
+								<characters key="NS.bytes">4A29DB98-9D49-464C-B2CC-925CAD9A8F2D</characters>
+							</object>
+							<string key="NSToolbarItemLabel">Quick Look</string>
+							<string key="NSToolbarItemPaletteLabel">Quick Look</string>
+							<string key="NSToolbarItemToolTip"/>
+							<nil key="NSToolbarItemView"/>
+							<object class="NSCustomResource" key="NSToolbarItemImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">NSQuickLookTemplate</string>
+							</object>
+							<nil key="NSToolbarItemTarget"/>
+							<nil key="NSToolbarItemAction"/>
+							<string key="NSToolbarItemMinSize">{0, 0}</string>
+							<string key="NSToolbarItemMaxSize">{0, 0}</string>
+							<bool key="NSToolbarItemEnabled">YES</bool>
+							<bool key="NSToolbarItemAutovalidates">YES</bool>
+							<int key="NSToolbarItemTag">-1</int>
+							<bool key="NSToolbarIsUserRemovable">YES</bool>
+							<int key="NSToolbarItemVisibilityPriority">0</int>
+						</object>
 						<object class="NSToolbarItem" key="55F1EEE1-BCD4-4A5C-BE5C-F26D31961F98" id="382276821">
 							<object class="NSMutableString" key="NSToolbarItemIdentifier">
 								<characters key="NS.bytes">55F1EEE1-BCD4-4A5C-BE5C-F26D31961F98</characters>
@@ -789,10 +811,11 @@
 							</object>
 						</object>
 					</dictionary>
-					<array key="NSToolbarIBAllowedItems">
+					<array class="NSMutableArray" key="NSToolbarIBAllowedItems">
 						<reference ref="579745584"/>
 						<reference ref="87340923"/>
 						<reference ref="816734455"/>
+						<reference ref="280073973"/>
 						<reference ref="314789245"/>
 						<reference ref="382276821"/>
 						<reference ref="286472543"/>
@@ -1590,6 +1613,22 @@
 					</object>
 					<int key="connectionID">729</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">qlItem</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="280073973"/>
+					</object>
+					<int key="connectionID">732</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">qlTorrent:</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="280073973"/>
+					</object>
+					<int key="connectionID">733</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -1957,6 +1996,7 @@
 							<reference ref="314789245"/>
 							<reference ref="382276821"/>
 							<reference ref="87340923"/>
+							<reference ref="280073973"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2162,6 +2202,11 @@
 						<reference key="object" ref="656175214"/>
 						<reference key="parent" ref="110575045"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">730</int>
+						<reference key="object" ref="280073973"/>
+						<reference key="parent" ref="912729080"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -2222,9 +2267,9 @@
 				<string key="296.editorWindowContentRectSynchronizationRect">{{475, 832}, {234, 43}}</string>
 				<string key="297.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="298.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="371.IBEditorWindowLastContentRect">{{861, 319}, {579, 492}}</string>
+				<string key="371.IBEditorWindowLastContentRect">{{664, 164}, {579, 492}}</string>
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="371.IBWindowTemplateEditedContentRect">{{861, 319}, {579, 492}}</string>
+				<string key="371.IBWindowTemplateEditedContentRect">{{664, 164}, {579, 492}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
 				<string key="371.editorWindowContentRectSynchronizationRect">{{33, 99}, {480, 360}}</string>
 				<string key="371.windowTemplate.maxSize">{3.40282e+38, 3.40282e+38}</string>
@@ -2298,6 +2343,7 @@
 				<string key="709.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="72.ImportedFromIB2"/>
+				<string key="730.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="81.IBEditorWindowLastContentRect">{{450, 813}, {127, 23}}</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="81.ImportedFromIB2"/>
@@ -2311,7 +2357,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">729</int>
+			<int key="maxID">733</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2354,6 +2400,7 @@
 						<string key="openTorrent:">id</string>
 						<string key="preferences:">id</string>
 						<string key="productWebsite:">id</string>
+						<string key="qlTorrent:">id</string>
 						<string key="refreshTorrents:">id</string>
 						<string key="removeTorrent:">id</string>
 					</dictionary>
@@ -2394,6 +2441,10 @@
 							<string key="name">productWebsite:</string>
 							<string key="candidateClassName">id</string>
 						</object>
+						<object class="IBActionInfo" key="qlTorrent:">
+							<string key="name">qlTorrent:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="refreshTorrents:">
 							<string key="name">refreshTorrents:</string>
 							<string key="candidateClassName">id</string>
@@ -2410,6 +2461,7 @@
 						<string key="mainWindow">NSWindow</string>
 						<string key="preferencesItem">NSToolbarItem</string>
 						<string key="progressIndicator">NSProgressIndicator</string>
+						<string key="qlItem">NSToolbarItem</string>
 						<string key="refreshItem">NSToolbarItem</string>
 						<string key="removeItem">NSToolbarItem</string>
 						<string key="searchField">NSSearchField</string>
@@ -2439,6 +2491,10 @@
 						<object class="IBToOneOutletInfo" key="progressIndicator">
 							<string key="name">progressIndicator</string>
 							<string key="candidateClassName">NSProgressIndicator</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="qlItem">
+							<string key="name">qlItem</string>
+							<string key="candidateClassName">NSToolbarItem</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="refreshItem">
 							<string key="name">refreshItem</string>
@@ -3264,7 +3320,7 @@
 			<integer value="3200" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../tlaloc.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../Tlaloc.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NSAddTemplate">{8, 8}</string>
@@ -3273,6 +3329,7 @@
 			<string key="NSMenuCheckmark">{9, 8}</string>
 			<string key="NSMenuMixedState">{7, 2}</string>
 			<string key="NSPreferencesGeneral">{32, 32}</string>
+			<string key="NSQuickLookTemplate">{19, 11}</string>
 			<string key="NSRefreshTemplate">{10, 12}</string>
 			<string key="NSRemoveTemplate">{8, 8}</string>
 			<string key="NSToolbarCustomizeToolbarItemImage">{32, 32}</string>

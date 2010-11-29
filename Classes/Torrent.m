@@ -59,8 +59,6 @@ static NSOperationQueue* downloadIconQueue = nil;
 
 + (BOOL)loadAll {
 
-    NSLog(@"Fetching the torrent list");
-
     NSURL *rtorrentRPCURL = [Config rtorrentRPCURL];
 
     if (rtorrentRPCURL == nil) {
