@@ -12,7 +12,7 @@
 #import <Quartz/Quartz.h>
 #import <Growl/Growl.h>
 
-
+#import "TorrentInfoController.h"
 #import "TorrentArrayController.h"
 
 @class TorrentInfoController;
@@ -59,6 +59,7 @@
 - (IBAction)preferences:(id)sender;
 
 - (IBAction)productWebsite:(id)sender;
+- (IBAction)togglePreviewPanel:(id)sender;
 
 - (void)openFiles:(NSArray *) filenames;
 - (void) updateUI;

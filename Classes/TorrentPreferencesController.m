@@ -6,9 +6,9 @@
 //  Copyright 2009. All rights reserved.
 //
 
-#import "AppPrefsWindowController.h"
+#import "TorrentPreferencesController.h"
 
-@implementation AppPrefsWindowController
+@implementation TorrentPreferencesController
 
 - (void)setupToolbar {
     [self addView:generalPreferenceView label:@"General"];

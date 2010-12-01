@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "DBPrefsWindowController.h"
 
-@interface AppPrefsWindowController : DBPrefsWindowController {
+@interface TorrentPreferencesController : DBPrefsWindowController {
     IBOutlet NSView *generalPreferenceView;
     IBOutlet NSView *updatesPreferenceView;
 }

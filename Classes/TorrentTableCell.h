@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ImageTextCell : NSTextFieldCell {
+@interface TorrentTableCell : NSTextFieldCell {
     NSObject* delegate;
     NSString* typeIconKeyPath;
     NSString* ratioIconKeyPath;
@@ -27,12 +27,12 @@
 
 @interface NSObject(ImageTextCellDelegate)
 
-- (NSImage*) typeIconForCell: (ImageTextCell*) cell data: (NSObject*) data;
-- (NSImage*) ratioIconForCell: (ImageTextCell*) cell data: (NSObject*) data;
-- (NSString*) primaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data;
-- (NSString*) secondaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data;
-- (NSObject*) dataElementForCell: (ImageTextCell*) cell;
+- (NSImage*) typeIconForCell: (TorrentTableCell*) cell data: (NSObject*) data;
+- (NSImage*) ratioIconForCell: (TorrentTableCell*) cell data: (NSObject*) data;
+- (NSString*) primaryTextForCell: (TorrentTableCell*) cell data: (NSObject*) data;
+- (NSString*) secondaryTextForCell: (TorrentTableCell*) cell data: (NSObject*) data;
+- (NSObject*) dataElementForCell: (TorrentTableCell*) cell;
 
-- (BOOL) disabledForCell: (ImageTextCell*) cell data: (NSObject*) data;
+- (BOOL) disabledForCell: (TorrentTableCell*) cell data: (NSObject*) data;
 
 @end

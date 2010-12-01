@@ -10,17 +10,14 @@
 #import "Config.h"
 #import "Util.h"
 #import "Torrent.h"
-#import "ImageTextCell.h"
-#import "AppPrefsWindowController.h"
-#import "tlalocAppDelegate.h"
-
-#import <Quartz/Quartz.h>
-#include <QuickLook/QuickLook.h>
+#import "TorrentTableCell.h"
+#import "TorrentPreferencesController.h"
+#import "TlalocAppDelegate.h"
 
 #import <Cocoa/Cocoa.h>
-
 #import <Growl/Growl.h>
-
+#import <Quartz/Quartz.h>
+#include <QuickLook/QuickLook.h>
 
 #define UPDATE_UI_SECONDS   1.5
 
@@ -60,7 +57,7 @@ NSPredicate *predicateTemplate;
 -(void)awakeFromNib {
 
     NSTableColumn* column = [[tableView tableColumns] objectAtIndex:0];
-    ImageTextCell* cell = [[[ImageTextCell alloc] init] autorelease];
+    TorrentTableCell* cell = [[[TorrentTableCell alloc] init] autorelease];
     [column setDataCell: cell];
 
     [cell setPrimaryTextKeyPath: @"filename"];
@@ -239,7 +236,7 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)qlTorrent:(id)sender {
-    [[NSApp delegate] togglePreviewPanel:self];
+    [self togglePreviewPanel:self];
 }
 
 - (void)updateTorrents {
@@ -311,7 +308,7 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)preferences:(id)sender {
-    [[AppPrefsWindowController sharedPrefsWindowController] showWindow:nil];
+    [[TorrentPreferencesController sharedPrefsWindowController] showWindow:nil];
     (void)sender;
 }
 

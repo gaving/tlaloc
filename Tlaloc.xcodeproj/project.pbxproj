@@ -10,10 +10,10 @@
 		8610519110930EDE002078AA /* TorrentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517110930EDE002078AA /* TorrentTableView.m */; };
 		8610519210930EDE002078AA /* TorrentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517310930EDE002078AA /* TorrentListController.m */; };
 		8610519310930EDE002078AA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517410930EDE002078AA /* Config.m */; };
-		8610519410930EDE002078AA /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517710930EDE002078AA /* ImageTextCell.m */; };
+		8610519410930EDE002078AA /* TorrentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517710930EDE002078AA /* TorrentTableCell.m */; };
 		8610519510930EDE002078AA /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610517910930EDE002078AA /* Torrent.m */; };
 		862967C110B6142C00191673 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862967BE10B6142C00191673 /* DBPrefsWindowController.m */; };
-		862967C210B6142C00191673 /* AppPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862967BF10B6142C00191673 /* AppPrefsWindowController.m */; };
+		862967C210B6142C00191673 /* TorrentPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862967BF10B6142C00191673 /* TorrentPreferencesController.m */; };
 		8629680210B61A3C00191673 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 862967FE10B61A3C00191673 /* Preferences.nib */; };
 		8629680410B61A3C00191673 /* Updates.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8629680010B61A3C00191673 /* Updates.tiff */; };
 		8629680510B61A3C00191673 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 8629680110B61A3C00191673 /* General.png */; };
@@ -33,10 +33,11 @@
 		8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F9109311B800ACABF0 /* NSDataAdditions.m */; };
 		8650F42E1093130000ACABF0 /* Tlaloc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* Tlaloc.xib */; };
 		8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42C1093130000ACABF0 /* InfoPlist.strings */; };
-		8678593D12A509FC003D9F91 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */; };
-		867859ED12A50A0A003D9F91 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */; };
 		86785A0A12A50E7C003D9F91 /* TorrentInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86785A0912A50E7C003D9F91 /* TorrentInfoView.xib */; };
 		86785A1B12A5104D003D9F91 /* TorrentInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86785A1A12A5104D003D9F91 /* TorrentInfoController.m */; };
+		8682E12A12A65433000D437E /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8682E12812A65433000D437E /* PFMoveApplication.m */; };
+		8682E13812A65499000D437E /* MoveApplication.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8682E13412A65499000D437E /* MoveApplication.strings */; };
+		8682E18112A65675000D437E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8682E18012A65675000D437E /* Security.framework */; };
 		868309E912A583C40032DCBF /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
 		868309F312A583D00032DCBF /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
 		869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 869ED6F110C4732E009814CD /* Tlaloc.icns */; };
@@ -51,7 +52,7 @@
 		86CB4EE0129B1D9B006F4C9D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CB4EDF129B1D9B006F4C9D /* Quartz.framework */; };
 		86CF96F112A461BE00C1424B /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */; };
 		86E9E6AA10C1FB670082415E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E9E6A810C1FB670082415E /* Util.m */; };
-		86F43E0710964252003EDB14 /* tlalocAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F43E0310964252003EDB14 /* tlalocAppDelegate.m */; };
+		86F43E0710964252003EDB14 /* TlalocAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F43E0310964252003EDB14 /* TlalocAppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -75,7 +76,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				868309F312A583D00032DCBF /* Growl.framework in CopyFiles */,
-				867859ED12A50A0A003D9F91 /* BWToolkitFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,14 +93,14 @@
 		8610517410930EDE002078AA /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		8610517510930EDE002078AA /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		8610517610930EDE002078AA /* TorrentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentListController.h; sourceTree = "<group>"; };
-		8610517710930EDE002078AA /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextCell.m; sourceTree = "<group>"; };
-		8610517810930EDE002078AA /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextCell.h; sourceTree = "<group>"; };
+		8610517710930EDE002078AA /* TorrentTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentTableCell.m; sourceTree = "<group>"; };
+		8610517810930EDE002078AA /* TorrentTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentTableCell.h; sourceTree = "<group>"; };
 		8610517910930EDE002078AA /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
 		8610517A10930EDE002078AA /* Torrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torrent.h; sourceTree = "<group>"; };
 		862967BD10B6142C00191673 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		862967BE10B6142C00191673 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
-		862967BF10B6142C00191673 /* AppPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPrefsWindowController.m; sourceTree = "<group>"; };
-		862967C010B6142C00191673 /* AppPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPrefsWindowController.h; sourceTree = "<group>"; };
+		862967BF10B6142C00191673 /* TorrentPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentPreferencesController.m; sourceTree = "<group>"; };
+		862967C010B6142C00191673 /* TorrentPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentPreferencesController.h; sourceTree = "<group>"; };
 		862967FE10B61A3C00191673 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/Preferences.nib; sourceTree = "<group>"; };
 		8629680010B61A3C00191673 /* Updates.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Updates.tiff; path = Resources/Updates.tiff; sourceTree = "<group>"; };
 		8629680110B61A3C00191673 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = General.png; path = Resources/General.png; sourceTree = "<group>"; };
@@ -132,11 +132,14 @@
 		8650F3FA109311B800ACABF0 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
 		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Tlaloc.xib; sourceTree = "<group>"; };
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = "<group>"; };
 		86785A0912A50E7C003D9F91 /* TorrentInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TorrentInfoView.xib; sourceTree = "<group>"; };
 		86785A1912A5104D003D9F91 /* TorrentInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentInfoController.h; sourceTree = "<group>"; };
 		86785A1A12A5104D003D9F91 /* TorrentInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentInfoController.m; sourceTree = "<group>"; };
-		86802D0410934360003CB030 /* tlaloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tlaloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86802D0410934360003CB030 /* Tlaloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tlaloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8682E12812A65433000D437E /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFMoveApplication.m; path = LetsMove/PFMoveApplication.m; sourceTree = SOURCE_ROOT; };
+		8682E12912A65433000D437E /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFMoveApplication.h; path = LetsMove/PFMoveApplication.h; sourceTree = SOURCE_ROOT; };
+		8682E13512A65499000D437E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = MoveApplication.strings; sourceTree = "<group>"; };
+		8682E18012A65675000D437E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		868309E812A583C40032DCBF /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		869ED6F110C4732E009814CD /* Tlaloc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tlaloc.icns; path = Resources/Tlaloc.icns; sourceTree = "<group>"; };
 		86C2920710962B0800ED24C0 /* TorrentActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentActionController.h; sourceTree = "<group>"; };
@@ -152,9 +155,9 @@
 		86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		86E9E6A810C1FB670082415E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		86E9E6A910C1FB670082415E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		86F43E0310964252003EDB14 /* tlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tlalocAppDelegate.m; sourceTree = "<group>"; };
-		86F43E0410964252003EDB14 /* tlalocAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlalocAppDelegate.h; sourceTree = "<group>"; };
-		86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlaloc_Prefix.pch; sourceTree = "<group>"; };
+		86F43E0310964252003EDB14 /* TlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TlalocAppDelegate.m; path = ../TlalocAppDelegate.m; sourceTree = "<group>"; };
+		86F43E0410964252003EDB14 /* TlalocAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TlalocAppDelegate.h; path = ../TlalocAppDelegate.h; sourceTree = "<group>"; };
+		86F43E0510964252003EDB14 /* Tlaloc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tlaloc_Prefix.pch; sourceTree = "<group>"; };
 		86F43E0610964252003EDB14 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,8 +169,8 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				8631E68510C2F381009A8820 /* Sparkle.framework in Frameworks */,
 				86CB4EE0129B1D9B006F4C9D /* Quartz.framework in Frameworks */,
-				8678593D12A509FC003D9F91 /* BWToolkitFramework.framework in Frameworks */,
 				868309E912A583C40032DCBF /* Growl.framework in Frameworks */,
+				8682E18112A65675000D437E /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,23 +180,23 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8650F3D01093115300ACABF0 /* XMLRPC */,
+				8682E1F412A65A6D000D437E /* External */,
+				86F43E0310964252003EDB14 /* TlalocAppDelegate.m */,
+				86F43E0410964252003EDB14 /* TlalocAppDelegate.h */,
+				8610517410930EDE002078AA /* Config.m */,
+				8610517510930EDE002078AA /* Config.h */,
 				86E9E6A810C1FB670082415E /* Util.m */,
 				86E9E6A910C1FB670082415E /* Util.h */,
-				862967BD10B6142C00191673 /* DBPrefsWindowController.h */,
-				862967BE10B6142C00191673 /* DBPrefsWindowController.m */,
-				862967BF10B6142C00191673 /* AppPrefsWindowController.m */,
-				862967C010B6142C00191673 /* AppPrefsWindowController.h */,
-				8650C98210B5A71B0003287E /* TorrentArrayController.h */,
+				862967BF10B6142C00191673 /* TorrentPreferencesController.m */,
+				862967C010B6142C00191673 /* TorrentPreferencesController.h */,
 				8650C98310B5A71B0003287E /* TorrentArrayController.m */,
+				8650C98210B5A71B0003287E /* TorrentArrayController.h */,
 				8610517110930EDE002078AA /* TorrentTableView.m */,
 				8610517210930EDE002078AA /* TorrentTableView.h */,
 				8610517310930EDE002078AA /* TorrentListController.m */,
-				8610517410930EDE002078AA /* Config.m */,
-				8610517510930EDE002078AA /* Config.h */,
 				8610517610930EDE002078AA /* TorrentListController.h */,
-				8610517710930EDE002078AA /* ImageTextCell.m */,
-				8610517810930EDE002078AA /* ImageTextCell.h */,
+				8610517710930EDE002078AA /* TorrentTableCell.m */,
+				8610517810930EDE002078AA /* TorrentTableCell.h */,
 				8610517910930EDE002078AA /* Torrent.m */,
 				8610517A10930EDE002078AA /* Torrent.h */,
 				86C2920710962B0800ED24C0 /* TorrentActionController.h */,
@@ -210,7 +213,7 @@
 				868309E812A583C40032DCBF /* Growl.framework */,
 				8631E68410C2F381009A8820 /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */,
+				8682E18012A65675000D437E /* Security.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -229,7 +232,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				86802D0410934360003CB030 /* tlaloc.app */,
+				86802D0410934360003CB030 /* Tlaloc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				86F43E0510964252003EDB14 /* Tlaloc_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -260,9 +264,6 @@
 				867859F812A50E40003D9F91 /* Other */,
 				867859F712A50E2C003D9F91 /* Nibs */,
 				86DC3DFE12A43CA9002116EE /* Icons */,
-				86F43E0310964252003EDB14 /* tlalocAppDelegate.m */,
-				86F43E0410964252003EDB14 /* tlalocAppDelegate.h */,
-				86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */,
 				86F43E0610964252003EDB14 /* Info.plist */,
 				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
 			);
@@ -320,10 +321,23 @@
 		867859F812A50E40003D9F91 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				8682E13412A65499000D437E /* MoveApplication.strings */,
 				86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */,
 				8631E80210C2F6D9009A8820 /* dsa_pub.pem */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		8682E1F412A65A6D000D437E /* External */ = {
+			isa = PBXGroup;
+			children = (
+				8682E12812A65433000D437E /* PFMoveApplication.m */,
+				862967BD10B6142C00191673 /* DBPrefsWindowController.h */,
+				862967BE10B6142C00191673 /* DBPrefsWindowController.m */,
+				8682E12912A65433000D437E /* PFMoveApplication.h */,
+				8650F3D01093115300ACABF0 /* XMLRPC */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 		86DC3DFE12A43CA9002116EE /* Icons */ = {
@@ -363,7 +377,7 @@
 			name = Tlaloc;
 			productInstallPath = "$(HOME)/Applications";
 			productName = tlaloc;
-			productReference = 86802D0410934360003CB030 /* tlaloc.app */;
+			productReference = 86802D0410934360003CB030 /* Tlaloc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -411,6 +425,7 @@
 				8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */,
 				869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */,
 				86785A0A12A50E7C003D9F91 /* TorrentInfoView.xib in Resources */,
+				8682E13812A65499000D437E /* MoveApplication.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +440,7 @@
 				8610519110930EDE002078AA /* TorrentTableView.m in Sources */,
 				8610519210930EDE002078AA /* TorrentListController.m in Sources */,
 				8610519310930EDE002078AA /* Config.m in Sources */,
-				8610519410930EDE002078AA /* ImageTextCell.m in Sources */,
+				8610519410930EDE002078AA /* TorrentTableCell.m in Sources */,
 				8610519510930EDE002078AA /* Torrent.m in Sources */,
 				8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */,
 				8650F3FD109311B800ACABF0 /* XMLRPCResponse.m in Sources */,
@@ -438,12 +453,13 @@
 				8650F404109311B800ACABF0 /* NSStringAdditions.m in Sources */,
 				8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */,
 				86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */,
-				86F43E0710964252003EDB14 /* tlalocAppDelegate.m in Sources */,
+				86F43E0710964252003EDB14 /* TlalocAppDelegate.m in Sources */,
 				8650C98410B5A71B0003287E /* TorrentArrayController.m in Sources */,
 				862967C110B6142C00191673 /* DBPrefsWindowController.m in Sources */,
-				862967C210B6142C00191673 /* AppPrefsWindowController.m in Sources */,
+				862967C210B6142C00191673 /* TorrentPreferencesController.m in Sources */,
 				86E9E6AA10C1FB670082415E /* Util.m in Sources */,
 				86785A1B12A5104D003D9F91 /* TorrentInfoController.m in Sources */,
+				8682E12A12A65433000D437E /* PFMoveApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +482,15 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		8682E13412A65499000D437E /* MoveApplication.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8682E13512A65499000D437E /* English */,
+			);
+			name = MoveApplication.strings;
+			path = LetsMove/English.lproj;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -486,7 +511,7 @@
 				GCC_PREFIX_HEADER = tlaloc_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = tlaloc;
+				PRODUCT_NAME = Tlaloc;
 			};
 			name = Debug;
 		};
@@ -504,7 +529,7 @@
 				GCC_PREFIX_HEADER = tlaloc_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = tlaloc;
+				PRODUCT_NAME = Tlaloc;
 			};
 			name = Release;
 		};

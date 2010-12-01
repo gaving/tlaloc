@@ -131,6 +131,9 @@ static NSOperationQueue* downloadIconQueue = nil;
             if (([[tempTorrent complete] intValue] == 1) && ([[existingTorrent complete] intValue] == 0)) {
                 [[NSNotificationCenter defaultCenter] postNotificationName: @"TorrentFinishedDownloading" object: tempTorrent];
             }
+
+
+            /* TODO: Check to see if something has now failed */
         }
 
         /* Update the key*/

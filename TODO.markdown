@@ -1,15 +1,18 @@
 # Tlaloc TODO
 
+## 0.8+ (???)
+
+- [_] Menu item actions for each table cell (launch, remove, pause, stop)
+- [_] Notification area show outstanding torrents on click (think airport)
+- [_] Tweetie-esque interface
+
 ## 0.5 (2010-12-07)
 
-- [_] Growl on completed torrents (click to open)
-- [_] Notification area show outstanding torrents on click (think airport)
+- [x] Growl on completed torrents (click to open)
 - [_] Status bar showing meaningful stats (download/upload) Also: action updates
 - [_] Badge dock icon to show outstanding torrents
 - [_] Upload and download speed on the interface/badge
 - [_] Toggle completed/incomplete toolbar etc
-- [_] Version dialog of some kind
-- [_] Menu item actions for each table cell (launch, remove, pause, stop)
 - [_] Make toolbar visibility a preference option
 - [_] General preferences browse button to find the destination directory
 - [_] Allow show/hide completed torrents (sort order too?)
@@ -18,6 +21,7 @@
 - [!] Info pane when you view a torrent (heavy going)
 - [x] Refresh automatically (polling of some sort)
 - [x] Quick look individual files with spacebar
+- [_] Move self to applications folder
 
 ## 0.2 (2009-03-01)
 

@@ -6,11 +6,11 @@
 //  Copyright 2009. All rights reserved.
 //
 
-#import "ImageTextCell.h"
+#import "TorrentTableCell.h"
 #define PROGRESS_INDICATOR_DIMENSION    16
 #define PROGRESS_INDICATOR_LEFT_MARGIN  1
 
-@implementation ImageTextCell
+@implementation TorrentTableCell
 
 - (void)dealloc {
     [self setDataDelegate: nil];
@@ -22,7 +22,7 @@
 }
 
 - copyWithZone:(NSZone *)zone {
-    ImageTextCell *cell = (ImageTextCell *)[super copyWithZone:zone];
+    TorrentTableCell *cell = (TorrentTableCell *)[super copyWithZone:zone];
     cell->delegate = nil;
     [cell setDataDelegate: delegate];
     return cell;
@@ -167,28 +167,28 @@
 #pragma mark -
 #pragma mark Delegate methods
 
-- (NSImage*) typeIconForCell: (ImageTextCell*) cell data: (NSObject*) data {
+- (NSImage*) typeIconForCell: (TorrentTableCell*) cell data: (NSObject*) data {
     if (typeIconKeyPath) {
         return [data valueForKeyPath: typeIconKeyPath];
     }
     return nil;
 }
 
-- (NSImage*) ratioIconForCell: (ImageTextCell*) cell data: (NSObject*) data {
+- (NSImage*) ratioIconForCell: (TorrentTableCell*) cell data: (NSObject*) data {
     if (ratioIconKeyPath) {
         return [data valueForKeyPath: ratioIconKeyPath];
     }
     return nil;
 }
 
-- (NSString*) primaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data {
+- (NSString*) primaryTextForCell: (TorrentTableCell*) cell data: (NSObject*) data {
     if (primaryTextKeyPath) {
         return [data valueForKeyPath: primaryTextKeyPath];
     }
     return nil;
 }
 
-- (NSString*) secondaryTextForCell: (ImageTextCell*) cell data: (NSObject*) data {
+- (NSString*) secondaryTextForCell: (TorrentTableCell*) cell data: (NSObject*) data {
     if (primaryTextKeyPath) {
         return [data valueForKeyPath: secondaryTextKeyPath];
     }
