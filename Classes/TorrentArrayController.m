@@ -53,6 +53,7 @@
         Torrent *torrent = [selectedTorrents objectAtIndex:i];
         NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]]; 
         [fileNames addObject: realPath];
+        [realPath release];
     }
 
     [pboard setPropertyList:fileNames forType:NSFilenamesPboardType];

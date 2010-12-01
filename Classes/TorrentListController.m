@@ -44,7 +44,7 @@ NSPredicate *predicateTemplate;
     if (self = [super init]) {
         [NSApp setDelegate:self];
         if ([self grabTorrents]) {
-            torrents  = [[NSMutableArray alloc] init];
+            torrents = [[NSMutableArray alloc] init];
             [self buildTorrents];
         } else {
             [self showFetchError];
@@ -160,6 +160,7 @@ NSPredicate *predicateTemplate;
         Torrent *torrent = [selectedTorrents objectAtIndex:i];
         NSString *realPath = [torrentDestination stringByAppendingPathComponent: [torrent filename]];
         [fileNames addObject: realPath];
+        [realPath release];
     }
 
     NSPasteboard *pb = [NSPasteboard generalPasteboard];
@@ -245,8 +246,7 @@ NSPredicate *predicateTemplate;
         id selection = [tableView selectedRowIndexes];
         int index = [selection firstIndex];
 
-        [torrents release];
-        torrents  = [[NSMutableArray alloc] init];
+        torrents = [NSMutableArray array];
         [self buildTorrents];
 
         /* Set the array controllers new content */
@@ -398,8 +398,8 @@ NSPredicate *predicateTemplate;
     }
 
     NSString *label = [NSString stringWithFormat:@"%d", incomplete];
-
     [[NSApp dockTile] setBadgeLabel:label];
+    [label release];
 }
 
 #pragma mark -

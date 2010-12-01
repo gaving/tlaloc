@@ -192,7 +192,7 @@
             // }
         // }];
     }
-    return iconImage;
+    return [iconImage autorelease];
 }
 
 - (NSImage*) ratioIcon {
@@ -219,7 +219,7 @@
 
     NSString *textPath = [[NSBundle mainBundle] pathForResource:resource ofType:@"png"];
     NSImage *image = [[NSImage alloc] initWithContentsOfFile: textPath];
-    return image;
+    return [image autorelease];
 }
 
 - (NSString*) fullPath {
@@ -240,6 +240,12 @@
     [uri release];
     [bytesDone release];
     [bytesTotal release];
+    [bytesDoneReadable release];
+    [bytesTotalReadable release];
+    [sizeFiles release];
+    [ratio release];
+    [multiFile release];
+    [complete release];
     [state release];
     [super dealloc];
 }

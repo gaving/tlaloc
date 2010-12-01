@@ -5,6 +5,7 @@
 - [_] Menu item actions for each table cell (launch, remove, pause, stop)
 - [_] Notification area show outstanding torrents on click (think airport)
 - [_] Tweetie-esque interface
+- [_] Option to look and open a media file within the folder downloaded
 
 ## 0.5 (2010-12-07)
 
@@ -17,11 +18,12 @@
 - [_] General preferences browse button to find the destination directory
 - [_] Allow show/hide completed torrents (sort order too?)
 - [_] Focus (i.e. select) newly added torrent
-- [_] Option to look and open a media file within the folder downloaded
-- [!] Info pane when you view a torrent (heavy going)
+- [!] Info pane when you view a torrent (heavy going, allow various files to be launched)
 - [x] Refresh automatically (polling of some sort)
 - [x] Quick look individual files with spacebar
-- [_] Move self to applications folder
+- [x] Move self to applications folder
+- [_] Highlight torrents depending on status
+- [x] Fix memory leaks
 
 ## 0.2 (2009-03-01)
 
