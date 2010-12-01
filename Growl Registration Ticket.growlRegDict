@@ -10,11 +10,11 @@ Tlaloc
         <integer>1</integer>
         <key>AllNotifications</key>
         <array>
-            <string>Rogerian</string>
+            <string>Tlaloc</string>
         </array>
         <key>DefaultNotifications</key>
         <array>
-            <string>Rogerian</string>
+            <string>Tlaloc</string>
         </array>
     </dict>
 </plist>

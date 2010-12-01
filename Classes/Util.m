@@ -27,7 +27,7 @@
         [GrowlApplicationBridge setGrowlDelegate:self];
         [GrowlApplicationBridge notifyWithTitle:title
                                     description:message
-                               notificationName:@"Rogerian"
+                               notificationName:@"Tlaloc"
                                        iconData:nil
                                        priority:0
                                        isSticky:NO
