@@ -38,6 +38,7 @@
 		8682E12A12A65433000D437E /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8682E12812A65433000D437E /* PFMoveApplication.m */; };
 		8682E13812A65499000D437E /* MoveApplication.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8682E13412A65499000D437E /* MoveApplication.strings */; };
 		8682E18112A65675000D437E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8682E18012A65675000D437E /* Security.framework */; };
+		8682E4B012A6B5B4000D437E /* Tlaloc_status.png in Resources */ = {isa = PBXBuildFile; fileRef = 8682E4AF12A6B5B4000D437E /* Tlaloc_status.png */; };
 		868309E912A583C40032DCBF /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
 		868309F312A583D00032DCBF /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
 		869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 869ED6F110C4732E009814CD /* Tlaloc.icns */; };
@@ -140,6 +141,7 @@
 		8682E12912A65433000D437E /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFMoveApplication.h; path = LetsMove/PFMoveApplication.h; sourceTree = SOURCE_ROOT; };
 		8682E13512A65499000D437E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = MoveApplication.strings; sourceTree = "<group>"; };
 		8682E18012A65675000D437E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8682E4AF12A6B5B4000D437E /* Tlaloc_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tlaloc_status.png; path = Resources/Tlaloc_status.png; sourceTree = "<group>"; };
 		868309E812A583C40032DCBF /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		869ED6F110C4732E009814CD /* Tlaloc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tlaloc.icns; path = Resources/Tlaloc.icns; sourceTree = "<group>"; };
 		86C2920710962B0800ED24C0 /* TorrentActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentActionController.h; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 		86DC3DFE12A43CA9002116EE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				8682E4AF12A6B5B4000D437E /* Tlaloc_status.png */,
 				8629680010B61A3C00191673 /* Updates.tiff */,
 				8629680110B61A3C00191673 /* General.png */,
 				869ED6F110C4732E009814CD /* Tlaloc.icns */,
@@ -426,6 +429,7 @@
 				869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */,
 				86785A0A12A50E7C003D9F91 /* TorrentInfoView.xib in Resources */,
 				8682E13812A65499000D437E /* MoveApplication.strings in Resources */,
+				8682E4B012A6B5B4000D437E /* Tlaloc_status.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

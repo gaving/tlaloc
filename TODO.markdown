@@ -24,6 +24,7 @@
 - [x] Move self to applications folder
 - [_] Highlight torrents depending on status
 - [x] Fix memory leaks
+- [_] Show in dock/menu bar only
 
 ## 0.2 (2009-03-01)
 

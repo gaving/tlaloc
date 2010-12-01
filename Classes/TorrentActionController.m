@@ -34,7 +34,6 @@
 }
 
 - (BOOL)addTorrent:(NSString *)fileName {
-    NSLog(@"TorrentActionController addTorrent: %@", fileName);
     NSData *data = [NSData dataWithContentsOfFile:fileName];
 
     if ([TorrentActionController executeCommand:@"load_raw_start" withData:data]) {
@@ -46,14 +45,12 @@
 }
 
 - (BOOL)removeTorrent:(Torrent *)torrent {
-    NSLog(@"TorrentActionController removeTorrent: %@", [torrent hash]);
     return [TorrentActionController executeCommand:@"d.erase" withData:[torrent hash]];
 }
 
 - (BOOL)deleteFile:(Torrent *)torrent {
-    NSLog(@"TorrentActionController deleteFile: %@", [torrent hash]);
 
-    /* Delete the actual file */
+    /* NOTE: Delete the *actual* file */
     return [TorrentActionController executeCommand:@"d.delete_tied" withData:[torrent hash]];
 }
 

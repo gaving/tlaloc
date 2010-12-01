@@ -91,6 +91,25 @@ NSPredicate *predicateTemplate;
     [[NSRunLoop currentRunLoop] addTimer: timer forMode: NSEventTrackingRunLoopMode];
 
     fInfoController = [[TorrentInfoController alloc] init];
+
+    /* Do the status item */
+    statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength] retain];
+
+    NSBundle *bundle = [NSBundle mainBundle];
+    statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Tlaloc_status" ofType:@"png"]];
+    statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Tlaloc_status" ofType:@"png"]];
+
+    [statusMenu setDelegate:self];
+
+    [statusItem setImage:statusImage];
+    [statusItem setAlternateImage:statusHighlightImage];
+    [statusItem setMenu:statusMenu];
+    [statusItem setToolTip:@"Tlaloc"];
+    [statusItem setHighlightMode:NO];
+}
+
+- (void)menuWillOpen:(NSMenu *)menu {
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (NSMutableArray*) torrents {
@@ -393,7 +412,7 @@ NSPredicate *predicateTemplate;
 
     int incomplete = [self incompleteTorrents];
     if (incomplete == 0) {
-        [[NSApp dockTile] setShowsApplicationBadge: NO];
+        [[NSApp dockTile] setBadgeLabel:@""];
         return;
     }
 

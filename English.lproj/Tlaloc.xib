@@ -499,7 +499,7 @@
 							<nil key="NSToolbarItemView"/>
 							<object class="NSCustomResource" key="NSToolbarItemImage">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">NSFolderSmart</string>
+								<string key="NSResourceName">NSFolderBurnable</string>
 							</object>
 							<nil key="NSToolbarItemTarget"/>
 							<nil key="NSToolbarItemAction"/>
@@ -1209,6 +1209,19 @@
 			<object class="NSCustomObject" id="843970293">
 				<string key="NSClassName">SUUpdater</string>
 			</object>
+			<object class="NSMenu" id="482319756">
+				<string key="NSTitle"/>
+				<array class="NSMutableArray" key="NSMenuItems">
+					<object class="NSMenuItem" id="947880961">
+						<reference key="NSMenu" ref="482319756"/>
+						<string key="NSTitle">Quit Tlaloc</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="35465992"/>
+						<reference key="NSMixedImage" ref="502551668"/>
+					</object>
+				</array>
+			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<array class="NSMutableArray" key="connectionRecords">
@@ -1640,6 +1653,14 @@
 						<reference key="destination" ref="773831130"/>
 					</object>
 					<int key="connectionID">757</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">statusMenu</string>
+						<reference key="source" ref="773831130"/>
+						<reference key="destination" ref="482319756"/>
+					</object>
+					<int key="connectionID">771</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2219,6 +2240,20 @@
 						<reference key="object" ref="280073973"/>
 						<reference key="parent" ref="912729080"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">758</int>
+						<reference key="object" ref="482319756"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="947880961"/>
+						</array>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">StatusItem</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">762</int>
+						<reference key="object" ref="947880961"/>
+						<reference key="parent" ref="482319756"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -2356,6 +2391,8 @@
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="72.ImportedFromIB2"/>
 				<string key="730.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="758.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="762.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="81.IBEditorWindowLastContentRect">{{450, 813}, {127, 23}}</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="81.ImportedFromIB2"/>
@@ -2369,7 +2406,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">757</int>
+			<int key="maxID">771</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2434,6 +2471,7 @@
 						<string key="qlTorrent:">id</string>
 						<string key="refreshTorrents:">id</string>
 						<string key="removeTorrent:">id</string>
+						<string key="togglePreviewPanel:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="addTorrent:">
@@ -2484,6 +2522,10 @@
 							<string key="name">removeTorrent:</string>
 							<string key="candidateClassName">id</string>
 						</object>
+						<object class="IBActionInfo" key="togglePreviewPanel:">
+							<string key="name">togglePreviewPanel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addItem">NSToolbarItem</string>
@@ -2496,6 +2538,7 @@
 						<string key="refreshItem">NSToolbarItem</string>
 						<string key="removeItem">NSToolbarItem</string>
 						<string key="searchField">NSSearchField</string>
+						<string key="statusMenu">NSMenu</string>
 						<string key="tableView">NSTableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -2538,6 +2581,10 @@
 						<object class="IBToOneOutletInfo" key="searchField">
 							<string key="name">searchField</string>
 							<string key="candidateClassName">NSSearchField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statusMenu">
+							<string key="name">statusMenu</string>
+							<string key="candidateClassName">NSMenu</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="tableView">
 							<string key="name">tableView</string>
@@ -3343,7 +3390,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NSAddTemplate">{8, 8}</string>
-			<string key="NSFolderSmart">{32, 32}</string>
+			<string key="NSFolderBurnable">{32, 32}</string>
 			<string key="NSInfo">{32, 32}</string>
 			<string key="NSMenuCheckmark">{9, 8}</string>
 			<string key="NSMenuMixedState">{7, 2}</string>

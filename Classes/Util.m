@@ -31,7 +31,7 @@
                                        iconData:nil
                                        priority:0
                                        isSticky:NO
-                                   clickContext:[NSDate date]];
+                                   clickContext:nil];
     } else {
         NSLog(@"ERROR: Could not load Growl.framework");
     }
@@ -41,6 +41,12 @@
     XMLRPCResponse *userInfoResponse = [XMLRPCConnection sendSynchronousXMLRPCRequest:req];
     // NSLog(@"Response body: %@", [userInfoResponse body]);
     return [userInfoResponse object];
+}
+
+- (void) growlNotificationWasClicked:(id)clickContext {
+    NSLog(@"oh hey");
+    NSURL *url = [NSURL URLWithString:clickContext];
+    [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 + (void)openWebsite {

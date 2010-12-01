@@ -17,9 +17,10 @@
 
 @class TorrentInfoController;
 
-@interface TorrentListController : NSObject <GrowlApplicationBridgeDelegate, QLPreviewPanelDataSource, QLPreviewPanelDelegate> {
+@interface TorrentListController : NSObject <NSMenuDelegate, GrowlApplicationBridgeDelegate, QLPreviewPanelDataSource, QLPreviewPanelDelegate> {
 
     IBOutlet NSWindow *mainWindow;
+    IBOutlet NSMenu *statusMenu;
 
     IBOutlet NSToolbarItem *addItem;
     IBOutlet NSToolbarItem *refreshItem;
@@ -34,11 +35,15 @@
 
     IBOutlet TorrentArrayController *arrayTorrents;
 
-    QLPreviewPanel * previewPanel;
-    NSMutableArray* torrents;
-    NSTimer* timer;
+    NSStatusItem *statusItem;
+    NSImage *statusImage;
+    NSImage *statusHighlightImage;
+
+    NSMutableArray *torrents;
+    NSTimer *timer;
 
     TorrentInfoController *fInfoController;
+    QLPreviewPanel *previewPanel;
 }
 
 - (BOOL)grabTorrents;
