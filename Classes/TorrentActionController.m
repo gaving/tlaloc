@@ -25,9 +25,8 @@
     [request release];
 
     if ([response isKindOfClass:[NSError class]]) {
-
-        /* TODO: Present some sort of error dialog */
         NSLog(@"%@", [(NSError *)response localizedDescription]);
+        [Util showError:@"Couldn't make request" withMessage: [(NSError *)response localizedDescription]];
         return NO;
     }
 
@@ -37,7 +36,13 @@
 - (BOOL)addTorrent:(NSString *)fileName {
     NSLog(@"TorrentActionController addTorrent: %@", fileName);
     NSData *data = [NSData dataWithContentsOfFile:fileName];
-    return [TorrentActionController executeCommand:@"load_raw_start" withData:data];
+
+    if ([TorrentActionController executeCommand:@"load_raw_start" withData:data]) {
+        [Util doGrowl:@"Download Queued" withMessage:[NSString stringWithFormat: @"%@ queued", [fileName lastPathComponent]]];
+        return YES;
+    }
+
+    return NO;
 }
 
 - (BOOL)removeTorrent:(Torrent *)torrent {

@@ -12,7 +12,30 @@
 #import "XMLRPCResponse.h"
 #import "XMLRPCConnection.h"
 
+#import <Cocoa/Cocoa.h>
+#import <Growl/Growl.h>
+
 @implementation Util
+
++ (void)doGrowl:(NSString *)title withMessage:(NSString *)message {
+
+    NSBundle *myBundle = [NSBundle bundleForClass:[Util class]];
+    NSString *growlPath = [[myBundle privateFrameworksPath] stringByAppendingPathComponent:@"Growl.framework"];
+    NSBundle *growlBundle = [NSBundle bundleWithPath:growlPath];
+
+    if (growlBundle && [growlBundle load]) {
+        [GrowlApplicationBridge setGrowlDelegate:self];
+        [GrowlApplicationBridge notifyWithTitle:title
+                                    description:message
+                               notificationName:@"Rogerian"
+                                       iconData:nil
+                                       priority:0
+                                       isSticky:NO
+                                   clickContext:[NSDate date]];
+    } else {
+        NSLog(@"ERROR: Could not load Growl.framework");
+    }
+}
 
 + (id)executeXMLRPCRequest:(XMLRPCRequest *)req {
     XMLRPCResponse *userInfoResponse = [XMLRPCConnection sendSynchronousXMLRPCRequest:req];

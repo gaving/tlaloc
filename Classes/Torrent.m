@@ -104,6 +104,7 @@ static NSOperationQueue* downloadIconQueue = nil;
         return NO;
     }
 
+    NSMutableDictionary *torrentHistory = [[Config instance] torrentHistory];
     NSMutableArray *torrents = [[[NSMutableArray alloc] init] autorelease];
     NSArray* detailsArray = (NSArray *)response;
     for (int i = 0; i < [detailsArray count]; i++) {
@@ -122,7 +123,22 @@ static NSOperationQueue* downloadIconQueue = nil;
         [tempTorrent setComplete:[value objectAtIndex:14]];
 
         [torrents addObject:tempTorrent];
+
+        if ([torrentHistory objectForKey:[tempTorrent hash]]) {
+            Torrent *existingTorrent = [torrentHistory objectForKey:[tempTorrent hash]];
+
+            /* Check if the status flag has changed */
+            if (([[tempTorrent complete] intValue] == 1) && ([[existingTorrent complete] intValue] == 0)) {
+                [[NSNotificationCenter defaultCenter] postNotificationName: @"TorrentFinishedDownloading" object: tempTorrent];
+            }
+        }
+
+        /* Update the key*/
+        [torrentHistory setObject:tempTorrent forKey:[tempTorrent hash]];
     }
+
+
+    /* TODO: Clean up all the keys that aren't in torrents */
 
     /* Set these torrents in the config */
     [[Config instance] setTorrents:torrents];

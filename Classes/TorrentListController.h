@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
+#import <Growl/Growl.h>
+
 
 #import "TorrentArrayController.h"
 
-@interface TorrentListController : NSObject <QLPreviewPanelDataSource, QLPreviewPanelDelegate> {
+@class TorrentInfoController;
+
+@interface TorrentListController : NSObject <GrowlApplicationBridgeDelegate, QLPreviewPanelDataSource, QLPreviewPanelDelegate> {
 
     IBOutlet NSWindow *mainWindow;
 
@@ -31,6 +37,8 @@
     QLPreviewPanel * previewPanel;
     NSMutableArray* torrents;
     NSTimer* timer;
+
+    TorrentInfoController *fInfoController;
 }
 
 - (BOOL)grabTorrents;

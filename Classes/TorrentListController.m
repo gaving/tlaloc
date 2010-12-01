@@ -12,9 +12,15 @@
 #import "Torrent.h"
 #import "ImageTextCell.h"
 #import "AppPrefsWindowController.h"
+#import "tlalocAppDelegate.h"
 
 #import <Quartz/Quartz.h>
 #include <QuickLook/QuickLook.h>
+
+#import <Cocoa/Cocoa.h>
+
+#import <Growl/Growl.h>
+
 
 #define UPDATE_UI_SECONDS   1.5
 
@@ -69,17 +75,25 @@ NSPredicate *predicateTemplate;
     [tableView registerForDraggedTypes: [NSArray arrayWithObject:NSFilenamesPboardType] ];
     [tableView setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO];
 
-    [mainWindow setDelegate: self]; //do manually to avoid placement issue
+    [mainWindow setDelegate: self];
     [mainWindow makeFirstResponder: tableView];
     [mainWindow setExcludedFromWindowsMenu: YES];
 
-    // Timer to update interface
+    /* Notifications */
+    NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver: self selector: @selector(torrentFinishedDownloading:)
+                    name: @"TorrentFinishedDownloading" object: nil];
+
+
     [self updateUI];
+
+    /* Interface update timer */
     timer = [NSTimer scheduledTimerWithTimeInterval: UPDATE_UI_SECONDS target: self
-                selector: @selector(updateUI) userInfo: nil repeats: YES];
+                                           selector: @selector(updateUI) userInfo: nil repeats: YES];
     [[NSRunLoop currentRunLoop] addTimer: timer forMode: NSModalPanelRunLoopMode];
     [[NSRunLoop currentRunLoop] addTimer: timer forMode: NSEventTrackingRunLoopMode];
 
+    fInfoController = [[TorrentInfoController alloc] init];
 }
 
 - (NSMutableArray*) torrents {
@@ -111,11 +125,7 @@ NSPredicate *predicateTemplate;
 
 - (BOOL)validateToolbarItem:(NSToolbarItem *)toolbarItem {
 
-    if ([[toolbarItem itemIdentifier] isEqualTo:@"InfoTorrent"]) {
-
-        /* TODO: Implement this */
-        return NO;
-    } else if ([[toolbarItem itemIdentifier] isEqualTo:@"Remove"]) {
+    if ([[toolbarItem itemIdentifier] isEqualTo:@"Remove"]) {
         return [[arrayTorrents selectedObjects] count] > 0;
     }
 
@@ -246,7 +256,7 @@ NSPredicate *predicateTemplate;
         [arrayTorrents setContent:torrents];
 
         if (index) {
-            [tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:index] byExtendingSelection:NO]; 
+            [tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:index] byExtendingSelection:NO];
         }
     } else {
         [self showFetchError];
@@ -294,7 +304,10 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)infoTorrent:(id)sender {
-   NSLog(@"TODO: Fire up the fancy info window");
+    NSLog(@"Show info window");
+    if ([[fInfoController window] isVisible])
+        [fInfoController close];
+    [[fInfoController window] orderFront: nil];
 }
 
 - (IBAction)preferences:(id)sender {
@@ -381,19 +394,34 @@ NSPredicate *predicateTemplate;
 
 - (void) updateBadge {
 
-    int complete = [self incompleteTorrents];
-    if (complete == 0) {
+    int incomplete = [self incompleteTorrents];
+    if (incomplete == 0) {
+        [[NSApp dockTile] setShowsApplicationBadge: NO];
         return;
     }
 
-    NSString *label = [NSString stringWithFormat:@"%d", complete];
+    NSString *label = [NSString stringWithFormat:@"%d", incomplete];
 
     [[NSApp dockTile] setBadgeLabel:label];
+}
+
+#pragma mark -
+#pragma mark Notifications
+
+- (void) torrentFinishedDownloading: (NSNotification *) notification {
+    Torrent *torrent = [notification object];
+    [Util doGrowl:@"Download Complete" withMessage:[NSString stringWithFormat: @"%@ finished", [torrent filename]]];
 }
 
 - (void) dealloc {
     [torrents release];
     [super dealloc];
+}
+
+- (void) applicationWillTerminate: (NSNotification *) notification {
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
+    [timer invalidate];
+    [fInfoController release];
 }
 
 @end

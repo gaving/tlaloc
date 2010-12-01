@@ -33,6 +33,12 @@
 		8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3F9109311B800ACABF0 /* NSDataAdditions.m */; };
 		8650F42E1093130000ACABF0 /* Tlaloc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42A1093130000ACABF0 /* Tlaloc.xib */; };
 		8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8650F42C1093130000ACABF0 /* InfoPlist.strings */; };
+		8678593D12A509FC003D9F91 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */; };
+		867859ED12A50A0A003D9F91 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */; };
+		86785A0A12A50E7C003D9F91 /* TorrentInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86785A0912A50E7C003D9F91 /* TorrentInfoView.xib */; };
+		86785A1B12A5104D003D9F91 /* TorrentInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86785A1A12A5104D003D9F91 /* TorrentInfoController.m */; };
+		868309E912A583C40032DCBF /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
+		868309F312A583D00032DCBF /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
 		869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 869ED6F110C4732E009814CD /* Tlaloc.icns */; };
 		86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
 		86C3DB641094F2E700FB592F /* wink.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5D1094F2E700FB592F /* wink.png */; };
@@ -43,6 +49,7 @@
 		86C3DB691094F2E700FB592F /* plain.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB621094F2E700FB592F /* plain.png */; };
 		86C3DB6A1094F2E700FB592F /* crying.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB631094F2E700FB592F /* crying.png */; };
 		86CB4EE0129B1D9B006F4C9D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CB4EDF129B1D9B006F4C9D /* Quartz.framework */; };
+		86CF96F112A461BE00C1424B /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */; };
 		86E9E6AA10C1FB670082415E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E9E6A810C1FB670082415E /* Util.m */; };
 		86F43E0710964252003EDB14 /* tlalocAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F43E0310964252003EDB14 /* tlalocAppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -59,6 +66,17 @@
 				8631E6A910C2F3FA009A8820 /* Sparkle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CF96EF12A4614C00C1424B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				868309F312A583D00032DCBF /* Growl.framework in CopyFiles */,
+				867859ED12A50A0A003D9F91 /* BWToolkitFramework.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -114,7 +132,12 @@
 		8650F3FA109311B800ACABF0 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
 		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Tlaloc.xib; sourceTree = "<group>"; };
 		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = "<group>"; };
+		86785A0912A50E7C003D9F91 /* TorrentInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TorrentInfoView.xib; sourceTree = "<group>"; };
+		86785A1912A5104D003D9F91 /* TorrentInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentInfoController.h; sourceTree = "<group>"; };
+		86785A1A12A5104D003D9F91 /* TorrentInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentInfoController.m; sourceTree = "<group>"; };
 		86802D0410934360003CB030 /* tlaloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tlaloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		868309E812A583C40032DCBF /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		869ED6F110C4732E009814CD /* Tlaloc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tlaloc.icns; path = Resources/Tlaloc.icns; sourceTree = "<group>"; };
 		86C2920710962B0800ED24C0 /* TorrentActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentActionController.h; sourceTree = "<group>"; };
 		86C2920810962B0800ED24C0 /* TorrentActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentActionController.m; sourceTree = "<group>"; };
@@ -126,6 +149,7 @@
 		86C3DB621094F2E700FB592F /* plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plain.png; path = Resources/emotes/plain.png; sourceTree = "<group>"; };
 		86C3DB631094F2E700FB592F /* crying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crying.png; path = Resources/emotes/crying.png; sourceTree = "<group>"; };
 		86CB4EDF129B1D9B006F4C9D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		86E9E6A810C1FB670082415E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		86E9E6A910C1FB670082415E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		86F43E0310964252003EDB14 /* tlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tlalocAppDelegate.m; sourceTree = "<group>"; };
@@ -142,6 +166,8 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				8631E68510C2F381009A8820 /* Sparkle.framework in Frameworks */,
 				86CB4EE0129B1D9B006F4C9D /* Quartz.framework in Frameworks */,
+				8678593D12A509FC003D9F91 /* BWToolkitFramework.framework in Frameworks */,
+				868309E912A583C40032DCBF /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +198,8 @@
 				8610517A10930EDE002078AA /* Torrent.h */,
 				86C2920710962B0800ED24C0 /* TorrentActionController.h */,
 				86C2920810962B0800ED24C0 /* TorrentActionController.m */,
+				86785A1912A5104D003D9F91 /* TorrentInfoController.h */,
+				86785A1A12A5104D003D9F91 /* TorrentInfoController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -179,8 +207,10 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				868309E812A583C40032DCBF /* Growl.framework */,
 				8631E68410C2F381009A8820 /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				8678593C12A509FC003D9F91 /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -188,6 +218,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86CB4EDF129B1D9B006F4C9D /* Quartz.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -211,7 +242,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				86CB4EDF129B1D9B006F4C9D /* Quartz.framework */,
 			);
 			name = tlaloc;
 			sourceTree = "<group>";
@@ -227,15 +257,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				867859F812A50E40003D9F91 /* Other */,
+				867859F712A50E2C003D9F91 /* Nibs */,
 				86DC3DFE12A43CA9002116EE /* Icons */,
-				8631E80210C2F6D9009A8820 /* dsa_pub.pem */,
-				862967FE10B61A3C00191673 /* Preferences.nib */,
-				8629680010B61A3C00191673 /* Updates.tiff */,
 				86F43E0310964252003EDB14 /* tlalocAppDelegate.m */,
 				86F43E0410964252003EDB14 /* tlalocAppDelegate.h */,
 				86F43E0510964252003EDB14 /* tlaloc_Prefix.pch */,
 				86F43E0610964252003EDB14 /* Info.plist */,
-				8650F42A1093130000ACABF0 /* Tlaloc.xib */,
 				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -279,9 +307,29 @@
 			path = XMLRPC;
 			sourceTree = "<group>";
 		};
+		867859F712A50E2C003D9F91 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				862967FE10B61A3C00191673 /* Preferences.nib */,
+				8650F42A1093130000ACABF0 /* Tlaloc.xib */,
+				86785A0912A50E7C003D9F91 /* TorrentInfoView.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		867859F812A50E40003D9F91 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */,
+				8631E80210C2F6D9009A8820 /* dsa_pub.pem */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		86DC3DFE12A43CA9002116EE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				8629680010B61A3C00191673 /* Updates.tiff */,
 				8629680110B61A3C00191673 /* General.png */,
 				869ED6F110C4732E009814CD /* Tlaloc.icns */,
 				86C3DB5D1094F2E700FB592F /* wink.png */,
@@ -306,6 +354,7 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				8631E6A210C2F3C1009A8820 /* Copy Frameworks */,
+				86CF96EF12A4614C00C1424B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -346,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CF96F112A461BE00C1424B /* Growl Registration Ticket.growlRegDict in Resources */,
 				8650F42E1093130000ACABF0 /* Tlaloc.xib in Resources */,
 				8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */,
 				86C3DB641094F2E700FB592F /* wink.png in Resources */,
@@ -360,6 +410,7 @@
 				8629680510B61A3C00191673 /* General.png in Resources */,
 				8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */,
 				869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */,
+				86785A0A12A50E7C003D9F91 /* TorrentInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +443,7 @@
 				862967C110B6142C00191673 /* DBPrefsWindowController.m in Sources */,
 				862967C210B6142C00191673 /* AppPrefsWindowController.m in Sources */,
 				86E9E6AA10C1FB670082415E /* Util.m in Sources */,
+				86785A1B12A5104D003D9F91 /* TorrentInfoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

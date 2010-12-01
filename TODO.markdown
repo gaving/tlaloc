@@ -2,7 +2,7 @@
 
 ## 0.5 (2010-12-07)
 
-- [_] Growl on completed torrents
+- [_] Growl on completed torrents (click to open)
 - [_] Notification area show outstanding torrents on click (think airport)
 - [_] Status bar showing meaningful stats (download/upload) Also: action updates
 - [_] Badge dock icon to show outstanding torrents

@@ -10,12 +10,14 @@
 
 @interface Config : NSObject {
     NSMutableArray *torrents;
+    NSMutableDictionary *torrentHistory;
 }
 
 extern NSString* const XMLRPCUserAgent;
 extern NSString* const ProductWebsite;
 
 @property (retain) NSMutableArray *torrents;
+@property (retain) NSMutableDictionary *torrentHistory;
 
 + (NSURL *) rtorrentRPCURL;
 + (NSString *) torrentDestination;

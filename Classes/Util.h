@@ -12,6 +12,7 @@
 @interface Util : NSObject {
 }
 
++ (void)doGrowl:(NSString *)title withMessage:(NSString *)message;
 + (id)executeXMLRPCRequest:(XMLRPCRequest *)req;
 + (void)openWebsite;
 + (void)showError:(NSString *)info withMessage:(NSString *)message;

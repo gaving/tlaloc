@@ -11,9 +11,17 @@
 @implementation Config
 
 @synthesize torrents;
+@synthesize torrentHistory;
 
-NSString* const XMLRPCUserAgent = @"tlaloc";
+NSString* const XMLRPCUserAgent = @"Tlaloc";
 NSString* const ProductWebsite = @"http://github.com/gaving/tlaloc/";
+
+- (Config *)init {
+    if((self = [super init])) {
+        torrentHistory = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
 
 + (Config *)instance {
     static Config *gInstance = NULL;
@@ -59,6 +67,7 @@ NSString* const ProductWebsite = @"http://github.com/gaving/tlaloc/";
 
 - (void) dealloc {
     [torrents release];
+    [torrentHistory release];
     [super dealloc];
 }
 
