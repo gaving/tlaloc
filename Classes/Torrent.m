@@ -34,8 +34,8 @@
 @synthesize iconImage;
 @synthesize complete;
 
-static NSDictionary* quickLookOptions = nil;
-static NSOperationQueue* downloadIconQueue = nil;
+//static NSDictionary* quickLookOptions = nil;
+//static NSOperationQueue* downloadIconQueue = nil;
 
 + (NSString *)stringFromFileSize:(NSNumber *)theSize {
     float floatSize = [theSize floatValue];

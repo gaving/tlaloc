@@ -59,7 +59,7 @@
 - (IBAction)preferences:(id)sender;
 
 - (IBAction)productWebsite:(id)sender;
-- (IBAction)togglePreviewPanel:(id)sender;
+- (IBAction)togglePreviewPanel:(id)previewPanel;
 
 - (void)openFiles:(NSArray *) filenames;
 - (void) updateUI;

@@ -8,6 +8,7 @@
 
 #import "TorrentTableView.h"
 #import "TlalocAppDelegate.h"
+#import "TorrentListController.h"
 
 @implementation TorrentTableView
 
@@ -37,7 +38,7 @@
 - (void)keyDown:(NSEvent *)theEvent {
     NSString* key = [theEvent charactersIgnoringModifiers];
     if([key isEqual:@" "]) {
-        [[self delegate] togglePreviewPanel:self];
+        [((TorrentListController *)[self delegate]) togglePreviewPanel:self];
     } else {
         [super keyDown:theEvent];
     }
