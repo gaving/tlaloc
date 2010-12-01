@@ -39,8 +39,8 @@
 		8682E13812A65499000D437E /* MoveApplication.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8682E13412A65499000D437E /* MoveApplication.strings */; };
 		8682E18112A65675000D437E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8682E18012A65675000D437E /* Security.framework */; };
 		8682E4B012A6B5B4000D437E /* Tlaloc_status.png in Resources */ = {isa = PBXBuildFile; fileRef = 8682E4AF12A6B5B4000D437E /* Tlaloc_status.png */; };
-		868309E912A583C40032DCBF /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
-		868309F312A583D00032DCBF /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 868309E812A583C40032DCBF /* Growl.framework */; };
+		8682E54D12A6BF22000D437E /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8682E54C12A6BF22000D437E /* Growl.framework */; };
+		8682E5D612A6BF4C000D437E /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8682E54C12A6BF22000D437E /* Growl.framework */; };
 		869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 869ED6F110C4732E009814CD /* Tlaloc.icns */; };
 		86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
 		86C3DB641094F2E700FB592F /* wink.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5D1094F2E700FB592F /* wink.png */; };
@@ -76,7 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				868309F312A583D00032DCBF /* Growl.framework in CopyFiles */,
+				8682E5D612A6BF4C000D437E /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 		862967FE10B61A3C00191673 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/Preferences.nib; sourceTree = "<group>"; };
 		8629680010B61A3C00191673 /* Updates.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Updates.tiff; path = Resources/Updates.tiff; sourceTree = "<group>"; };
 		8629680110B61A3C00191673 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = General.png; path = Resources/General.png; sourceTree = "<group>"; };
-		8631E68410C2F381009A8820 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		8631E68410C2F381009A8820 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = External/Sparkle.framework; sourceTree = "<group>"; };
 		8631E80210C2F6D9009A8820 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
 		8650C98210B5A71B0003287E /* TorrentArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentArrayController.h; sourceTree = "<group>"; };
 		8650C98310B5A71B0003287E /* TorrentArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentArrayController.m; sourceTree = "<group>"; };
@@ -131,18 +131,18 @@
 		8650F3F8109311B800ACABF0 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
 		8650F3F9109311B800ACABF0 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		8650F3FA109311B800ACABF0 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		8650F42B1093130000ACABF0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Tlaloc.xib; sourceTree = "<group>"; };
-		8650F42D1093130000ACABF0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		86785A0912A50E7C003D9F91 /* TorrentInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TorrentInfoView.xib; sourceTree = "<group>"; };
+		8650F42B1093130000ACABF0 /* Tlaloc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tlaloc.xib; sourceTree = "<group>"; };
+		8650F42D1093130000ACABF0 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		86785A0912A50E7C003D9F91 /* TorrentInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TorrentInfoView.xib; path = Resources/TorrentInfoView.xib; sourceTree = "<group>"; };
 		86785A1912A5104D003D9F91 /* TorrentInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentInfoController.h; sourceTree = "<group>"; };
 		86785A1A12A5104D003D9F91 /* TorrentInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentInfoController.m; sourceTree = "<group>"; };
 		86802D0410934360003CB030 /* Tlaloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tlaloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8682E12812A65433000D437E /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFMoveApplication.m; path = LetsMove/PFMoveApplication.m; sourceTree = SOURCE_ROOT; };
-		8682E12912A65433000D437E /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFMoveApplication.h; path = LetsMove/PFMoveApplication.h; sourceTree = SOURCE_ROOT; };
+		8682E12812A65433000D437E /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFMoveApplication.m; path = External/LetsMove/PFMoveApplication.m; sourceTree = SOURCE_ROOT; };
+		8682E12912A65433000D437E /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFMoveApplication.h; path = External/LetsMove/PFMoveApplication.h; sourceTree = SOURCE_ROOT; };
 		8682E13512A65499000D437E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = MoveApplication.strings; sourceTree = "<group>"; };
 		8682E18012A65675000D437E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8682E4AF12A6B5B4000D437E /* Tlaloc_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tlaloc_status.png; path = Resources/Tlaloc_status.png; sourceTree = "<group>"; };
-		868309E812A583C40032DCBF /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		8682E54C12A6BF22000D437E /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = External/Growl.framework; sourceTree = "<group>"; };
 		869ED6F110C4732E009814CD /* Tlaloc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tlaloc.icns; path = Resources/Tlaloc.icns; sourceTree = "<group>"; };
 		86C2920710962B0800ED24C0 /* TorrentActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentActionController.h; sourceTree = "<group>"; };
 		86C2920810962B0800ED24C0 /* TorrentActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentActionController.m; sourceTree = "<group>"; };
@@ -154,11 +154,11 @@
 		86C3DB621094F2E700FB592F /* plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plain.png; path = Resources/emotes/plain.png; sourceTree = "<group>"; };
 		86C3DB631094F2E700FB592F /* crying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crying.png; path = Resources/emotes/crying.png; sourceTree = "<group>"; };
 		86CB4EDF129B1D9B006F4C9D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		86CF96F012A461BE00C1424B /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		86E9E6A810C1FB670082415E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		86E9E6A910C1FB670082415E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		86F43E0310964252003EDB14 /* TlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TlalocAppDelegate.m; path = ../TlalocAppDelegate.m; sourceTree = "<group>"; };
-		86F43E0410964252003EDB14 /* TlalocAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TlalocAppDelegate.h; path = ../TlalocAppDelegate.h; sourceTree = "<group>"; };
+		86F43E0310964252003EDB14 /* TlalocAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TlalocAppDelegate.m; sourceTree = "<group>"; };
+		86F43E0410964252003EDB14 /* TlalocAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TlalocAppDelegate.h; sourceTree = "<group>"; };
 		86F43E0510964252003EDB14 /* Tlaloc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tlaloc_Prefix.pch; sourceTree = "<group>"; };
 		86F43E0610964252003EDB14 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,8 +171,8 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				8631E68510C2F381009A8820 /* Sparkle.framework in Frameworks */,
 				86CB4EE0129B1D9B006F4C9D /* Quartz.framework in Frameworks */,
-				868309E912A583C40032DCBF /* Growl.framework in Frameworks */,
 				8682E18112A65675000D437E /* Security.framework in Frameworks */,
+				8682E54D12A6BF22000D437E /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,10 +212,10 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				868309E812A583C40032DCBF /* Growl.framework */,
 				8631E68410C2F381009A8820 /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				8682E18012A65675000D437E /* Security.framework */,
+				8682E54C12A6BF22000D437E /* Growl.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -473,17 +473,19 @@
 		8650F42A1093130000ACABF0 /* Tlaloc.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8650F42B1093130000ACABF0 /* English */,
+				8650F42B1093130000ACABF0 /* Tlaloc.xib */,
 			);
 			name = Tlaloc.xib;
+			path = Resources/English.lproj;
 			sourceTree = "<group>";
 		};
 		8650F42C1093130000ACABF0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8650F42D1093130000ACABF0 /* English */,
+				8650F42D1093130000ACABF0 /* InfoPlist.strings */,
 			);
 			name = InfoPlist.strings;
+			path = Resources/English.lproj;
 			sourceTree = "<group>";
 		};
 		8682E13412A65499000D437E /* MoveApplication.strings */ = {
@@ -492,7 +494,7 @@
 				8682E13512A65499000D437E /* English */,
 			);
 			name = MoveApplication.strings;
-			path = LetsMove/English.lproj;
+			path = External/LetsMove/English.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -506,6 +508,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/External\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -527,6 +530,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/External\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
