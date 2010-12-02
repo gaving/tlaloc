@@ -17,7 +17,7 @@
 @implementation TorrentActionController
 
 + (BOOL)executeCommand:(NSString *)command withData:(NSObject *)data {
-    NSURL *rtorrentRPCURL = [Config rtorrentRPCURL];
+    NSURL *rtorrentRPCURL = [[Config instance] rtorrentRPCURL];
     XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:rtorrentRPCURL];
     [request setUserAgent:XMLRPCUserAgent];
     [request setMethod:command withParameter:data];

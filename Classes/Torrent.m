@@ -59,7 +59,7 @@
 
 + (BOOL)loadAll {
 
-    NSURL *rtorrentRPCURL = [Config rtorrentRPCURL];
+    NSURL *rtorrentRPCURL = [[[Config instance] rtorrentRPCURL] retain];
 
     if (rtorrentRPCURL == nil) {
 
@@ -69,6 +69,7 @@
 
     /* Fetch the main download list */
     XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:rtorrentRPCURL];
+    [rtorrentRPCURL release];
     [request setUserAgent:XMLRPCUserAgent];
     NSMutableArray *params = [[[NSMutableArray alloc] init] autorelease];
 
@@ -223,7 +224,7 @@
 }
 
 - (NSString*) fullPath {
-    NSString *torrentDestination = [Config torrentDestination];
+    NSString *torrentDestination = [[Config instance] torrentDestination];
     NSString *realPath = [torrentDestination stringByAppendingPathComponent: self.filename];
     return realPath;
 }

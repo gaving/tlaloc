@@ -46,8 +46,6 @@ NSPredicate *predicateTemplate;
         if ([self grabTorrents]) {
             torrents = [[NSMutableArray alloc] init];
             [self buildTorrents];
-        } else {
-            [self showFetchError];
         }
     }
     return self;
@@ -173,7 +171,7 @@ NSPredicate *predicateTemplate;
         return;
     }
 
-    NSString *torrentDestination = [Config torrentDestination];
+    NSString *torrentDestination = [[Config instance] torrentDestination];
     NSMutableArray *fileNames = [NSMutableArray array];
     for (int i = 0; i < [selectedTorrents count]; i++) {
         Torrent *torrent = [selectedTorrents objectAtIndex:i];
@@ -220,7 +218,7 @@ NSPredicate *predicateTemplate;
 
 - (IBAction)removeTorrent:(id)sender {
 
-    NSArray *selectedTorrents = [arrayTorrents selectedObjects];
+    NSArray *selectedTorrents = [[arrayTorrents selectedObjects] copy];
     if ([selectedTorrents count] == 0) {
         return;
     }
@@ -247,6 +245,8 @@ NSPredicate *predicateTemplate;
             [arrayTorrents remove:torrent];
         }
     }
+    
+    [selectedTorrents release];
 }
 
 - (IBAction)refreshTorrents:(id)sender {
@@ -262,8 +262,7 @@ NSPredicate *predicateTemplate;
 - (void)updateTorrents {
 
     if ([self grabTorrents]) {
-        id selection = [tableView selectedRowIndexes];
-        int index = [selection firstIndex];
+        NSIndexSet *selection = [tableView selectedRowIndexes];
 
         torrents = [NSMutableArray array];
         [self buildTorrents];
@@ -271,11 +270,12 @@ NSPredicate *predicateTemplate;
         /* Set the array controllers new content */
         [arrayTorrents setContent:torrents];
 
-        if (index) {
-            [tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:index] byExtendingSelection:NO];
+        if (selection && ([selection firstIndex] != NSNotFound)) {
+            [tableView selectRowIndexes:selection byExtendingSelection:NO];
         }
     } else {
         [self showFetchError];
+        [timer invalidate];
     }
 }
 
@@ -295,7 +295,7 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)openTorrent:(id)sender {
-    NSString *torrentDestination = [Config torrentDestination];
+    NSString *torrentDestination = [[Config instance] torrentDestination];
 
     if (torrentDestination == nil) {
         [Util showError:@"Couldn't open destination" withMessage: @"No torrent destination defined in preferences."];
@@ -307,7 +307,7 @@ NSPredicate *predicateTemplate;
 }
 
 - (IBAction)openDestination:(id)sender {
-    NSString *torrentDestination = [Config torrentDestination];
+    NSString *torrentDestination = [[Config instance] torrentDestination];
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
     if (torrentDestination == nil) {

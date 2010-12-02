@@ -12,6 +12,11 @@
 @interface TorrentPreferencesController : DBPrefsWindowController {
     IBOutlet NSView *generalPreferenceView;
     IBOutlet NSView *updatesPreferenceView;
+    IBOutlet NSPopUpButton *destFolder;
+
+    NSUserDefaults *fDefaults;
 }
+
+- (void) incompleteFolderSheetShow: (id) sender;
 
 @end

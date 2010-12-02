@@ -20,6 +20,7 @@
 		8631E68510C2F381009A8820 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8631E68410C2F381009A8820 /* Sparkle.framework */; };
 		8631E6A910C2F3FA009A8820 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8631E68410C2F381009A8820 /* Sparkle.framework */; };
 		8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8631E80210C2F6D9009A8820 /* dsa_pub.pem */; };
+		863E37DB12A7B7B5005C703F /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
 		8650C98410B5A71B0003287E /* TorrentArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650C98310B5A71B0003287E /* TorrentArrayController.m */; };
 		8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */; };
 		8650F3FD109311B800ACABF0 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E7109311B800ACABF0 /* XMLRPCResponse.m */; };
@@ -42,7 +43,6 @@
 		8682E54D12A6BF22000D437E /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8682E54C12A6BF22000D437E /* Growl.framework */; };
 		8682E5D612A6BF4C000D437E /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8682E54C12A6BF22000D437E /* Growl.framework */; };
 		869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 869ED6F110C4732E009814CD /* Tlaloc.icns */; };
-		86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
 		86C3DB641094F2E700FB592F /* wink.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5D1094F2E700FB592F /* wink.png */; };
 		86C3DB651094F2E700FB592F /* surprise.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5E1094F2E700FB592F /* surprise.png */; };
 		86C3DB661094F2E700FB592F /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C3DB5F1094F2E700FB592F /* smile.png */; };
@@ -263,10 +263,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				867859F812A50E40003D9F91 /* Other */,
 				867859F712A50E2C003D9F91 /* Nibs */,
 				86DC3DFE12A43CA9002116EE /* Icons */,
 				86F43E0610964252003EDB14 /* Info.plist */,
+				867859F812A50E40003D9F91 /* Other */,
 				8650F42C1093130000ACABF0 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -456,7 +456,6 @@
 				8650F403109311B800ACABF0 /* XMLRPCConnection.m in Sources */,
 				8650F404109311B800ACABF0 /* NSStringAdditions.m in Sources */,
 				8650F405109311B800ACABF0 /* NSDataAdditions.m in Sources */,
-				86C2920910962B0800ED24C0 /* TorrentActionController.m in Sources */,
 				86F43E0710964252003EDB14 /* TlalocAppDelegate.m in Sources */,
 				8650C98410B5A71B0003287E /* TorrentArrayController.m in Sources */,
 				862967C110B6142C00191673 /* DBPrefsWindowController.m in Sources */,
@@ -464,6 +463,7 @@
 				86E9E6AA10C1FB670082415E /* Util.m in Sources */,
 				86785A1B12A5104D003D9F91 /* TorrentInfoController.m in Sources */,
 				8682E12A12A65433000D437E /* PFMoveApplication.m in Sources */,
+				863E37DB12A7B7B5005C703F /* TorrentActionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

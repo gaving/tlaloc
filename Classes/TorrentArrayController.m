@@ -47,7 +47,7 @@
         return NO;
     }
 
-    NSString *torrentDestination = [Config torrentDestination];
+    NSString *torrentDestination = [[Config instance] torrentDestination];
     NSMutableArray *fileNames = [NSMutableArray array];
     for (int i = 0; i < [selectedTorrents count]; i++) {
         Torrent *torrent = [selectedTorrents objectAtIndex:i];

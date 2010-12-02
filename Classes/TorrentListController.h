@@ -67,7 +67,7 @@
 - (IBAction)togglePreviewPanel:(id)previewPanel;
 
 - (void)openFiles:(NSArray *) filenames;
-- (void) updateUI;
-- (void) updateBadge;
+- (void)updateUI;
+- (void)updateBadge;
 
 @end

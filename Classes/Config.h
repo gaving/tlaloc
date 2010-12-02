@@ -11,16 +11,20 @@
 @interface Config : NSObject {
     NSMutableArray *torrents;
     NSMutableDictionary *torrentHistory;
+    NSUserDefaults *userDefaults;
+    NSString *torrentDestination;
+    NSString *rtorrentRPCString;    
+    NSURL *rtorrentRPCURL;
 }
 
 extern NSString* const XMLRPCUserAgent;
 extern NSString* const ProductWebsite;
 
-@property (retain) NSMutableArray *torrents;
-@property (retain) NSMutableDictionary *torrentHistory;
+@property (nonatomic, retain) NSMutableArray *torrents;
+@property (nonatomic, retain) NSMutableDictionary *torrentHistory;
+@property (nonatomic, retain) NSString *torrentDestination;
+@property (nonatomic, retain) NSURL *rtorrentRPCURL;
 
-+ (NSURL *) rtorrentRPCURL;
-+ (NSString *) torrentDestination;
 + (NSString *) productWebsite;
 + (Config *)instance;
 
