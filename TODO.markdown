@@ -7,16 +7,18 @@
 - [_] Tweetie-esque interface
 - [_] Option to look and open a media file within the folder downloaded
 
+## 0.6 (2011-??-??)
+
+- [_] Toggle completed/incomplete/seeding filterbar
+- [_] Sort ordering
+
 ## 0.5 (2010-12-07)
 
 - [x] Growl on completed torrents (click to open)
 - [_] Status bar showing meaningful stats (download/upload) Also: action updates
-- [_] Badge dock icon to show outstanding torrents
-- [_] Upload and download speed on the interface/badge
-- [_] Toggle completed/incomplete toolbar etc
-- [_] Make toolbar visibility a preference option
+- [x] Badge dock icon to show outstanding torrents
+- [x] Make toolbar visibility a preference option
 - [_] General preferences browse button to find the destination directory
-- [_] Allow show/hide completed torrents (sort order too?)
 - [_] Focus (i.e. select) newly added torrent
 - [!] Info pane when you view a torrent (heavy going, allow various files to be launched)
 - [x] Refresh automatically (polling of some sort)
@@ -24,7 +26,8 @@
 - [x] Move self to applications folder
 - [_] Highlight torrents depending on status
 - [x] Fix memory leaks
-- [_] Show in dock/menu bar only
+- [x] Show in dock/menu bar only
+- [_] Status label showing complete/incomplete
 
 ## 0.2 (2009-03-01)
 

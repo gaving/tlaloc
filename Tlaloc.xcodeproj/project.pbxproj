@@ -16,10 +16,14 @@
 		862967C210B6142C00191673 /* TorrentPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862967BF10B6142C00191673 /* TorrentPreferencesController.m */; };
 		8629680210B61A3C00191673 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 862967FE10B61A3C00191673 /* Preferences.nib */; };
 		8629680410B61A3C00191673 /* Updates.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8629680010B61A3C00191673 /* Updates.tiff */; };
-		8629680510B61A3C00191673 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 8629680110B61A3C00191673 /* General.png */; };
 		8631E68510C2F381009A8820 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8631E68410C2F381009A8820 /* Sparkle.framework */; };
 		8631E6A910C2F3FA009A8820 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8631E68410C2F381009A8820 /* Sparkle.framework */; };
 		8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8631E80210C2F6D9009A8820 /* dsa_pub.pem */; };
+		863D238E12A7F8F200C61420 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863D238D12A7F8F200C61420 /* BWToolkitFramework.framework */; };
+		863D23C912A7F92600C61420 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 863D238D12A7F8F200C61420 /* BWToolkitFramework.framework */; };
+		863D259012A80BF700C61420 /* View.png in Resources */ = {isa = PBXBuildFile; fileRef = 863D258F12A80BF700C61420 /* View.png */; };
+		863D26B912A836A400C61420 /* NSApplication+Relaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 863D26B812A836A400C61420 /* NSApplication+Relaunch.m */; };
+		863D26F012A8386800C61420 /* relaunch in Resources */ = {isa = PBXBuildFile; fileRef = 863D26EE12A8386800C61420 /* relaunch */; };
 		863E37DB12A7B7B5005C703F /* TorrentActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2920810962B0800ED24C0 /* TorrentActionController.m */; };
 		8650C98410B5A71B0003287E /* TorrentArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650C98310B5A71B0003287E /* TorrentArrayController.m */; };
 		8650F3FC109311B800ACABF0 /* XMLRPCTreeBasedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */; };
@@ -76,6 +80,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				863D23C912A7F92600C61420 /* BWToolkitFramework.framework in CopyFiles */,
 				8682E5D612A6BF4C000D437E /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,9 +109,13 @@
 		862967C010B6142C00191673 /* TorrentPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentPreferencesController.h; sourceTree = "<group>"; };
 		862967FE10B61A3C00191673 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/Preferences.nib; sourceTree = "<group>"; };
 		8629680010B61A3C00191673 /* Updates.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Updates.tiff; path = Resources/Updates.tiff; sourceTree = "<group>"; };
-		8629680110B61A3C00191673 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = General.png; path = Resources/General.png; sourceTree = "<group>"; };
 		8631E68410C2F381009A8820 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = External/Sparkle.framework; sourceTree = "<group>"; };
 		8631E80210C2F6D9009A8820 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
+		863D238D12A7F8F200C61420 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = External/BWToolkitFramework.framework; sourceTree = "<group>"; };
+		863D258F12A80BF700C61420 /* View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = View.png; path = Resources/View.png; sourceTree = "<group>"; };
+		863D26B712A836A400C61420 /* NSApplication+Relaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+Relaunch.h"; sourceTree = "<group>"; };
+		863D26B812A836A400C61420 /* NSApplication+Relaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+Relaunch.m"; sourceTree = "<group>"; };
+		863D26EE12A8386800C61420 /* relaunch */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = relaunch; sourceTree = "<group>"; };
 		8650C98210B5A71B0003287E /* TorrentArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentArrayController.h; sourceTree = "<group>"; };
 		8650C98310B5A71B0003287E /* TorrentArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentArrayController.m; sourceTree = "<group>"; };
 		8650F3E5109311B800ACABF0 /* XMLRPCTreeBasedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCTreeBasedParser.m; sourceTree = "<group>"; };
@@ -173,6 +182,7 @@
 				86CB4EE0129B1D9B006F4C9D /* Quartz.framework in Frameworks */,
 				8682E18112A65675000D437E /* Security.framework in Frameworks */,
 				8682E54D12A6BF22000D437E /* Growl.framework in Frameworks */,
+				863D238E12A7F8F200C61420 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +226,7 @@
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				8682E18012A65675000D437E /* Security.framework */,
 				8682E54C12A6BF22000D437E /* Growl.framework */,
+				863D238D12A7F8F200C61420 /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -254,6 +265,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				863D26EE12A8386800C61420 /* relaunch */,
 				86F43E0510964252003EDB14 /* Tlaloc_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -333,6 +345,8 @@
 		8682E1F412A65A6D000D437E /* External */ = {
 			isa = PBXGroup;
 			children = (
+				863D26B712A836A400C61420 /* NSApplication+Relaunch.h */,
+				863D26B812A836A400C61420 /* NSApplication+Relaunch.m */,
 				8682E12812A65433000D437E /* PFMoveApplication.m */,
 				862967BD10B6142C00191673 /* DBPrefsWindowController.h */,
 				862967BE10B6142C00191673 /* DBPrefsWindowController.m */,
@@ -345,9 +359,9 @@
 		86DC3DFE12A43CA9002116EE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				863D258F12A80BF700C61420 /* View.png */,
 				8682E4AF12A6B5B4000D437E /* Tlaloc_status.png */,
 				8629680010B61A3C00191673 /* Updates.tiff */,
-				8629680110B61A3C00191673 /* General.png */,
 				869ED6F110C4732E009814CD /* Tlaloc.icns */,
 				86C3DB5D1094F2E700FB592F /* wink.png */,
 				86C3DB5E1094F2E700FB592F /* surprise.png */,
@@ -412,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863D26F012A8386800C61420 /* relaunch in Resources */,
 				86CF96F112A461BE00C1424B /* Growl Registration Ticket.growlRegDict in Resources */,
 				8650F42E1093130000ACABF0 /* Tlaloc.xib in Resources */,
 				8650F42F1093130000ACABF0 /* InfoPlist.strings in Resources */,
@@ -424,12 +439,12 @@
 				86C3DB6A1094F2E700FB592F /* crying.png in Resources */,
 				8629680210B61A3C00191673 /* Preferences.nib in Resources */,
 				8629680410B61A3C00191673 /* Updates.tiff in Resources */,
-				8629680510B61A3C00191673 /* General.png in Resources */,
 				8631E80310C2F6D9009A8820 /* dsa_pub.pem in Resources */,
 				869ED6F210C4732E009814CD /* Tlaloc.icns in Resources */,
 				86785A0A12A50E7C003D9F91 /* TorrentInfoView.xib in Resources */,
 				8682E13812A65499000D437E /* MoveApplication.strings in Resources */,
 				8682E4B012A6B5B4000D437E /* Tlaloc_status.png in Resources */,
+				863D259012A80BF700C61420 /* View.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +479,7 @@
 				86785A1B12A5104D003D9F91 /* TorrentInfoController.m in Sources */,
 				8682E12A12A65433000D437E /* PFMoveApplication.m in Sources */,
 				863E37DB12A7B7B5005C703F /* TorrentActionController.m in Sources */,
+				863D26B912A836A400C61420 /* NSApplication+Relaunch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,7 @@
     IBOutlet NSWindow *mainWindow;
     IBOutlet NSMenu *statusMenu;
 
+    IBOutlet NSToolbar *toolbar;
     IBOutlet NSToolbarItem *addItem;
     IBOutlet NSToolbarItem *refreshItem;
     IBOutlet NSToolbarItem *qlItem;
@@ -32,6 +33,7 @@
     IBOutlet NSTableView *tableView;
     IBOutlet NSSearchField *searchField;
     IBOutlet NSProgressIndicator *progressIndicator;
+    IBOutlet NSTextField *statusLabel;
 
     IBOutlet TorrentArrayController *arrayTorrents;
 
@@ -41,6 +43,9 @@
 
     NSMutableArray *torrents;
     NSTimer *timer;
+    NSUserDefaults *fDefaults;
+
+    BOOL isUIElement;
 
     TorrentInfoController *fInfoController;
     QLPreviewPanel *previewPanel;
@@ -67,7 +72,12 @@
 - (IBAction)togglePreviewPanel:(id)previewPanel;
 
 - (void)openFiles:(NSArray *) filenames;
+
 - (void)updateUI;
 - (void)updateBadge;
+- (void)updateStatus;
+
+- (BOOL)shouldBeUIElement;
+- (BOOL)setShouldBeUIElement:(BOOL)hidden;
 
 @end

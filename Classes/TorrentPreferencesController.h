@@ -11,6 +11,7 @@
 
 @interface TorrentPreferencesController : DBPrefsWindowController {
     IBOutlet NSView *generalPreferenceView;
+    IBOutlet NSView *viewPreferenceView;
     IBOutlet NSView *updatesPreferenceView;
     IBOutlet NSPopUpButton *destFolder;
 

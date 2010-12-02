@@ -25,7 +25,8 @@
 }
 
 - (void)setupToolbar {
-    [self addView:generalPreferenceView label:@"General"];
+    [self addView:generalPreferenceView label:@"General" image:[NSImage imageNamed:@"NSPreferencesGeneral"]];
+    [self addView:viewPreferenceView label:@"View" image:[NSImage imageNamed:@"NSQuickLookTemplate"]];
     [self addView:updatesPreferenceView label:@"Updates"];
 }
 
@@ -49,7 +50,7 @@
         NSLog(@"%@", folder);
         [fDefaults setObject:folder forKey:@"torrentDestination"];
         [fDefaults synchronize];
-       
+
         NSString *torrentDestination = [fDefaults stringForKey:@"torrentDestination"];
         NSLog(@"%@", torrentDestination);
         NSLog(@"______");
@@ -57,6 +58,5 @@
     }
     [destFolder selectItemAtIndex: 0];
 }
-
 
 @end

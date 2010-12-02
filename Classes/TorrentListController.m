@@ -11,6 +11,7 @@
 #import "Util.h"
 #import "Torrent.h"
 #import "TorrentTableCell.h"
+#import "NSApplication+Relaunch.h"
 #import "TorrentPreferencesController.h"
 #import "TlalocAppDelegate.h"
 
@@ -74,6 +75,24 @@ NSPredicate *predicateTemplate;
     [mainWindow makeFirstResponder: tableView];
     [mainWindow setExcludedFromWindowsMenu: YES];
 
+    fDefaults = [NSUserDefaults standardUserDefaults];
+
+    // Honor dock hidden preference if new version
+    isUIElement = [self shouldBeUIElement];
+    if (!isUIElement && [fDefaults boolForKey:@"showDockIcon"]) {
+        if ([self setShouldBeUIElement:YES]) {
+            [NSApp relaunch:self];
+        }
+    } else if (isUIElement && ![fDefaults boolForKey:@"showDockIcon"]) {
+        if ([self setShouldBeUIElement:NO]) {
+            [NSApp relaunch:self];
+        }
+    }
+
+    /* Disable toolbar if it is off */
+    if (![fDefaults boolForKey: @"showToolbar"])
+        [toolbar setVisible:NO];
+
     /* Notifications */
     NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
     [nc addObserver: self selector: @selector(torrentFinishedDownloading:)
@@ -90,7 +109,7 @@ NSPredicate *predicateTemplate;
 
     fInfoController = [[TorrentInfoController alloc] init];
 
-    /* Do the status item */
+    /* Status item */
     statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength] retain];
 
     NSBundle *bundle = [NSBundle mainBundle];
@@ -245,7 +264,7 @@ NSPredicate *predicateTemplate;
             [arrayTorrents remove:torrent];
         }
     }
-    
+
     [selectedTorrents release];
 }
 
@@ -406,6 +425,7 @@ NSPredicate *predicateTemplate;
     }
 
     [self updateBadge];
+            [self updateStatus];
 }
 
 - (void) updateBadge {
@@ -421,8 +441,37 @@ NSPredicate *predicateTemplate;
     [label release];
 }
 
+- (void) updateStatus{
+    int totalTorrents = [[self torrents] count];
+    int totalIncomplete = [self incompleteTorrents];
+
+    NSString *output = [[NSString stringWithFormat:@"%d complete, %d downloading", (totalTorrents - totalIncomplete), totalIncomplete] autorelease];
+    // [statusLabel setStringValue:output];
+    [output release];
+}
+
 #pragma mark -
 #pragma mark Notifications
+
+
+- (BOOL)shouldBeUIElement {
+    return [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"LSUIElement"] boolValue];
+}
+
+- (BOOL)setShouldBeUIElement:(BOOL)hidden {
+    NSString * plistPath = nil;
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if (plistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"]) {
+        if ([manager isWritableFileAtPath:plistPath]) {
+            NSMutableDictionary *infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+            [infoDict setObject:[NSNumber numberWithBool:hidden] forKey:@"LSUIElement"];
+            [infoDict writeToFile:plistPath atomically:NO];
+            [manager setAttributes:[NSDictionary dictionaryWithObject:[NSDate date] forKey:NSFileModificationDate] ofItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
+            return YES;
+        }
+    }
+    return NO;
+}
 
 - (void) torrentFinishedDownloading: (NSNotification *) notification {
     Torrent *torrent = [notification object];
@@ -431,6 +480,11 @@ NSPredicate *predicateTemplate;
 
 - (void) dealloc {
     [torrents release];
+    [timer release];
+    [statusItem release];
+    [statusImage release];
+    [statusHighlightImage release];
+    [previewPanel release];
     [super dealloc];
 }
 
