@@ -71,8 +71,6 @@
 - (IBAction)productWebsite:(id)sender;
 - (IBAction)togglePreviewPanel:(id)previewPanel;
 
-- (void)openFiles:(NSArray *) filenames;
-
 - (void)updateUI;
 - (void)updateBadge;
 - (void)updateStatus;

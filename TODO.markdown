@@ -28,6 +28,7 @@
 - [x] Fix memory leaks
 - [x] Show in dock/menu bar only
 - [_] Status label showing complete/incomplete
+- [_] Show recent documents
 
 ## 0.2 (2009-03-01)
 

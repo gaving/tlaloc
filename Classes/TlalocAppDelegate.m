@@ -24,4 +24,16 @@
     PFMoveToApplicationsFolderIfNecessary();
 }
 
+-(BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
+
+- (void) application: (NSApplication *) app openFiles: (NSArray *) filenames {
+    [self openFiles: filenames];
+}
+
+- (void) openFiles: (NSArray *) filenames {
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"TorrentAdded" object: filenames];
+}
+
 @end

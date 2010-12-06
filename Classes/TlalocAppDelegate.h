@@ -12,7 +12,9 @@
     NSWindow *window;
 }
 
-
 @property (assign) IBOutlet NSWindow *window;
+
+- (void)openFiles:(NSArray *) filenames;
+
 
 @end

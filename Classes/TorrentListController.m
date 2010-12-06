@@ -97,6 +97,8 @@ NSPredicate *predicateTemplate;
     NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
     [nc addObserver: self selector: @selector(torrentFinishedDownloading:)
                     name: @"TorrentFinishedDownloading" object: nil];
+    [nc addObserver: self selector: @selector(torrentAdded:)
+                    name: @"TorrentAdded" object: nil];
 
 
     [self updateUI];
@@ -354,20 +356,6 @@ NSPredicate *predicateTemplate;
     [Util openWebsite];
 }
 
-- (void) application: (NSApplication *) app openFiles: (NSArray *) filenames {
-    [self openFiles: filenames];
-}
-
-- (void) openFiles: (NSArray *) filenames {
-    for(int i = 0; i < [filenames count]; i++ ) {
-        NSString* fileName = [filenames objectAtIndex:i];
-        if (![arrayTorrents add:fileName]) {
-            [Util showError:@"Couldn't add torrent" withMessage: @"Please verify this file is a valid torrent file."];
-        }
-    }
-    [self refreshTorrents:self];
-}
-
 - (void)showFetchError {
     [Util showError:@"Couldn't fetch torrents" withMessage: @"Please check your connection settings."];
 }
@@ -476,6 +464,16 @@ NSPredicate *predicateTemplate;
 - (void) torrentFinishedDownloading: (NSNotification *) notification {
     Torrent *torrent = [notification object];
     [Util doGrowl:@"Download Complete" withMessage:[NSString stringWithFormat: @"%@ finished", [torrent filename]]];
+}
+
+- (void) torrentAdded: (NSNotification *) notification {
+    NSArray *filenames = [notification object];
+    for (NSString* filename in filenames) {
+        if (![arrayTorrents add:filename]) {
+            [Util showError:@"Couldn't add torrent" withMessage: @"Please verify this file is a valid torrent file."];
+        }
+    }
+    [self refreshTorrents:self];
 }
 
 - (void) dealloc {
