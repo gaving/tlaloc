@@ -26,6 +26,7 @@ NSString* const ProductWebsite = @"http://github.com/gaving/tlaloc/";
         userDefaults = [NSUserDefaults standardUserDefaults];
         torrentDestination = [userDefaults stringForKey:@"torrentDestination"];
         rtorrentRPCString = [userDefaults stringForKey:@"rtorrentRPCURL"];
+		rtorrentRPCString = ([rtorrentRPCString length] > 0) ? rtorrentRPCString : @"http://localhost/";
         rtorrentRPCURL = [[NSURL URLWithString: rtorrentRPCString] retain];
     }
     return self;
