@@ -1,5 +1,7 @@
 # Tlaloc
 
+**Note: You might want to check out [nativa](http://www.aramzamzam.net/nativa/) instead.**
+
 This application aims to be a native, cocoa-based mac application for
 interacting with rtorrent via the exposed xmlrpc interface.
 
