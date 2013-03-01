@@ -3,7 +3,7 @@
 //  Tlaloc
 //
 //  Created by Gavin Gilmour on 30/11/2010.
-//  Copyright 2010 SPSA. All rights reserved.
+//  Copyright 2010 All rights reserved.
 //
 
 #import "TorrentInfoController.h"
